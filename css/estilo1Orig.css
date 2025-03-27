@@ -1,0 +1,110 @@
+html, body {margin:0;padding:0;border:0;}
+body {font-family: 'Ubuntu', sans-serif;margin: 0px;background-repeat: no-repeat;background-position: center top;line-height:1.5; font-size:17px; background: #fff; color: #000; word-wrap: break-word; -webkit-text-size-adjust: none; }
+p img {float: left; margin: 0 10px 5px 0; padding: 0;}
+img {border:0; max-width: 100%;}
+table {width:auto;border-collapse:collapse;border-spacing:0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display:block;}
+#main ul.gallery-grid li a p,
+#main ul.gallery-list.price li a p,
+h1 {font-family: 'Ubuntu', sans-serif;display: block;text-align: center;font-size: 63px;font-weight: bold;color:black;margin:0;}
+h7 {font-size: 17px;font-weight: normal; margin: 0;font-family: 'Ubuntu', sans-serif;color:#000000;}
+h8 {font-family: 'Ubuntu', sans-serif;display: block;text-align: center;font-size:17px;font-weight: normal;color:#000000;margin:0;}
+h2 {text-align: center;margin: 4px 0;font-size: 28px;font-family: 'Ubuntu', sans-serif;font-weight: normal;color:black;margin:0;}
+.containerjec {position: relative;}
+.centeredjec2 {position: absolute;text-align:center;top:65%;left: 18%;font-family: 'Ubuntu', sans-serif;font-size: 40px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}
+.centeredjec3 {position: absolute;text-align:center;top:65%;left: 19%;font-family: 'Ubuntu', sans-serif;font-size: 40px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}		
+.centeredjec4 {position: absolute;text-align:center;top:65%;left: 19%;font-family: 'Ubuntu', sans-serif;font-size: 40px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}
+.centeredjec9 {position: absolute;top: 20%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;}
+.centeredjec10 {position: absolute;top: 34%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;}
+.centeredjec11 {position: absolute;top: 48%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;}
+.centeredjec12 {position: absolute;top: 62%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;}
+.buttontrans2 {border: 0.5px solid white;color: white;padding: 5px 9px;text-align: center;font-size: 15px;margin: 4px 2px;position: absolute;top: 82%;left: 72%;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.button2 {border-radius: 24px; max-width: 180px;}
+.button2:hover {background-color: #106510;color: white;border-color:transparent;}
+.buttontrans3 {background-color: #106510;color: white;top: 82%;left: 45.5%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;}
+.button3 {border-radius: 24px; max-width: 280px;}
+.button3:hover {background-color: white;color: #106510;border-color:transparent;}
+.buttontrans4 {background-color: #106510;color: white;top: 82%;left: 44.9%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;}
+.buttontrans5 {background-color: #106510;color: white;top: 82%;left: 42.8%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;}
+#video {max-width:100%;}
+.componentcontent_1 {margin-left:auto;margin-right:auto;width:300px;}
+.resp-container {width:560px;height:315px;}
+.responiframe{width:100%;height:100%;border:0;}
+.componentcontent_4 {width:671px;margin-left:auto;margin-right:auto;}
+/*Slide text and button*/
+.mySlides {display: none;}
+/* Next & previous buttons */
+.prev, .next {cursor:pointer;position:absolute;top:50%;width:auto;margin-top:-30px;padding:16px;color:#106510;font-weight:bold;font-size:35px;border-radius:0 3px 3px 0; user-select:none;}
+/* Position the "next button" to the right */
+.next {position:absolute;right:0;border-radius:3px 0 0 3px;}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {background-color:#106510;color:white;}
+/* The dots/bullets/indicators */
+.dot {cursor:pointer;height:15px;width:15px;margin:0 2px;background-color:#bbb;border-radius:50%;display:inline-block;transition:background-color 0.6s ease;}
+.Estilodot{position:absolute;top:91%;left:48.5%;}
+.active {background-color:#106510;}
+/* Fading animation */
+.fade {-webkit-animation-name:fade;-webkit-animation-duration:1.5s;animation-name:fade;animation-duration:1.5s;}
+@-webkit-keyframes fade {from {opacity: .4} to {opacity: 1}}
+@keyframes fade {from {opacity: .4} to {opacity: 1}}
+/*Slide text and button*/
+@media screen and (max-width: 1007px) {
+h1 {font-family: 'Ubuntu', sans-serif;display: block;text-align: center;font-size: 25px;font-weight: bold;color:black;margin:0;}
+h7 {font-size: 16px;font-weight: normal; margin: 0;font-family: 'Ubuntu', sans-serif;color:#000000;}
+h2 {text-align: center;margin: 4px 0;font-size: 20px;font-family: 'Ubuntu', sans-serif;font-weight: normal;color:black;margin:0;}		
+h8 {font-family: 'Ubuntu', sans-serif;display: block;text-align: center;font-size: 16px;font-weight: normal;color:#000000;margin:0;}
+td {width:100%;display: block;}
+.centeredjec2 {position: absolute;top: 18%;left: 2%;font-family: 'Ubuntu', sans-serif;font-size: 30px;color: white;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec3 {position: absolute;top: 18%;left: 2%;font-family: 'Ubuntu', sans-serif;font-size: 30px;color: white;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec4 {position: absolute;top: 18%;left: 2%;font-family: 'Ubuntu', sans-serif;font-size: 30px;color: white;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec9 {position: absolute;top: 20%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 24px;color: white;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec10 {position: absolute;top: 34%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 24px;color: white;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec11 {position: absolute;top: 48%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 24px;color: white;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec12 {position: absolute;top: 62%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 24px;color: white;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.buttontrans2 {border: 0.5px solid white;color: white;padding: 5px 9px;text-align: center;font-size: 15px;position: absolute;top: 65%;left: 2%;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.button2 {border-radius: 24px; max-width: 180px;}
+.button2:hover {background-color: #106510;color: white;border-color:transparent;}
+.buttontrans3 {background-color: #106510;color: white;top: 52%;left: 34%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.buttontrans4 {background-color: #106510;color: white;top: 52%;left: 33%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.buttontrans5 {background-color: #106510;color: white;top: 52%;left: 26%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.componentcontent_1 {width:90%;}
+.resp-container {width:100%;height:100%;}
+.componentcontent_4 {width:90%;}
+.Estilodot{position:absolute;top:65%;left:44.3%;}
+.prev, .next {font-size: 20px;top: 39%;}
+}
+.buttontrans {border: 0.5px solid black;color: black;padding: 10px 18px;text-align: center;font-size: 15px;margin: 4px 2px;display: inline-block;cursor: pointer;}
+.button1 {border-radius: 24px; max-width: 180px;}
+.button1:hover {background-color: #106510;color: white;border-color:white;}
+@media screen and (width: 1024px) {
+.centeredjec9 {position: absolute;top: 20%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 28px;color: white;font-weight: bold;}
+.centeredjec10 {position: absolute;top: 34%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 28px;color: white;font-weight: bold;}
+.centeredjec11 {position: absolute;top: 48%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 28px;color: white;font-weight: bold;}
+.centeredjec12 {position: absolute;top: 62%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 28px;color: white;font-weight: bold;}
+.centeredjec2 {position: absolute;top: 29%;left: 14%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}
+.centeredjec3 {position: absolute;top: 29%;left: 14%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}
+.centeredjec4 {position: absolute;top: 29%;left: 14%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}
+.buttontrans2 {border: 0.5px solid white;color: white;padding: 5px 9px;text-align: center;font-size: 15px;margin: 4px 2px;position: absolute;top: 35%;left: 62%;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.buttontrans3 {background-color: #198C19;color: white;top: 33%;left: 44%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.buttontrans4 {background-color: #198C19;color: white;top: 33%;left: 43.5%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.buttontrans5 {background-color: #198C19;color: white;top: 33%;left: 41%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.Estilodot{position:absolute;top:38%;left:48%;}
+.prev, .next {font-size: 30px;top: 20%;}
+}
+@media screen and (width: 768px) {
+.centeredjec9 {position: absolute;top: 20%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 20px;color: white;font-weight: bold;}
+.centeredjec10 {position: absolute;top: 34%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 20px;color: white;font-weight: bold;}
+.centeredjec11 {position: absolute;top: 48%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 20px;color: white;font-weight: bold;}
+.centeredjec12 {position: absolute;top: 62%;left: 1%;font-family: 'Ubuntu', sans-serif;font-size: 20px;color: white;font-weight: bold;}
+.centeredjec2 {position: absolute;top: 22%;left: 2%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}
+.centeredjec3 {position: absolute;top: 22%;left: 2%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}
+.centeredjec4 {position: absolute;top: 22%;left: 2%;font-family: 'Ubuntu', sans-serif;font-size: 35px;color: white;font-weight: bold;text-shadow: 0.3px 0.3px black;}
+.buttontrans2 {border: 0.5px solid white;color: white;padding: 5px 9px;text-align: center;font-size: 15px;margin: 4px 2px;position: absolute;top: 35%;left: 62%;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.buttontrans3 {background-color: #198C19;color: white;top: 32%;left: 42.5%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.buttontrans4 {background-color: #198C19;color: white;top: 32%;left: 41.5%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.buttontrans5 {background-color: #198C19;color: white;top: 32%;left: 38.5%;border-color:transparent;padding: 5px 9px;text-align: center;font-size: 27px;margin: 4px 2px;position: absolute;cursor: pointer;text-shadow: 0.3px 0.3px black;}
+.Estilodot{position:absolute;top:38%;left:47.3%;}
+.prev, .next {font-size: 30px;top: 20%;}
+}
+dispblo.b {display: inline-block;}
+

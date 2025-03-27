@@ -1,0 +1,182 @@
+.buttongreen {background-color: #106510;border: none;color: white;padding: 10px 10px;text-align: center;text-decoration: none;cursor: pointer;border-radius: 16px;max-width:250px;font-size: 15px;}
+.buttongreenvideo {font-family: 'Ubuntu', sans-serif;font-size: 15px;background-color: #106510;border: none;color: white;padding: 10px 10px;text-align: center;text-decoration: none;cursor: pointer;border-radius: 24px;max-width:180px;}
+.roundbutton{width:35px;height:35px;cursor:pointer;border-style:none;color:white;background-color:#106510;border-radius:100%;text-align:center;display: inline-flex;flex-direction: column;justify-content: center;margin-right:10px;}
+.modal {display: none;position: fixed;  z-index: 1;  padding-top: 40px;  left: 0;  top: 0;  width: 100%;  height: 100%;  background-color: black;}
+.modal-content {  background-color: black;  margin: auto;  padding: 20px;  width: 860px;  height:484px;}
+.close {  color: #aaaaaa;  float: right;  font-size: 28px;  font-weight: bold;}
+.close:hover,
+.close:focus {  color: white;  text-decoration: none;  cursor: pointer;}
+
+.buttonwhite {background-color:transparent;border:1px solid white;color:white;padding:10px 10px;text-align:center;text-decoration:none;cursor:pointer;border-radius:16px;max-width:250px;font-size:15px;}
+.buttoncircle {position:relative;background-color: transparent;border:2px solid white;color: white;text-align: center;text-decoration: none;cursor: pointer;border-radius: 50%;font-size: 15px;width:50px;height:50px;padding-top:30px;padding-left:20px;padding-right:20px;}
+.buttoncircle .popupvideo {visibility: hidden;position:absolute;z-index: 1;top:-325px;left:300px;}
+.buttoncircle .show{visibility: visible;}
+.contenedorhero {position:relative;line-height:0px;z-index:-1;}
+.contenedorheroh1 {position: absolute;top:5%;left:0;right:0;margin-left:auto;margin-right:auto;font-family: 'Ubuntu', sans-serif;font-size: 45px;text-align:center;color: white;font-weight: normal;line-height:1.5;}
+.divdescripcion1 {max-width:1920px;margin-left:auto;margin-right:auto;background-color:#e7f1fb;padding-top:50px;padding-bottom:50px;}
+.divdescripcion{max-width:600px;}
+.divdescripcionh2 {font-family: 'Ubuntu', sans-serif;font-size: 25px;text-align:left;color: black;font-weight: bold;line-height:1.5;padding-left:15px;padding-right:15px;}
+.divdescripcionh3 {font-family: 'Ubuntu', sans-serif;font-size: 18px;text-align:left;color: black;font-weight: normal;line-height:1.5;padding-left:15px;padding-right:15px;}
+
+.flex-container_b {display: flex;justify-content: space-around;max-width: 1200px;}
+.contenedorinicial{position:absolute;top:22%;right:3%;max-width:500px;z-index:1;}
+.tituloinicial {font-family: 'Ubuntu', sans-serif;font-size: 40px;color:black;font-weight: bold;line-height:1.5;}
+.subtitulo {font-family: 'Ubuntu', sans-serif;position:absolute;bottom:3%;left:10%;font-size: 14px;color:#106510;cursor:pointer;font-weight: bold;z-index:1;}
+.centeredjec1 {font-family: 'Ubuntu', sans-serif;font-size: 40px;color: #106510;font-weight: bold;line-height:1.5;}
+.divbeneficios {max-width:1920px;margin-left:auto;margin-right:auto;background-color:#106510;}
+.divbeneficiosfont {font-family: 'Ubuntu', sans-serif;font-size: 35px;text-align:center;color: white;font-weight: bold;line-height:1.5;padding-left:10px;padding-right:10px;}
+.divbeneficiosfont2 {font-family: 'Ubuntu', sans-serif;font-size: 30px;text-align:center;color: white;font-weight: bold;line-height:1.5;padding-left:20px;padding-right:20px;}
+.contenedorazul {max-width:1920px;margin-left:auto;margin-right:auto;background-color:#e7f1fb;padding-top:50px;padding-bottom:50px;padding-left:10px;padding-right:10px;}
+img.sticky {position: fixed;left:1.5%;bottom:8%;cursor:pointer;z-index:1;}
+/*Flex absolute*/
+.compocontent_6{position:absolute;top:20%;width:100%;}
+.flex-container_a {display: flex;flex-direction: row;max-width: 1200px;}
+.compocontent_5{max-width:600px;max-height:400px;text-align:left;margin-top:10%;}
+.compocontent_4{max-width:600px;max-height:500px;text-align:right;margin-top:5%;}
+/*Fin Flex absolute*/
+/*Flex questions*/
+.flex-container_q {display: flex;flex-direction: row;max-width: 1920px;}
+.componentcontent_10{max-width:960px;text-align:left;margin:auto;padding:2%;}
+.componentcontent_11{width:100%;height:auto;text-align:right;line-height:0px;padding:2%;}
+.flex-container_hero {display: flex;flex-direction: row;max-width: 1920px;margin-top:100px;padding:2%;}
+.content_hero1{max-width:490px;}
+.content_hero2{width:100%;}
+/*Fin Flex questions*/
+/*viewport*/
+.contenedorvprincipal {position: relative;display:flex;width:100%;z-index:0;overflow: hidden;}
+.contenedorvprincipal--full-height {height: 100vh;}
+.contenedorvprincipalviewp {height:100%;left:0;position:absolute;top: 0;width: 100%;z-index:1;}
+/*end viewport*/
+.contenedorimagen {max-width:1920px;line-height:0px;}
+.contenedorlogopromo {max-width:300px;line-height:0px;padding-left:10px;padding-right:10px;}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */    color: black;opacity: 1; /* Firefox */}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */    color: black;}
+::-ms-input-placeholder { /* Microsoft Edge */    color: black;}
+input[type=text], select, textarea {width:60%;padding: 8px;border: 1px solid black;box-sizing: border-box;margin-top:6px;margin-bottom:6px;font-family: 'Ubuntu', sans-serif; font-size:16px;line-height:1.5;background-color:transparent;color:black;}
+input[type=submit] {width:60%;padding: 8px;font-family: 'Ubuntu', sans-serif;margin-top:6px;margin-bottom:6px;line-height:1.5; font-size:16px;border-color:transparent;background-color: #106510;
+    color: white;cursor: pointer;}
+@media screen and (max-width: 768px) and (min-height:600px) {
+.centeredjec1 {font-family: 'Ubuntu', sans-serif;font-size: 30px;color: #106510;font-weight: bold;}
+.tituloinicial {font-size: 22px;}
+.subtitulo {font-size: 15px;bottom:3%;bottom:5%;left:26%;color:#106510;background-color: rgba(255, 255, 255, 0.5);}
+.roundbutton{width:30px;height:30px;}
+.divbeneficiosfont {font-family: 'Ubuntu', sans-serif;font-size: 25px;text-align:center;color: white;font-weight: bold;line-height:1.5;}
+.divbeneficiosfont2 {font-size:22px;}
+.compocontent_6{position:absolute;top:5%;width:100%;}
+.flex-container_a {display:block;max-width: 1007px;}
+.flex-container_b {display:block;}
+.contenedorheroh1 {font-size:32px;}
+.compocontent_5{max-width:350px;max-height:300px;text-align:center;margin-top:18%;}
+.compocontent_4{max-width:350px;max-height:300px;text-align:center;margin-top:15%;}
+input[type=text], select, textarea {width: 87%;padding: 4px;border: 1px solid black;box-sizing: border-box;margin-top:3px;margin-bottom:3px;font-family: 'Ubuntu', sans-serif; font-size:16px;line-height:1.5;background-color:transparent;color:black;}
+input[type=submit] {width: 87%;font-family: 'Ubuntu', sans-serif;margin-top:3px;margin-bottom:3px;line-height:1.5; font-size:16px;border-color:transparent;background-color: #106510;
+    color: white;padding: 4px;cursor: pointer;}
+.flex-container_q {display:block;}
+.componentcontent_10{padding:3%;}
+.componentcontent_11{padding:0px;}
+.flex-container_hero {display:block;margin-top:0px;padding:2%;}
+.content_hero1{margin-top:70px;}
+.content_hero2{margin-top:0px;}
+.divdescripcionh2 {font-size:18px;}
+.divdescripcionh3 {font-size:16px;}
+.contenedorinicial{position:absolute;max-width:300px;top:15%;left:0;right:0;margin-left:auto;margin-right:auto;text-align:center;z-index:1;padding-left:2%;padding-right:2%;}
+img.sticky {left:3%;bottom:4%;}
+.modal-content {  width: 343px;  height:193px;margin-top:50%;padding: 10px;}
+}
+@media screen and (max-width: 768px) and (max-height:600px) {
+.centeredjec1 {font-family: 'Ubuntu', sans-serif;font-size: 25px;color: #106510;font-weight: bold;}
+.tituloinicial {font-size: 18px;}
+.subtitulo {font-size: 13px;bottom:3%;left:25%;color:#106510;background-color: rgba(255, 255, 255, 0.5);}
+.roundbutton{width:28px;height:28px;}
+.divbeneficiosfont {font-family: 'Ubuntu', sans-serif;font-size: 23px;text-align:center;color: white;font-weight: bold;line-height:1.5;}
+.divbeneficiosfont2 {font-size:20px;}
+.compocontent_6{position:absolute;top:5%;width:100%;}
+.flex-container_a {display:block;max-width: 1007px;}
+.flex-container_b {display:block;}
+.contenedorheroh1 {font-size:32px;}
+.compocontent_5{max-width:310px;max-height:300px;text-align:center;margin-top:25%;}
+.compocontent_4{max-width:310px;max-height:300px;text-align:center;margin-top:10%;}
+input[type=text], select, textarea {width: 85%;padding: 4px;border: 1px solid black;box-sizing: border-box;margin-top:3px;margin-bottom:3px;font-family: 'Ubuntu', sans-serif; font-size:14px;line-height:1.5;background-color:transparent;color:black;}
+input[type=submit] {width: 85%;font-family: 'Ubuntu', sans-serif;margin-top:3px;margin-bottom:3px;line-height:1.5; font-size:14px;border-color:transparent;background-color: #106510;
+    color: white;padding: 4px;cursor: pointer;}
+.flex-container_q {display:block;}
+.componentcontent_10{padding:3%;}
+.componentcontent_11{padding:0px;}
+.flex-container_hero {display:block;margin-top:0px;padding:2%;}
+.content_hero1{margin-top:75px;}
+.content_hero2{margin-top:0px;}
+.divdescripcionh2 {font-size:18px;}
+.divdescripcionh3 {font-size:16px;}
+.contenedorinicial{position:absolute;max-width:265px;top:15%;left:0;right:0;margin-left:auto;margin-right:auto;text-align:center;z-index:1;}
+img.sticky {left:3%;bottom:5.5%;}
+.modal-content {  width: 300px;  height:193px;margin-top:50%;padding: 10px;}
+}
+@media screen and (width: 1024px) and (height: 1366px) {
+.centeredjec1 {font-family: 'Ubuntu', sans-serif;font-size: 40px;color: #106510;font-weight: bold;}
+.contenedorinicial{position:absolute;max-width:650px;top:15%;left:0;right:0;margin-left:auto;margin-right:auto;text-align:center;z-index:1;padding-left:2%;padding-right:2%;}
+.tituloinicial {font-size: 40px;}
+.subtitulo {font-size: 18px;bottom:2%;left:38%;}
+.roundbutton{width:35px;height:35px;}
+
+.divbeneficiosfont {font-family: 'Ubuntu', sans-serif;font-size: 35px;text-align:center;color: white;font-weight: bold;line-height:1.5;}
+.flex-container_a {max-width: 1000px;}
+input[type=text], select, textarea {width:80%;padding: 8px;border: 1px solid black;box-sizing: border-box;margin-top:6px;margin-bottom:6px;font-family: 'Ubuntu', sans-serif; font-size:16px;line-height:1.5;background-color:transparent;color:black;}
+input[type=submit] {width:80%;padding: 8px;font-family: 'Ubuntu', sans-serif;margin-top:6px;margin-bottom:6px;line-height:1.5; font-size:16px;border-color:transparent;background-color: #106510;
+    color: white;cursor: pointer;}
+.flex-container_hero {display:block;}
+.content_hero1{margin-top:5%;max-width:1024px;}
+.content_hero2{width:100%;margin-top:12%;}
+img.sticky {bottom:3.6%;}
+}
+@media screen and (width: 1366px) and (height:1024px) {
+.centeredjec1 {font-family: 'Ubuntu', sans-serif;font-size: 40px;color: #106510;font-weight: bold;}
+.tituloinicial {font-size: 40px;}
+.subtitulo {bottom:18%;right:11%;}
+.divbeneficiosfont {font-family: 'Ubuntu', sans-serif;font-size: 35px;text-align:center;color: white;font-weight: bold;line-height:1.5;}
+.contenedorinicial{position:absolute;top:30%;right:2%;max-width:550px;z-index:1;}
+.flex-container_hero {margin-top:200px;}
+.content_hero2{max-width:100%;}
+img.sticky {bottom:5%;}
+}
+@media screen and (width: 768px) {
+.centeredjec1 {font-family: 'Ubuntu', sans-serif;font-size: 25px;color: #106510;font-weight: bold;}
+.contenedorinicial{position:absolute;max-width:400px;top:15%;left:0;right:0;margin-left:auto;margin-right:auto;text-align:center;z-index:1;padding-left:2%;padding-right:2%;}
+.tituloinicial {font-size: 35px;}
+.subtitulo {font-size: 18px;bottom:2%;left:37%;}
+.roundbutton{width:35px;height:35px;}
+.divbeneficiosfont {font-family: 'Ubuntu', sans-serif;font-size: 23px;text-align:center;color: white;font-weight: bold;line-height:1.5;}
+.divbeneficiosfont2 {font-size:23px;}
+.compocontent_6{position:absolute;top:5%;width:100%;}
+.flex-container_a {display: flex;flex-direction: row;max-width: 750px;}
+.flex-container_b {display: flex;justify-content: space-around;}
+.flex-container_q {display: flex;flex-direction: row;max-width: 768px;}
+.flex-container_hero {display:block;}
+.content_hero1{margin-top:15%;max-width:768px;}
+.compocontent_5{max-width:350px;max-height:300px;text-align:center;margin-top:27%;}
+.compocontent_4{max-width:400px;max-height:400px;text-align:center;margin-top:20%;}
+input[type=text], select, textarea {width: 80%;padding: 4px;border: 1px solid black;box-sizing: border-box;margin-top:3px;margin-bottom:3px;font-family: 'Ubuntu', sans-serif; font-size:16px;line-height:1.5;background-color:transparent;color:black;}
+input[type=submit] {width: 80%;font-family: 'Ubuntu', sans-serif;margin-top:3px;margin-bottom:3px;line-height:1.5; font-size:14px;border-color:transparent;background-color: #106510;
+    color: white;padding: 4px;cursor: pointer;}
+.componentcontent_10{max-width:375px;text-align:left;margin:auto;padding:1%;}
+.componentcontent_11{width:100%;height:auto;text-align:right;line-height:0px;padding:1%;}
+.centeredjec3 {font-size: 17px;}
+.modal-content {  background-color: black;  margin: auto;  padding: 20px;  width: 600px;height:338px;margin-top:40%;}
+img.sticky {bottom:4.4%}
+}
+@media screen and (width: 1024px) and (height:768px) {
+.centeredjec1 {font-family: 'Ubuntu', sans-serif;font-size: 30px;color: #106510;font-weight: bold;}
+.contenedorinicial{position:absolute;top:31%;right:2%;max-width:400px;z-index:1;}
+.tituloinicial {font-size: 30px;}
+.subtitulo {bottom:18%;right:9%;}
+.divbeneficiosfont {font-family: 'Ubuntu', sans-serif;font-size: 28px;text-align:center;color: white;font-weight: bold;line-height:1.5;}
+.divbeneficiosfont2 {font-size:25px;}
+input[type=text], select, textarea {width: 70%;padding: 4px;border: 1px solid black;box-sizing: border-box;margin-top:3px;margin-bottom:3px;font-family: 'Ubuntu', sans-serif; font-size:15px;line-height:1.5;background-color:transparent;color:black;}
+input[type=submit] {width: 70%;font-family: 'Ubuntu', sans-serif;margin-top:3px;margin-bottom:3px;line-height:1.5; font-size:14px;border-color:transparent;background-color: #106510;
+    color: white;padding: 4px;cursor: pointer;}
+.flex-container_hero {display: flex;flex-direction: row;max-width: 1920px;margin-top:150px;}
+.content_hero1{max-width:350;padding:2%;}
+.content_hero2{width:100%;padding:2%;}
+img.sticky {bottom:7%}
+}
+
+dispblo.b {display: inline-block;}

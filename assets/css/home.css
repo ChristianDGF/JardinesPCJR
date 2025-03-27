@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+  --color-1: white;
+  --text-color: #333333;
+  --accent-color: #43b248;
+ }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+  
+}
+
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  font-size: 16px;
+}
+
+
+header{
+  z-index: 1;
+}
+
+
+.imgsec1{
+  width: 100%; 
+  height: 100vh;
+  min-height: 700px; 
+  object-fit: cover;
+  object-position: left top; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  filter: brightness(50%);
+  z-index: -1;
+ }
+ 
+.sec1 {
+  position: relative;
+   width: 100%;
+   height: calc(100vh - 80px);
+   min-height: 700px;
+   display: flex;
+   align-items: center; 
+  
+}
+
+.sec1 .content{
+  width: 80%;
+   margin: 0 auto;
+}
+.sec1 h1{
+  color: white;
+  font-weight: 400;
+  font-size: 45px;
+}
+
+.sec1 p{
+  margin-top: 20px;
+  font-family: "Lato", serif;
+  color: white;
+  font-weight: 400;
+  
+}
+
+.mainp{
+  width: 50%;
+} 
+
+.specialbtn {
+  font-family: "Playfair Display", serif;
+  background-color: #43b248;
+  color: white;
+
+  border: unset;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-weight: 600;
+  display: inline-flex; /* Asegura que los elementos internos estén en una línea */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.specialbtn2 {
+  background-color: #43b248;
+  color: white;
+
+  border: unset;
+  border-radius: 2px;
+  font-weight: 600;
+  display: inline-flex; /* Asegura que los elementos internos estén en una línea */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sec1 .links-b{
+  display: inline-flex; /* Asegura que los elementos internos estén en una línea */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  
+}
+.sec1 .button-2{
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.sec1 button .arrow{
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  margin-left: 8px;
+  
+}
+.sec1 button:hover .arrow{
+  transform: translateX(5px);
+}
+
+.specialbtn:hover {
+  background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+ transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+ --myColor1: #43b248;
+ --myColor2: #d4b757;
+ --myColor3: #ffdb98;
+}
+
+.specialbtn:not(:hover){
+  background: linear-gradient(var(--myColor1), var(--myColor2));
+ transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+}
+
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: #43b248;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: #43b248;
+  inherits: false;
+}
+@property --myColor3 {
+  syntax: '<color>';
+  initial-value: #43b248;
+  inherits: false;
+}
+
+
+.specialbtn2:hover {
+  background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+ transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+ --myColor1: #43b248;
+ --myColor2: #d4b757;
+ --myColor3: #ffdb98;
+}
+
+.specialbtn2:not(:hover){
+  background: linear-gradient(var(--myColor1), var(--myColor2));
+ transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+}
+
+@property --myColor1 {
+  syntax: '<color>';
+  initial-value: #43b248;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: '<color>';
+  initial-value: #43b248;
+  inherits: false;
+}
+@property --myColor3 {
+  syntax: '<color>';
+  initial-value: #43b248;
+  inherits: false;
+}
+
+
+
+
+.greenline {
+
+  height: 100px;
+  width: 1px;
+  min-width: 1px;
+  max-width: 1px;
+  background-color: #26672a;
+}
+
+.Contactenossection{
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.ct1{
+  font-size: 12px;
+}
+.sidegreenlinecontent {
+  margin-top: 10px;
+  margin-left: 18px;
+}
+
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: rgb(245, 245, 245);
+}
+
+.contact{
+  padding: 0px 0px;
+  padding-bottom: 0px;
+
+}
+.section h2 {
+  font-size: 2em;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-family: "Lato", serif;
+
+}
+.section p {
+  font-size: 16px;
+  color: #666;
+}
+
+.section .what-we-offer{
+  background-color: #6e6e6e;
+}
+
+.why-choose-us, .what-we-offer, .testimonials {
+  background-color: #f5f5f5;
+  
+}
+.why-choose-us .features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  font-family: "Lato", serif;
+ 
+  
+}
+
+.what-we-offer .offers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  font-family: "Lato", serif;
+ 
+  
+}
+
+.what-we-offer .offers .offer{
+  background-color: white;
+  padding: 0px;
+  padding-bottom: 20px;
+}
+
+.what-we-offer h3{
+  margin-bottom: 6px;
+}
+
+.feature h3{
+  margin-bottom: 20px;
+  
+}
+
+.feature, .offer {
+
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 300px;
+
+}
+.feature i {
+  font-size: 1.5em;
+  color: #3c763e;
+  margin-bottom: 30px;
+  background-color: #c7dfc7;
+  width: 55px; /* Igualar el ancho y alto */
+  height: 55px; /* Igualar el ancho y alto */
+  line-height: 60px; /* Alinear el ícono verticalmente */
+  text-align: center; /* Alinear el ícono horizontalmente */
+  border-radius: 50%; /* Círculo perfecto */
+  display: inline-block; /* Asegurarte de que el ícono tenga las dimensiones */
+}
+
+.offer img{
+  font-size: 2em;
+  height: 300px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  object-fit: cover;
+  overflow: hidden;
+  width: auto;
+}
+.offer img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.offer .description {
+  padding: 10px;
+}
+.contact {
+  position: relative;
+  display: flex;
+
+}
+
+.contact > * {
+  width: 50%; /* Cada elemento ocupa el 25% */
+}
+.contact iframe {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+.contact-form {
+text-align: left;
+  right: 100px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  display: flex;
+    flex-direction: column; /* Si hay varios elementos, los alinea en columna */
+    justify-content: center;
+}
+.contact-form h3 {
+  margin-bottom: 20px;
+  font-family: "Lato", serif;
+}
+
+.contact-form input {
+  font-family: "Lato", serif;
+  
+  
+}
+.contact-form input[type="text"] {
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.contact-form input[type="email"] {
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+
+.contact-form textarea {
+  font-family: "Lato", serif;
+  box-sizing: border-box;
+  padding-left: 10px;
+  resize: none;
+}
+
+
+.contact-form input, .contact-form textarea, .contact-form select {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+
+.contact-form button:hover {
+  background-color: #396e39;
+  
+}
+.testimonials {
+  background-color: #2E7D32;
+  color: white;
+}
+
+.testimonial p {
+  color: white;
+}
+.testimonials .testimonial {
+ min-width: 320px;
+margin-right: 80px;
+}
+.testimonials .testimonial p {
+  font-size: 14px;
+}
+.testimonials .testimonial h4 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+.testimonials .testimonial span {
+  font-size: 0.9em;
+  color: #ccc;
+}
+.testimonials .testimonial .stars {
+  color: #FFD700;
+}
+.testimonials .carousel {
+  display: flex;
+  gap: 100px;
+
+  padding: 20px 0;
+}
+.testimonials .carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .why-choose-us .features, .what-we-offer .offers {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .mainp{
+    width: 100%;
+  } 
+  .contact-form{
+    padding: 10px 20px;
+    
+    
+  }
+
+  .contact > * {
+    width: unset; /* Cada elemento ocupa el 25% */
+  }
+  .contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-inner {
+    display: flex;
+    width: calc(200%);
+    animation: scroll 60s linear infinite;
+  }
+  
+}
+
+
+.testimonials {
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  width: calc(200%);
+  animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.what-we-offer button{
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-family: "Lato", serif;
+  background-color: #43b248;
+  color: white;
+
+  border: unset;
+  border-radius: 20px;
+  padding: 10px 34px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.what-we-offer button:hover {
+  background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+ transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+ --myColor1: #43b248;
+ --myColor2: #d4b757;
+ --myColor3: #ffdb98;
+}
+
+.what-we-offer button:not(:hover){
+  background: linear-gradient(var(--myColor1), var(--myColor2));
+ transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+}
+
+.testimonials h2{
+  margin-bottom: 30px;
+}
+
+
+icon-outline {
+  -webkit-text-stroke: 1px #16a34a; /* Custom green outline */
+  color: transparent;
+}
+.icon-outline:hover {
+  color: #16a34a; /* Fill color on hover */
+}
+
+footer{
+  background-color: #144816;
+  color: white;
+  padding-top: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 20px;
+}
+.flogo {
+  width: auto;
+  height: 75px;
+}
+
+footer li {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer .text-green-600 {
+  font-size: 18px;
+}
+
+
+.navpadding {
+  margin-left: 30px;
+  height: 100%;
+  width: auto;
+}
+.navpadding2 {
+  margin-right: 30px;
+}
+
+
+/* Posiciona solo el contenedor del slider y establece min-height */
+.unslider.imgsec1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  z-index: -1;
+}
+
+/* Estilos para la lista e imágenes */
+.unslider ul,
+.unslider li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.unslider img {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  object-fit: cover;
+  object-position: left top;
+
+}
+
+.unslider-arrow {
+  display: none !important;
+}

@@ -1,0 +1,124 @@
+.buttontrans {border: 1px solid black;color: black;padding: 10px 18px;text-align: center;font-size: 15px;margin: 4px 2px;display: inline-block;cursor: pointer;}
+.button1 {border-radius: 24px; max-width: 200px;}
+.button1:hover {background-color: #106510;color: white;border-color:white;}
+.buttontrans2 {background-color: #106510;color: white;padding: 10px 18px;text-align: center;font-size: 15px;margin: 4px 2px;display: inline-block;cursor: pointer;}
+.button2 {border-radius: 24px; max-width: 200px;}
+dispblo.b {display: inline-block;}
+.containerjec {position: relative;text-align: center;}
+/*reset*/
+html, body { margin: 0; padding: 0;	border: 0; }
+body { line-height:1.5; font-size:17px; background: #fff; color: #000; word-wrap: break-word; -webkit-text-size-adjust: none; }
+h1, h2, h5, h7, h8,h9{ font-weight: normal; margin: 0;}
+p img { float: left; margin: 0 10px 5px 0; padding: 0; }
+img { border: 0; max-width: 100%; }
+table { width:auto; border-collapse: collapse;border-spacing: 0; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+/*Non-semantic helper classes*/
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+body {margin: 0px;font-family: 'Ubuntu',sans-serif;background-repeat: no-repeat;background-position: center top;}
+#main ul.gallery-grid li a p, 
+#main ul.gallery-list.price li a p,
+h1 {display: block;text-align: center;font-size: 63px;font-weight: bold;font-family: 'Ubuntu', sans-serif;color:black;}
+h2 {text-align: center;margin: 4px 0;font-size: 28px;font-family: 'Ubuntu', sans-serif;}
+h5 {text-align: center;font-size:1.2vw;font-family: 'Ubuntu', sans-serif;text-decoration:underline;color:#000000;cursor:pointer;}
+h5:hover{color: #008000;}
+h7 {font-size: 17px;font-weight: normal; margin: 0;font-family: 'Ubuntu', sans-serif;color:#000000;}
+h8 {display: block;text-align: center;font-size:26px;font-weight: normal;font-family: 'Ubuntu', sans-serif;color:#000000;}
+h9 {display: block;text-align: center;font-size: 0.4em;font-weight: normal;font-family: 'Ubuntu', sans-serif;color:#ffffff;line-height:0.7;}
+p.otro {font-size: 17px;font-weight: normal; margin: 0;font-family: 'Ubuntu', sans-serif;color:#000000;}
+.componentcontent {margin-left:auto;margin-right:auto;width:671px;text-align:left;}
+.containerjec_1 {position: relative;}			
+.centeredjec_1 {position: absolute;font-size:63px;top:25%;left:29.4%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_2 {position: absolute;font-size:63px;top:25%;left:33.5%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_3 {position: absolute;font-size:63px;top:25%;left:38.5%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_4 {position: absolute;font-size:63px;top:25%;left:31%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_5 {position: absolute;font-size:63px;top:25%;left:42%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_5_5 {position: absolute;font-size:26px;top:10%;left:1%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_6 {position: absolute;font-size:63px;top:25%;left:37%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_7 {position: absolute;font-size:30px;width: 100%;text-align: center;bottom:10px;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.resp-container {width:875px;height:492.19px;}
+.responiframe{width:100%;height:100%;border:0;}
+
+.componentcontent_4 {width:671px;margin-left:auto;margin-right:auto;}
+.componentcontent_5{max-width:400px;text-align:left;margin-left:auto;margin-right:auto;}
+.componentcontent_6 {width:1000px;margin-left:auto;margin-right:auto;}
+.componentcontent_61 {width:1200px;margin-left:auto;margin-right:auto;}
+.flex-container {display: flex;flex-direction: row;max-width: 1200px;margin: auto;}
+
+/*---------------*/
+input[type=text], select, textarea {
+	width:95%;
+    max-width: 500px;
+    padding: 8px;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+	font-family: 'Ubuntu', sans-serif; font-size:16px;line-height:1.5;
+}
+
+input[type=submit] {
+	font-family: 'Ubuntu', sans-serif;margin: 0px;line-height:1.2; font-size:15px;
+	border-color:transparent;
+    background-color: #106510;
+    color: white;
+    padding: 8px 16px;
+    /*border-box: block;*/
+    border-radius: 24px;
+    cursor: pointer;
+}
+/*---------------*/
+@media screen and (max-width: 1007px) {		
+h1 {display: block;text-align: center;font-size: 35px;font-weight: bold;font-family: 'Ubuntu', sans-serif;color:black;}			
+h5 {text-align: center;font-size: 1em;font-weight: normal;font-family: 'Ubuntu', sans-serif;color:#000000;line-height:1.3;cursor: pointer;}
+h7 {font-size: 16px;font-weight: normal; margin: 0;font-family: 'Ubuntu', sans-serif;color:#000000;}
+h8 {display: block;text-align: center;font-size: 17px;font-weight: normal;font-family: 'Ubuntu', sans-serif;color:#000000;}
+h2 {text-align: center;margin: 4px 0;font-size: 20px;font-family: 'Ubuntu', sans-serif;}
+p.otro {font-size: 16px;font-weight: normal; margin: 0;font-family: 'Ubuntu', sans-serif;color:#000000;}
+.componentcontent {width:90%;}
+.centeredjec_1 {position: absolute;font-size:35px;top:35%;left:10%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec_2 {position: absolute;font-size:35px;top:35%;left:17%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec_3 {position: absolute;font-size:35px;top:35%;left:29%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec_4 {position: absolute;font-size:35px;top:35%;left:12%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec_5 {position: absolute;font-size:35px;top:35%;left:34%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec_6 {position: absolute;font-size:35px;top:35%;left:24%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;text-shadow: 0.5px 0.5px black;}
+.centeredjec_7 {position: absolute;font-size:25px;top:2%;left:52%;color:white;text-shadow: 0.5px 0.5px black;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.resp-container {width:100%;height:100%;}
+.componentcontent_6 {width:90%;}
+.componentcontent_61{width:95%;}
+.flex-container {display:block;}
+.componentcontent_4 {width:90%;}
+.componentcontent_5 {width:90%;}
+}
+@media screen and (width: 768px) {
+.centeredjec_1 {position: absolute;font-size:35px;top:27%;left:30%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}	
+.centeredjec_2 {position: absolute;font-size:35px;top:27%;left:33.5%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_3 {position: absolute;font-size:35px;top:27%;left:39%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_4 {position: absolute;font-size:35px;top:27%;left:32%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_5 {position: absolute;font-size:35px;top:27%;left:42%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_6 {position: absolute;font-size:35px;top:27%;left:37.5%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_7 {position: absolute;font-size:30px;top:25%;left:70%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.componentcontent_6 {width:90%;}
+.componentcontent_61 {width:95%;}
+}	
+@media screen and (width: 1024px) {
+.centeredjec_1 {position: absolute;font-size:63px;top:22%;left:23%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_2 {position: absolute;font-size:63px;top:22%;left:28%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_3 {position: absolute;font-size:63px;top:22%;left:35%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_4 {position: absolute;font-size:63px;top:22%;left:25.5%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_5 {position: absolute;font-size:63px;top:22%;left:39%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_6 {position: absolute;font-size:63px;top:22%;left:33.4%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.centeredjec_7 {position: absolute;font-size:42px;top:27%;left:70%;color:white;font-family: 'Ubuntu', sans-serif;font-weight: bold;}
+.flex-container {display: flex;flex-direction: row;max-width: 1000px;margin: auto;}
+}
+@media screen and (width: 1024px) and (height:768px) {
+	.componentcontent_6 {width:950px;}	
+	.componentcontent_61 {width:1000px;}
+}
+@media screen and (width: 1024px) and (height:1366px) {
+	.componentcontent_6 {width:950px;}	
+	.componentcontent_61 {width:1000px;}
+}
+

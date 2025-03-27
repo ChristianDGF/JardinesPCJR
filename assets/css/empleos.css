@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+  --color-1: white;
+  --text-color: #333333;
+  --accent-color: #43b248;
+ }
+
+
+ body {
+    font-family: "Lato", serif;
+ }
+
+ .imgsec1{
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover;
+    object-position: left center;  
+    top: 0;
+    left: 0;
+    filter: brightness(50%);
+    z-index: -1;
+   }
+   
+  .sec1 {
+    position: relative;
+     width: 100%;
+     height: 400px;
+     margin-bottom: 60px;
+  }
+  
+  .sec1 h1{
+     
+    position: absolute;
+    color: white;
+    font-weight: 400;
+    font-size: 45px;
+    top: 45%;
+     left: 0;
+      position:absolute;
+      text-align:center;
+      width: 100%
+  }
+
+  
+  .content {
+    font-family: "Lato", serif;
+    padding: 40px 20px;
+    margin: 0 auto;
+    width: 80%;
+}
+.job {
+    margin-bottom: 40px;
+}
+.job-title {
+    
+    font-size: 24px;
+    font-weight: 500;
+    color: #4CAF50;
+}
+.job-description {
+    margin: 10px 0;
+}
+.job-requirements {
+    margin: 10px 0;
+}
+.job-requirements li {
+    margin-bottom: 5px;
+}
+.job-contact {
+    margin-top: 10px;
+}
+.job-contact a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+.job-contact a:hover {
+    text-decoration: underline;
+}
+hr {
+    margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-text {
+        font-size: 24px;
+    }
+    .content {
+        padding: 20px 10px;
+        width: 90%;
+    }
+    .job-title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 18px;
+    }
+    .job-title {
+        font-size: 18px;
+    }
+}
+
+
+footer{
+    background-color: #144816;
+    color: white;
+    padding-top: 80px;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-bottom: 20px;
+  }
+  .flogo {
+    width: auto;
+    height: 75px;
+  }
+  
+  footer li {
+    font-size: 14px;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  footer .text-green-600 {
+    font-size: 18px;
+  }
+  
+  
+  .navpadding {
+    margin-left: 30px;
+    height: 100%;
+    width: auto;
+  }
+  .navpadding2 {
+    margin-right: 30px;
+  }

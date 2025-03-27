@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+:root{
+  --color-1: white;
+  --text-color: #333333;
+  --accent-color: #43b248;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 12pt;
+  font-family: "Playfair Display", serif;
+}
+
+
+body {
+  font-family: "Lato", serif;
+}
+
+
+.imgsec1{
+  width: 100%; 
+  height: 400px; 
+  object-fit: cover;
+  object-position: left center;  
+  top: 0;
+  left: 0;
+  filter: brightness(50%);
+  z-index: -1;
+}
+
+.sec1 {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 100px;
+}
+
+.sec1 h1{
+  position: absolute;
+  color: white;
+  font-weight: 400;
+  font-size: 45px;
+  top: 45%;
+  left: 0;
+  position:absolute;
+  text-align:center;
+  width: 100%
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+
+.sec2 h1{
+  font-family: "Lato", serif;
+  color: #333333;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sec2 .plan-container {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sec2 .plan-container div{
+  justify-content: left;
+  margin-left: 40px;
+}
+
+.sec2 .plan-img {
+  width: auto;
+  height: 320px;
+}
+
+.sec2 .plan-btn {
+  margin-top: 16px;
+  font-size: 14px;
+  border: none;
+  background-color: #43b248;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  font-weight: 400;
+  border-radius: 20px;
+  position: relative;
+  bottom: 0px;
+}
+
+
+icon-outline {
+  -webkit-text-stroke: 1px #16a34a; /* Custom green outline */
+  color: transparent;
+}
+.icon-outline:hover {
+  color: #16a34a; /* Fill color on hover */
+}
+
+footer{
+  background-color: #144816;
+  color: white;
+  padding-top: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 20px;
+}
+.flogo {
+  width: auto;
+  height: 75px;
+}
+
+footer li {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer .text-green-600 {
+  font-size: 18px;
+}
+
+
+.navpadding {
+  margin-left: 30px;
+  height: 100%;
+  width: auto;
+}
+.navpadding2 {
+  margin-right: 30px;
+}
+
