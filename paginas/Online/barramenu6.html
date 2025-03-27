@@ -1,111 +1,117 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
-<meta name="description" content="Un cementerio, como ningún otro. Sea previsivo, garantice la tranquilidad presente y futura de su familia y deje un legado digno.">
-<meta name="keywords" content="parque,cementerio,jardines,recuerdo,mausoleo,panteón,jardín,familiar,difunto,inhumación,funeraria,previsión,santiago,caballeros,república,dominicana">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: white;
-}
-
-.topnav a {
-  display: inline-block;
-  font-weight: bold;
-  color: black;
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration: none;
-  font-size: 16px;
-  margin-top:11px;
-}
-
-.topnav a.logo {
-  padding: 0;
-  margin: 10px;
-}
-
-.topnav a:hover {
-  color: #008000;
-}
-
-.active {
-  /*background-color: #4CAF50;*/
-  color: #008000;
-}
-
-.topnav .icon {
-  display: none;
-  margin-top:2px;
-}
-
-@media screen and (max-width: 1024px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    padding-top:25px;
-	position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-	font-size: 25px;
-	font-weight:bold;
-	padding-top:15px;
-	padding-bottom: 0px;
-	
-  }
-}
-</style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">  
+  <style>
+      .navpadding {
+          margin-left: 30px;
+          height: 100%;
+          width: auto;
+      }
+          .navpadding2 {
+          margin-right: 30px;
+      }
+  </style>
 </head>
-<body>
-<div align="center">
-<div class="topnav" id="myTopnav">
-  <a href="../../Index.php" class="logo"><img src="../../images/LogoTrans58_New.png" alt="Logo Parque Cementerio Jardines del Recuerdo"></a>
-  <a href="../../paginas/quienes.php">Nosotros</a>
-  <a href="../../paginas/obituarios.php">Obituarios</a>
-  <a href="../../paginas/servicios.php">Servicios en L&iacute;nea</a>
-  <a href="../../paginas/ubiquenos.php">Donde Estamos</a>
-  <a href="../../paginas/empleo.php">Empleo</a>
-  <a href="../../paginas/Testimonios.php">Testimonios</a>
-  <a href="http://blog.jardinesrecuerdo.com/blog/">Blog</a>
-  <a href="../../paginas/ComplejoFunerario.php" style="color:#CE8500;">Nueva Funeraria</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <img src="../../images/ListaMenu3L.png" alt="Menú Parque Cementerio Jardines del Recuerdo">
-  </a>
-</div>
-</div>
+
+<header class="bg-white shadow-md relative z-50">
+  <div class="container mx-auto flex justify-between items-center py-2 px-6 ">
+    <img src="../../assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="h-14 navpadding" style="height: 56px; width: auto;"/>
+    
+    <!-- Menú de escritorio -->
+    <nav class="hidden md:flex items-center space-x-6 navpadding2">
+      <a href="../../index.php" class="text-gray-700 hover:text-green-500">Inicio</a>
+      <div class="relative group">
+        <a href="#" class="text-gray-700 hover:text-green-500">Nosotros</a>
+        <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <a href="../quienes.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
+          <a href="../galeria.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Galeria</a>
+          <a href="../empleo.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Empleos</a>
+          <a href="../servicios.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Pagos</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="#" class="text-gray-700 hover:text-green-500">Servicios</a>
+        <div class="absolute left-0 mt-2 w-40 bg-white border border-gray-200 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <a href="../afiliarse.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Afiliarse</a>
+          <a href="../planes.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Planes</a>
+          <a href="../obituarios.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
+          <a href="BuscarDifunto.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
+        </div>
+      </div>
+      <a href="../FAQ.php" class="text-gray-700 hover:text-green-500">FAQ</a>
+      <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="text-gray-700 hover:text-green-500">Blog</a>
+      <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
+    </nav>
+    
+    <!-- Botón menú móvil -->
+    <div class="md:hidden">
+      <button id="menu-button" class="text-gray-700 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md">
+      <a href="../../index.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Inicio</a>
+      
+      <!-- Dropdown de "Nosotros" -->
+      <div class="border-t border-gray-200"></div>
+      <div class="relative">
+        <button id="mobile-nosotros" class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500 flex justify-between items-center">
+          Nosotros
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="mobile-nosotros-menu" class="hidden">
+          <a href="../quienes.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">¿Quiénes Somos?</a>
+          <a href="../galeria.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Galeria</a>
+          <a href="../empleo.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Empleos</a>
+          <a href="../servicios.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Pagos</a>
+        </div>
+      </div>
+      
+      <!-- Dropdown de "Servicios" -->
+      <div class="border-t border-gray-200"></div>
+      <div class="relative">
+        <button id="mobile-servicios" class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500 flex justify-between items-center">
+          Servicios
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="mobile-servicios-menu" class="hidden">
+          <a href="../afiliarse.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Afiliarse</a>
+          <a href="../planes.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Planes</a>
+          <a href="../obituarios.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Obituarios</a>
+          <a href="BuscarDifunto.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Buscar Difunto</a>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-200"></div>
+      <a href="../FAQ.php" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">FAQ</a>
+      
+      <div class="border-t border-gray-200"></div>
+      <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Blog</a>
+      
+      <div class="border-t border-gray-200"></div>
+      <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
+    </div>
+</header>
 
 <script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
+  // Toggle principal del menú móvil
+  document.getElementById('menu-button').addEventListener('click', function() {
+  document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
 
-</body>
-</html>
+  // Toggle del submenú "Nosotros" en mobile
+  document.getElementById('mobile-nosotros').addEventListener('click', function() {
+  document.getElementById('mobile-nosotros-menu').classList.toggle('hidden');
+  });
+
+  // Toggle del submenú "Servicios" en mobile
+  document.getElementById('mobile-servicios').addEventListener('click', function() {
+  document.getElementById('mobile-servicios-menu').classList.toggle('hidden');
+  });
+
+</script>

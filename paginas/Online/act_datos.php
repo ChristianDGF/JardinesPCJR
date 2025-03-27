@@ -1,5 +1,9 @@
 <?php include(__DIR__ . '\barramenu6.html');?>
 <?php
+
+$flag = isset($_SESSION['flag']) ? $_SESSION['flag'] : 0;
+$row = isset($_SESSION['row']) ? $_SESSION['row'] : array();
+
 if (isset($_POST['buscar']) ){
 	$buscar    = $_POST['buscar'];
 	}
@@ -53,29 +57,48 @@ if (isset($_POST['enviar'])){
 	echo "</script>";	 
 	}
 
-if (isset($_POST['buscar']) && $cedula <> "" ){
-	include(__DIR__ . '\..\..\conexion\conexion.php');
-	$sql = "SELECT * FROM PruebaWeb01 WHERE (Cedula = ".$cedula.") AND (Contrato = ".$contrato.")";
-  	$result = odbc_exec($conn,$sql);				    
-	$num = odbc_num_rows($result);
-	if($num == "" ){
-		echo "<script>alert('Combinacion Cedula/Contrato No Existe. Intente de nuevo');</script>"; 
-		echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
-		echo "window.location.href= 'act_datos.php'";  
-		echo "</script>";}
-	else{
-		$sql2 = "SELECT * FROM twebactdatos WHERE (CedulaRif = ".$cedula.")";
-  		$result2 = odbc_exec($conn,$sql2);
-		$num2 = odbc_num_rows($result2);
-	if($num2 == 1 ){	
-		echo "<script>alert('Usted Ya Tiene una solicitud de actualizacion pendiente. Nuestros ejecutivos se pondran en contacto con usted para Verificar los cambios');</script>"; 
-		echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
-		echo "window.location.href= 'act_datos.php'";  
-		echo "</script>";}
-	else{
-	$flag = 1;
-	$row = odbc_fetch_array($result);}
-	}}
+// Modify the search section of your code like this:
+	if (isset($_POST['buscar']) && !empty($cedula) && !empty($contrato)) {
+		include(__DIR__ . '\..\..\conexion\conexion.php');
+		
+		// Validate and sanitize inputs
+		$cedula = floatval($cedula);  // Convert to float
+		$contrato = intval($contrato); // Convert to int
+		
+		// Use parameterized query to prevent SQL injection
+		$sql = "SELECT * FROM PruebaWeb01 WHERE (Cedula = ?) AND (Contrato = ?)";
+		$stmt = odbc_prepare($conn, $sql);
+		
+		if ($stmt && odbc_execute($stmt, array($cedula, $contrato))) {
+			$num = odbc_num_rows($stmt);
+			
+			if($num == 0) {
+				echo "<script>alert('Combinacion Cedula/Contrato No Existe. Intente de nuevo');</script>"; 
+				echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
+				echo "window.location.href= 'act_datos.php'";  
+				echo "</script>";
+			} else {
+				$sql2 = "SELECT * FROM twebactdatos WHERE (CedulaRif = ?)";
+				$stmt2 = odbc_prepare($conn, $sql2);
+				
+				if ($stmt2 && odbc_execute($stmt2, array($cedula))) {
+					$num2 = odbc_num_rows($stmt2);
+					
+					if($num2 == 1) {    
+						echo "<script>alert('Usted Ya Tiene una solicitud de actualizacion pendiente. Nuestros ejecutivos se pondran en contacto con usted para Verificar los cambios');</script>"; 
+						echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
+						echo "window.location.href= 'act_datos.php'";  
+						echo "</script>";
+					} else {
+						$flag = 1;
+						$row = odbc_fetch_array($stmt);
+					}
+				}
+			}
+		} else {
+			echo "<script>alert('Error en la consulta. Por favor intente nuevamente.');</script>";
+		}
+	}
 ?>
 <html class=" js flexbox canvas rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent" lang="es">
 <head>
