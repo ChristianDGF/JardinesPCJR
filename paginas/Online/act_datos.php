@@ -1,8 +1,11 @@
-<?php include(__DIR__ . '\barramenu6.html');?>
+<?php 
+ session_start();
+ include(__DIR__ . '\barramenu6.html');
+
+?>
+
 <?php
 
-$flag = isset($_SESSION['flag']) ? $_SESSION['flag'] : 0;
-$row = isset($_SESSION['row']) ? $_SESSION['row'] : array();
 
 if (isset($_POST['buscar']) ){
 	$buscar    = $_POST['buscar'];
@@ -140,7 +143,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV5K5NB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<?php if ($flag == 0){ ?>
+<?php 
+$flag = isset($_SESSION['flag']) ? $_SESSION['flag'] : 0;
+$row = isset($_SESSION['row']) ? $_SESSION['row'] : array();
+if ($flag == 0){ ?>
 <h1 align="center">Actualizar Datos</h1>
 <BR>
 <p align="center">Si desea actualizar algún dato, tal como el teléfono, dirección o agregar su email, lo puede hacer por esta vía.</p>
