@@ -104,6 +104,77 @@ if (isset($_POST['enviar'])){
     }
 ?>
 
+<?php
+
+if (isset($_POST['consulta']) ){
+	$consulta = $_POST['consulta'];
+	}
+	else{
+	}
+if (isset($_POST['cedula']) ){
+	$cedula   = $_POST['cedula'];
+	}
+	else{
+	}
+if (isset($_POST['contrato']) ){
+	$contrato = $_POST['contrato'];
+	}
+	else{
+	}
+
+$flag = 0;
+
+
+if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
+    include(__DIR__ . '..\conexion\conexion.php');
+    
+    // Validate and sanitize inputs
+    $cedula = floatval($cedula);  // Convert to float
+    $contrato = intval($contrato); // Convert to int
+    
+    // Use parameterized query to prevent SQL injection
+    $sql = "SELECT * FROM PruebaWeb01 WHERE (Cedula = ?) AND (Contrato = ?)";
+    $stmt = odbc_prepare($conn, $sql);
+    
+    if ($stmt && odbc_execute($stmt, array($cedula, $contrato))) {
+        $num = odbc_num_rows($stmt);
+        
+        if($num == 0) {
+            echo "<script>alert('Combinacion Cedula/Contrato No Existe. Intente de nuevo');</script>"; 
+            echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
+            echo "window.location.href= 'PCJR_servicios.php'";  
+            echo "</script>";
+        } else {
+            $sql2 = "SELECT * FROM twebactdatos WHERE (CedulaRif = ?)";
+            $stmt2 = odbc_prepare($conn, $sql2);
+            
+            if ($stmt2 && odbc_execute($stmt2, array($cedula))) {
+                $num2 = odbc_num_rows($stmt2);
+                
+                if($num2 == 1) {    
+                    echo "<script>alert('Usted Ya Tiene una solicitud de actualizacion pendiente. Nuestros ejecutivos se pondran en contacto con usted para Verificar los cambios');</script>"; 
+                    echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
+                    echo "window.location.href= 'PCJR_servicios.php'";  
+                    echo "</script>";
+                } else {
+                    $flag = 1;
+                    $row = odbc_fetch_array($stmt);
+
+                    $_SESSION['flag'] = $flag;
+                    $_SESSION['row'] = $row;
+
+                    header("Location: Online/saldo.php");
+                    exit();
+                }
+            }
+        }
+    } else {
+        echo "<script>alert('Error en la consulta. Por favor intente nuevamente.');</script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -177,11 +248,11 @@ if (isset($_POST['enviar'])){
             <p>Actualizar Datos</p>
             <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
             <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
-            <form id="datos" name="datos" method="post" action="">
+            <form id="saldo" name="saldo" method="post" action="">
             <input placeholder="Cédula" name="cedula" type="text" id="cedula" />
             <input placeholder="Contrato" name="contrato" type="text" id="contrato" />
             <div class="button-container">
-                <button name="buscar" type="submit">Validar credenciales</button>
+                <button name="consulta" type="submit">Validar credenciales</button>
             </div>
             </form>
         </div>
