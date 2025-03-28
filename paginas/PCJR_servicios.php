@@ -248,13 +248,13 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
             <p>Actualizar Datos</p>
             <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
             <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
-            <form id="saldo" name="saldo" method="post" action="">
-            <input placeholder="Cédula" name="cedula" type="text" id="cedula" />
-            <input placeholder="Contrato" name="contrato" type="text" id="contrato" />
-            <div class="button-container">
-                <button name="consulta" type="submit">Validar credenciales</button>
-            </div>
-            </form>
+            <form id="saldo" name="saldo" method="post" action="Online/saldo.php">
+        <input placeholder="Cédula" name="cedula" type="text" id="cedula" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"/>
+        <input placeholder="Contrato" name="contrato" type="text" id="contrato" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"/>
+        <div class="button-container">
+            <button name="consulta" type="submit" value="Consultar Balance">Validar credenciales</button>
+        </div>
+    </form>
         </div>
         <div class="form-content hidden">
             <p>Cuentas Bancarias</p>
