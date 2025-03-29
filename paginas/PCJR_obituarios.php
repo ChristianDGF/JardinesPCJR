@@ -2,7 +2,7 @@
 include(__DIR__ . '\conexion\conexion.php');
 $d = strtotime("-1 Months");
 $fecha = date("Y-m-d", $d);
-$sql = "select * from VServiciosdia where fecha >= '" . $fecha . "'";
+$sql = "select * from VServiciosdia where fecha >= '2019-04-30 11:00:00.000'";
 $resultado = odbc_exec($conn, $sql);
 $totalregistros = odbc_num_rows($resultado);
 $row = odbc_fetch_array($resultado);

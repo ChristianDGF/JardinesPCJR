@@ -366,7 +366,7 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
             });
         });
     </script>
-
+    <script src="../assets/js/showonscroll.js"></script>
 </body>
 
 </html>
