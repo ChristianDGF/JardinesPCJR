@@ -19,14 +19,15 @@
 
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
-    <div class="sec1">
-        <img class="imgsec1" src="../assets/images/DSC_0636.JPG" />
-        <h1>Empleos</h1>
-    </div>
-    </div>
+    
+    <div class="sec1 hiddenscroll">
+        <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
+           <h1 class="hiddenscroll">Empleos</h1>
+           </div>
+        </div>
 
     <div class="content">
-        <div class="job">
+        <div class="job hiddenscroll">
             <div class="job-title">Especialista en marketing y ventas</div>
             <div class="job-description">
                 Buscamos personas con una perspectiva única y experiencia en marketing y ventas. Buscamos profesionales interesados en mejorar su potencial de ingresos.
@@ -42,10 +43,10 @@
                 <a href="mailto:vacantespcjr@gmail.com">vacantespcjr@gmail.com</a>.
             </div>
         </div>
-        <hr />
+        <hr/>
         <br>
         <br>
-        <div class="job">
+        <div class="job hiddenscroll">
             <div class="job-title">Analista en marketing y ventas</div>
             <div class="job-description">
                 Buscamos personas con una perspectiva única y experiencia en marketing y ventas. Buscamos profesionales interesados en mejorar su potencial de ingresos.

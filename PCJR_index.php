@@ -19,21 +19,17 @@
 <body>
 
 
-  <?php include(__DIR__ . '\paginas\barramenu5index.html'); ?>
+  <?php include(__DIR__ . '/paginas/barramenu5index.html'); ?>
 
 
-  <div class="unslider imgsec1">
-    <ul>
-      <li><img src="assets/images/DSC_0636.JPG" alt="Imagen 1"></li>
-      <li><img src="assets/images/image.jpg" alt="Imagen 2"></li>
-      <li><img src="assets/images/lotefam_brillo4.jpg" alt="Imagen 3"></li>
-    </ul>
-  </div>
-  <div class="sec1">
+  <div class="unslider imgsec1"> 
+  <video src="assets/images/VIDEO.mp4" autoplay muted playsinline class="bg-video"></video>
+</div>
+  <div class="sec1 hiddenscroll">
     <div class="content">
-      <h1>Planes de Previsión <br>Familiar Flexibles</h1>
-      <p class="mainp">Con más de 50 años brindando servicios exequiales y funerarios con un personal altamente motivado y enfocado en lograr alta calidad en la atencion a las familias</p>
-      <div class="links-b">
+      <h1 class="hiddenscroll">Planes de Previsión <br>Familiar Flexibles</h1>
+      <p class="mainp hiddenscroll">Con más de 50 años brindando servicios exequiales y funerarios con un personal altamente motivado y enfocado en lograr alta calidad en la atencion a las familias</p>
+      <div class="links-b hiddenscroll">
         <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank"><button class="specialbtn">Atención Urgente <div class="arrow">➜</div></button></a>
         <p class="button-2"><u>Quiero Pagar</u></p>
         <a href="pages/planes.html">
@@ -45,11 +41,11 @@
   </div>
 
   <div class="section why-choose-us">
-    <h2>
+    <h2 class="hiddenscroll">
       ¿Por qué elegirnos?
     </h2>
     <div class="features">
-      <div class="feature">
+      <div class="feature hiddenscroll">
         <i class="fas fa-hand-holding-heart">
         </i>
         <h3>
@@ -59,7 +55,7 @@
           Ofrecemos un abrazo silencioso, acompañándote con sensibilidad en cada paso.
         </p>
       </div>
-      <div class="feature">
+      <div class="feature hiddenscroll">
         <i class="fas fa-home">
         </i>
         <h3>
@@ -69,7 +65,7 @@
           Un lugar donde honres la vida de nuestros seres queridos con dignidad y amor.
         </p>
       </div>
-      <div class="feature">
+      <div class="feature hiddenscroll">
         <i class="fas fa-users">
         </i>
         <h3>
@@ -79,7 +75,7 @@
           Ofrecemos soluciones flexibles, porque entendemos lo importante que es la familia.
         </p>
       </div>
-      <div class="feature">
+      <div class="feature hiddenscroll">
         <i class="fas fa-seedling">
         </i>
         <h3>
@@ -89,7 +85,7 @@
           Ofrecemos un lugar de memoria permanente que crece en valor sentimental.
         </p>
       </div>
-      <div class="feature">
+      <div class="feature hiddenscroll">
         <i class="fas fa-tree">
         </i>
         <h3>
@@ -99,7 +95,7 @@
           Ofrecemos un ambiente de belleza y tranquilidad para conectar con familiares y amigos.
         </p>
       </div>
-      <div class="feature">
+      <div class="feature hiddenscroll">
         <i class="fas fa-church">
         </i>
         <h3>
@@ -112,11 +108,11 @@
     </div>
   </div>
   <div class="section what-we-offer">
-    <h2>
+    <h2 class="hiddenscroll">
       ¿Qué ofrecemos?
     </h2>
     <div class="offers">
-      <div class="offer">
+      <div class="offer hiddenscroll">
         <img alt="Jardines Familiares" src="assets/images/lotefam_brillo4.jpg" />
         <div class="description">
           <h3>
@@ -127,7 +123,7 @@
           </p>
         </div>
       </div>
-      <div class="offer">
+      <div class="offer hiddenscroll">
         <img alt="Mausoleos Familiares" src="assets/images/maus_noche2.jpg" />
         <div class="description">
           <h3>
@@ -138,7 +134,7 @@
           </p>
         </div>
       </div>
-      <div class="offer">
+      <div class="offer hiddenscroll">
         <img alt="Panteones Familiares" src="assets/images/panteon4.jpg" />
         <div class="description">
           <h3>
@@ -150,7 +146,7 @@
         </div>
       </div>
     </div>
-    <a href="pages/Afiliarse.html">
+    <a href="pages/Afiliarse.html" class="hiddenscroll">
       <button class="">
         Afiliarse
       </button>
@@ -164,9 +160,9 @@
 
 
   <div class="section testimonials">
-    <h2>Testimonios de nuestros clientes</h2>
+    <h2 class="hiddenscroll">Testimonios de nuestros clientes</h2>
     <div class="carousel">
-      <div class="carousel-inner">
+      <div class="carousel-inner hiddenscroll">
         <div class="testimonial">
           <p>"Cuando perdí a mi madre, sentí que el mundo se derrumbaba. Jardines del Recuerdo no solo nos dio un lugar hermoso para honrar su memoria, sino que nos acompañó en cada paso de nuestro dolor. Aquí, cada rincón habla de... (leer más)"</p>
           <h4>María González</h4>
@@ -221,6 +217,46 @@
   </div>
 
   <?php include(__DIR__ . '\paginas\piepagina1index.html'); ?>
+
+  <div id="popup-afiliacion" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center px-4">
+  <div class="relative bg-white border border-green-600 p-4 w-full max-w-3xl shadow-2xl rounded-xl md:rounded-lg flex flex-col md:flex-row items-center gap-6 scale-90">
+
+    <!-- Botón cerrar más pequeño -->
+    <button onclick="document.getElementById('popup-afiliacion').style.display='none'"
+      class="absolute top-2 right-3 text-gray-500 hover:text-red-500 text-2xl font-semibold">&times;</button>
+
+    <!-- Imagen lateral ocupa 5/8, toma contenido desde la izquierda -->
+    <div class="w-full md:basis-[62.5%] p-0 m-0">
+      <img src="assets/images/fieldfam.jpg" alt=""
+        class="w-full h-[350px] rounded-lg object-cover object-left m-0 p-0">
+    </div>
+
+    <!-- Contenido ocupa 3/8 -->
+    <div class="w-full md:basis-[55.0%] text-center md:text-left">
+      <h3 class="text-2xl md:text-3xl font-semibold text-green-700 leading-snug" style="font-family: 'Playfair Display', serif;">
+        Tu tranquilidad y la de tu familia 
+        es lo más importante
+      </h3>
+      <p class="text-gray-700 mt-3 text-sm md:text-base" style="font-family: 'Lato', sans-serif;">
+        Afíliate gratis con nosotros para obtener información directa.
+      </p>
+
+      <!-- Botón -->
+      <a href="paginas/afiliarse.php">
+        <button class="mt-5 px-6 py-3 bg-[#43b248] hover:bg-green-600 text-white rounded-lg font-medium transition-all duration-300"
+          style="font-family: 'Playfair Display', serif;">
+          AFÍLIATE GRATIS
+        </button>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
 
   <script>
     // Toggle principal del menú móvil

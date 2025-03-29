@@ -110,27 +110,27 @@ if ((isset($_POST['mensajeasunto'])) && (filter_var($Email, FILTER_VALIDATE_EMAI
 
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
-    <div class="sec1">
-        <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
-           <h1>Plan de Afiliación</h1>
+    <div class="sec1 hiddenscroll">
+        <img class="imgsec1 " src="../assets/images/DSC_0636.JPG"/>
+           <h1 class="hiddenscroll">Plan de Afiliación</h1>
            </div>
         </div>
     
     <div class="containera form-container">
-        <h1>Afiliarse</h1>
-        <form>
+        <h1 class="hiddenscroll">Afiliarse</h1>
+        <form class="hiddenscroll">
             <input name="nombre" placeholder="Nombre" style="width: 80%; background-color: #f5f5f5;" type="text"/>
             <input name="apellido" placeholder="Apellido" style="width: 80%; background-color: #f5f5f5;" type="text"/>
             <input name="correo" placeholder="Correo" style="width: 80%; background-color: #f5f5f5;" type="email"/>
             <input name="télefono" placeholder="télefono" style="width: 80%; background-color: #f5f5f5;" type="number"/>
                 
             </select>
-            <button type="submit" style="margin-top: 20px;">Enviar solicitud</button>
+            <button class="hiddenscroll" type="submit" style="margin-top: 20px;">Enviar solicitud</button>
         </form>
     </div>
     <div class="containera benefits-container">
-        <h2>Beneficios de ser Afiliado</h2>
-        <div class="benefits-content">
+        <h2 class="hiddenscroll" >Beneficios de ser Afiliado</h2>
+        <div class="benefits-content hiddenscroll">
             <img alt="Personas mayores usando una tablet" height="250" src="../assets/images/busi.webp" width="250"/>
             <ol class="olafil">
                 <li>Descuentos especiales de hasta del 30%</li>
@@ -141,13 +141,13 @@ if ((isset($_POST['mensajeasunto'])) && (filter_var($Email, FILTER_VALIDATE_EMAI
         </div>
     </div>
     <div class="containera testimonials-container">
-        <h2>Opiniones de nuestros Afiliados</h2>
-        <div class="testimonial">
+        <h2 class="hiddenscroll">Opiniones de nuestros Afiliados</h2>
+        <div class="testimonial hiddenscroll">
             <iframe src="https://www.youtube.com/embed/YICvTJUI0es" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             
             <p>Deyanira Romero</p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial hiddenscroll">
             <iframe src="https://www.youtube.com/embed/LbqAlF-PAEw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>José Luis Fernández</p>
         </div>
@@ -158,15 +158,35 @@ if ((isset($_POST['mensajeasunto'])) && (filter_var($Email, FILTER_VALIDATE_EMAI
 
     <script>
         document.getElementById('menu-button').addEventListener('click', function() {
-            var menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Toggle del submenú "Nosotros" en mobile
+        document.getElementById('mobile-nosotros').addEventListener('click', function() {
+            document.getElementById('mobile-nosotros-menu').classList.toggle('hidden');
+        });
+
+        // Toggle del submenú "Servicios" en mobile
+        document.getElementById('mobile-servicios').addEventListener('click', function() {
+            document.getElementById('mobile-servicios-menu').classList.toggle('hidden');
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tabs div');
+            const sections = document.querySelectorAll('.form-content');
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    sections.forEach(section => section.classList.add('hidden'));
+                    sections[index].classList.remove('hidden');
+                });
+            });
         });
     </script>
     <script src="../assets/js/showonscroll.js"></script>
+        
 </body>
 
 </html>

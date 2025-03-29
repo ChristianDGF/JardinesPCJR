@@ -32,19 +32,24 @@ header{
 }
 
 
-.imgsec1{
-  width: 100%; 
-  height: 100vh;
-  min-height: 700px; 
-  object-fit: cover;
-  object-position: left top; 
-  position: absolute; 
+.imgsec1 {
+  position: absolute;
   top: 0;
   left: 0;
-  filter: brightness(50%);
+  width: 100%;
+  height: 100vh;
   z-index: -1;
- }
- 
+  overflow: hidden;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(40%);
+}
+
 .sec1 {
   position: relative;
    width: 100%;
@@ -55,14 +60,21 @@ header{
   
 }
 
-.sec1 .content{
+.sec1 .content {
   width: 80%;
-   margin: 0 auto;
+  margin: 0 auto;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
+
 .sec1 h1{
   color: white;
   font-weight: 400;
   font-size: 45px;
+  font-family: "Playfair Display", serif;
 }
 
 .sec1 p{
@@ -81,9 +93,9 @@ header{
   font-family: "Playfair Display", serif;
   background-color: #43b248;
   color: white;
-
+  width: 200px;
   border: unset;
-  border-radius: 20px;
+  border-radius: 2px;
   margin-top: 20px;
   font-weight: 600;
   display: inline-flex; /* Asegura que los elementos internos estén en una línea */
@@ -98,7 +110,7 @@ header{
 .specialbtn2 {
   background-color: #43b248;
   color: white;
-
+  
   border: unset;
   border-radius: 2px;
   font-weight: 600;
@@ -233,8 +245,8 @@ header{
   font-weight: 300;
   margin-top: 30px;
   margin-bottom: 60px;
-  font-family: "Lato", serif;
 
+  font-family: "Playfair Display", serif;
 }
 .section p {
   font-size: 16px;
@@ -273,11 +285,12 @@ header{
   background-color: white;
   padding: 0px;
   padding-bottom: 20px;
-  transition: 0.2s ease cubic-bezier(.03,1.1,.58,.99);
+  transition: .4s ease;
 }
 
 .what-we-offer .offers .offer:hover{
     transform: scale(1.1);
+    
 }
 
 .what-we-offer .offers .offer:hover img{
@@ -482,6 +495,9 @@ margin-right: 80px;
     width: calc(200%);
     animation: scroll 60s linear infinite;
   }
+  .specialbtn2 {
+    width: 100%;
+  }
   
 }
 
@@ -512,7 +528,7 @@ margin-right: 80px;
   font-family: "Lato", serif;
   background-color: #43b248;
   color: white;
-
+  
   border: unset;
   border-radius: 20px;
   padding: 10px 34px;
@@ -585,7 +601,7 @@ footer .text-green-600 {
 }
 
 
-/* Posiciona solo el contenedor del slider y establece min-height */
+/* Posiciona solo el contenedor del slider y establece min-height 
 .unslider.imgsec1 {
   position: absolute;
   top: 0;
@@ -596,7 +612,7 @@ footer .text-green-600 {
   z-index: -1;
 }
 
-/* Estilos para la lista e imágenes */
+/* Estilos para la lista e imágenes 
 .unslider ul,
 .unslider li {
   list-style: none;
@@ -616,7 +632,7 @@ footer .text-green-600 {
 .unslider-arrow {
   display: none !important;
 }
-
+*/
 
 .monumento {
   top: -80px;
@@ -628,9 +644,9 @@ footer .text-green-600 {
 
 
 .what-we-offer {
-  background-image: url("../images/RECORTADO.png");
+  background-image: url("../images/map.png");
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   width: 100%;
   padding: 60px 20px; /* Puedes ajustar esto si hace falta espacio interno */
@@ -638,11 +654,17 @@ footer .text-green-600 {
 
 .hiddenscroll{
   opacity: 0;
-  transition: all 1s cubic-bezier(.07,.04,.09,1.00);
+  transition: all 1.1s cubic-bezier(.07,.04,.09,1.00);
   transform: translateY(+30px);
 }
 
 .showscroll {
   opacity: 1;
   transform: translateY(0px);
+}
+
+@media screen and (max-width: 768px) {
+  .what-we-offer {
+    background-image: none !important;
+  }
 }

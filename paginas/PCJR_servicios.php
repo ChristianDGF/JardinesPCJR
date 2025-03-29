@@ -197,141 +197,127 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
 
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
-    <div class="sec1">
-        <img class="imgsec1" src="../assets/images/DSC_0636.JPG" />
-        <h1>Pagos</h1>
-    </div>
+    <div class="sec1 hiddenscroll">
+        <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
+           <h1 class="hiddenscroll">Pagos</h1>
+           </div>
 
 
 
-    <div class="content">
-        <h2>¿Qué te ofrecemos?</h2>
-        <p style="margin-left: 10%; margin-right: 10%; text-align: left;">
-            Entendemos que los momentos de pérdida pueden ser emocionalmente abrumadores. Por eso, te ofrecemos la posibilidad de gestionar algunos servicios en línea para que pueda concentrarse en lo que realmente importa: honrar la memoria de su ser querido.
-        </p>
-        <ul style="margin-left: 10%; margin-right: 10%; text-align: left;">
-            <li>
-                <i class="fas fa-home"></i>
-                Realizar pagos cómodamente desde casa.
-            </li>
-            <li>
-                <i class="fas fa-exchange-alt"></i>
-                Completar transacciones de manera rápida y respetuosa.
-            </li>
-            <li>
-                <i class="fas fa-user-shield"></i>
-                Utilizar su cuenta con total tranquilidad.
-            </li>
-        </ul>
-    </div>
-    <div class="form-section">
-        <h2>Datos</h2>
-        <div class="tabs">
-            <div class="active">Datos</div>
-            <div>Balance</div>
-            <div>Cuentas Bancarias</div>
-            <div>Pagos en Línea</div>
+           <div class="content">
+            <h2 class="hiddenscroll">¿Qué te ofrecemos?</h2>
+            <p class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">
+                Entendemos que los momentos de pérdida pueden ser emocionalmente abrumadores. Por eso, te ofrecemos la posibilidad de gestionar algunos servicios en línea para que pueda concentrarse en lo que realmente importa: honrar la memoria de su ser querido.
+            </p>
+            <ul class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">
+                <li>
+                    <i class="fas fa-home"></i>
+                    Realizar pagos cómodamente desde casa.
+                </li>
+                <li>
+                    <i class="fas fa-exchange-alt"></i>
+                    Completar transacciones de manera rápida y respetuosa.
+                </li>
+                <li>
+                    <i class="fas fa-user-shield"></i>
+                    Utilizar su cuenta con total tranquilidad.
+                </li>
+            </ul>
         </div>
-        <div class="form-content">
-            <p>Actualizar Datos</p>
-            <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
-            <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
-            <form id="datos" name="datos" method="post" action="">
-            <input placeholder="Cédula" name="cedula" type="text" id="cedula" />
-            <input placeholder="Contrato" name="contrato" type="text" id="contrato" />
-            <div class="button-container">
+        <div class="form-section">
+            <h2 class="hiddenscroll">Datos</h2>
+            <div class="tabs hiddenscroll">
+                <div class="active ">Datos</div>
+                <div>Balance</div>
+                <div>Cuentas Bancarias</div>
+                <div>Pagos en Línea</div>
+            </div>
+            <div class="form-content hiddenscroll">
+                <p>Actualizar Datos</p>
+                <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
+                <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
+                <form id="datos" name="datos" method="post" action="">
+                <input placeholder="Cédula" name="cedula" type="text" id="cedula" />
+                <input placeholder="Contrato" name="contrato" type="text" id="contrato" />
+                <div class="button-container">
                 <button name="buscar" type="submit">Validar credenciales</button>
+                </div>
+                </form>
             </div>
-            </form>
-        </div>
-        <div class="form-content hidden">
-            <p>Actualizar Datos</p>
-            <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
-            <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
-            <form id="saldo" name="saldo" method="post" action="Online/saldo.php">
-        <input placeholder="Cédula" name="cedula" type="text" id="cedula" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"/>
+            <div class="form-content hidden hiddenscroll">
+                <p>Actualizar Datos</p>
+                <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
+                <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
+                <form id="saldo" name="saldo" method="post" action="Online/saldo.php">
+                 <input placeholder="Cédula" name="cedula" type="text" id="cedula" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"/>
         <input placeholder="Contrato" name="contrato" type="text" id="contrato" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"/>
-        <div class="button-container">
-            <button name="consulta" type="submit" value="Consultar Balance">Validar credenciales</button>
-        </div>
-    </form>
-        </div>
-        <div class="form-content hidden">
-            <p>Cuentas Bancarias</p>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <p>Banesco</p>
-                    <p>RNC: 1-30-89531-7</p>
-                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-                    <p>Nro. de Cuenta: 99100003187</p>
+                <div class="button-container">
+                <button name="consulta" type="submit" value="Consultar Balance">Validar credenciales</button>
                 </div>
-                <div class="grid-item">
-                    <p>Banco Popular</p>
-                    <p>RNC: 1-30-89531-7</p>
-                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-                    <p>Nro. de Cuenta: 99100003187</p>
-                </div>
-                <div class="grid-item">
-                    <p>Banreservas</p>
-                    <p>RNC: 1-30-89531-7</p>
-                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-                    <p>Nro. de Cuenta: 99100003187</p>
-                </div>
-                <div class="grid-item">
-                    <p>Banesco</p>
-                    <p>RNC: 1-30-89531-7</p>
-                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-                    <p>Nro. de Cuenta: 99100003187</p>
-                </div>
-                <div class="grid-item">
-                    <p>Banco Popular</p>
-                    <p>RNC: 1-30-89531-7</p>
-                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-                    <p>Nro. de Cuenta: 99100003187</p>
-                </div>
-                <div class="grid-item">
-                    <p>Scotiabank</p>
-                    <p>RNC: 1-30-89531-7</p>
-                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-                    <p>Nro. de Cuenta: 99100003187</p>
-                </div>
-                <div class="grid-item">
-                    <p>Banesco</p>
-                    <p>RNC: 1-30-89531-7</p>
-                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-                    <p>Nro. de Cuenta: 99100003187</p>
-                </div>
-                <div class="grid-item">
-                    <p>Banreservas</p>
-                    <p>RNC: 1-30-89531-7</p>
-                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-                    <p>Nro. de Cuenta: 99100003187</p>
-                </div>
+                </form>
             </div>
+            <div class="form-content hidden hiddenscroll">
+    <p>Cuentas Bancarias</p>
+    <div class="grid-container">
+        <div class="grid-item" style="text-align: center;">
+            <img src="../assets/images/banesco.png" alt="Logo Banesco" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
+            <br>    
+            <p><b>Banesco</b></p>
+            <p>RNC: 1-30-89531-7</p>
+            <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
+            <p>Nro. de Cuenta: 99100003187</p>
         </div>
-        <div class="form-content hidden">
-            <p>Pagos en Línea</p>
-            <div class="payment-grid">
-                <div class="payment-item">
-                    <h3>Internet Banking - Banco Popular</h3>
-                    <p>Accede con tu usuario personal o empresarial a Popular en Línea.</p>
-                    <p>En beneficiarios, ingresa a servicios y facturas y selecciona la opción adicionar servicio o factura.</p>
-                    <p>Luego, elige la categoría de servicios y selecciona el beneficiario Jardines del Recuerdo. Completa los campos requeridos y presiona continuar.</p>
-                    <p>Ingresa el código de tu token y presiona continuar.</p>
-                    <p>Finalmente, te aparecerá el comprobante con el resultado de la adición del servicio o factura.</p>
-                    <p>Enlace de pago: <a href="https://www.popularenlinea.com" target="_blank">www.popularenlinea.com</a></p>
-                </div>
-                <div class="payment-item">
-                    <h3>PayPal</h3>
-                    <p>Haga clic en nuestro enlace de PayPal.</p>
-                    <p>Inicie sesión de forma segura.</p>
-                    <p>Complete su pago con la tranquilidad que merece.</p>
-                    <p>Enlace de pago: <a href="https://paypal.me/jardinesdelrecuerdo" target="_blank">paypal.me/jardinesdelrecuerdo</a></p>
-                </div>
-            </div>
+        <div class="grid-item" style="text-align: center;">
+            <img src="../assets/images/popular.png" alt="Logo Banco Popular" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
+            <br>
+            <p><b>Banco Popular</b></p>
+            <p>RNC: 1-30-89531-7</p>
+            <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
+            <p>Nro. de Cuenta: 99100003187</p>
+        </div>
+        <div class="grid-item" style="text-align: center;">
+            <img src="../assets/images/Banreservas.webp" alt="Logo Banreservas" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
+            <br>
+            <p><b>Banreservas</b></p>
+            <p>RNC: 1-30-89531-7</p>
+            <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
+            <p>Nro. de Cuenta: 99100003187</p>
+        </div>
+        <div class="grid-item" style="text-align: center;">
+            <img src="../assets/images/scotiabank.webp" alt="Logo Scotiabank" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
+            <br>
+            <p><b>Scotiabank</b></p>
+            <p>RNC: 1-30-89531-7</p>
+            <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
+            <p>Nro. de Cuenta: 99100003187</p>
         </div>
     </div>
+</div>
 
+            <div class="form-content hidden hiddenscroll">
+                <p>Pagos en Línea</p>
+                <div class="payment-grid">
+                    <div class="payment-item">
+                        <h3>Internet Banking - Banco Popular</h3>
+                        <br>
+                        <p>1. Accede con tu usuario personal o empresarial a Popular en Línea.</p>
+                        <p>2. En beneficiarios, ingresa a servicios y facturas y selecciona la opción adicionar servicio o factura.</p>
+                        <p>3. Luego, elige la categoría de servicios y selecciona el beneficiario Jardines del Recuerdo. Completa los campos requeridos y presiona continuar.</p>
+                        <p>4. Ingresa el código de tu token y presiona continuar.</p>
+                        <p>5. Finalmente, te aparecerá el comprobante con el resultado de la adición del servicio o factura.</p>
+                        <p>Enlace de pago: <a href="https://www.popularenlinea.com" target="_blank">www.popularenlinea.com</a></p>
+                    </div>
+                    <div class="payment-item">
+                        <h3>PayPal</h3>
+                        <br>
+                        <p>1. Haga clic en nuestro enlace de PayPal.</p>
+                        <p>2. Inicie sesión de forma segura.</p>
+                        <p>3. Complete su pago con la tranquilidad que merece.</p>
+                        <p>Enlace de pago: <a href="https://paypal.me/jardinesdelrecuerdo" target="_blank">paypal.me/jardinesdelrecuerdo</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <?php include(__DIR__ . '\piepagina2.html'); ?>
 
