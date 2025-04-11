@@ -23,7 +23,7 @@
 
 
   <div class="unslider imgsec1"> 
-  <video src="assets/images/VIDEO.mp4" autoplay muted playsinline class="bg-video"></video>
+  <video src="assets/images/VIDEO.mp4" autoplay muted playsinline loop class="bg-video"></video>
 </div>
   <div class="sec1 hiddenscroll">
     <div class="content">
@@ -31,9 +31,9 @@
       <p class="mainp hiddenscroll">Con más de 50 años brindando servicios exequiales y funerarios con un personal altamente motivado y enfocado en lograr alta calidad en la atencion a las familias</p>
       <div class="links-b hiddenscroll">
         <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank"><button class="specialbtn">Atención Urgente <div class="arrow">➜</div></button></a>
-        <p class="button-2"><u>Quiero Pagar</u></p>
+        <p class="button-2"><u><a href="paginas/servicios.php">Quiero Pagar</a></u></p>
         <a href="pages/planes.html">
-          <p class="button-2"><u>Conocer Servicios</u></p>
+          <p class="button-2"><u><a href="paginas/planes.php">Conocer Servicios</a></u></p>
         </a>
       </div>
     </div>

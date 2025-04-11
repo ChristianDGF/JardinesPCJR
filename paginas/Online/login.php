@@ -1,4 +1,6 @@
-<?php include(__DIR__ . '\barramenu6.html');?>
+<?php 
+session_start();
+include(__DIR__ . '\barramenu6.html');?>
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -117,6 +119,9 @@ else
 		$num0 = odbc_num_rows($result0);
 		if($num0 > 0)
 		{
+			$_SESSION["varsessemail"] = $iniciarsesionemail;
+			echo "<script>window.open('../servicios.php','_self')</script>";
+			exit();	
 			$fila0 = odbc_fetch_array($result0);
 			if (password_verify($iniciarsesionpassword,$fila0["Password"]))
 			{

@@ -34,7 +34,6 @@ if (isset($_POST['consulta']) && is_numeric($cedula) == true && $contrato <> "" 
 	else{
 	$flag = 1;
 	}}
-session_start();
 ?>
 <html class=" js flexbox canvas rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent" lang="es">
 <head>

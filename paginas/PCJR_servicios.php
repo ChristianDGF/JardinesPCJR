@@ -2,159 +2,153 @@
 
 session_start();
 
-if (isset($_POST['buscar']) ){
-	$buscar    = $_POST['buscar'];
-	}
-	else{
-	}
-if (isset($_POST['enviar']) ){
-	$enviar    = $_POST['enviar'];
-	}
-	else{
-	}
-if (isset($_POST['contrato']) ){
-	$contrato  = $_POST['contrato'];
-	}
-	else{
-	}
-if (isset($_POST['cedula']) ){
-	$cedula    = $_POST['cedula'];
-	}
-	else{
-	}
-if (isset($_POST['nombre']) ){
-	$nombre    = mb_convert_encoding($_POST['nombre'], "ISO-8859-1", "UTF-8");
-	}
-	else{
-	}
-if (isset($_POST['direccion']) ){
-	$direccion = mb_convert_encoding($_POST['direccion'], "ISO-8859-1", "UTF-8");
-	}
-	else{
-	}
-if (isset($_POST['telefono']) ){
-	$telefono  = $_POST['telefono'];
-	}
-	else{
-	}
-if (isset($_POST['correo']) ){
-	$correo = mb_convert_encoding($_POST['correo'], "ISO-8859-1", "UTF-8");
-	}
-	else{
-	}
+if (!isset($_SESSION["varsessemail"])) {
+    header("Location: Online/login.php");
+    exit(); // Detener la ejecución del script
+}
+
+if (isset($_POST['buscar'])) {
+    $buscar    = $_POST['buscar'];
+} else {
+}
+if (isset($_POST['enviar'])) {
+    $enviar    = $_POST['enviar'];
+} else {
+}
+if (isset($_POST['contrato'])) {
+    $contrato  = $_POST['contrato'];
+} else {
+}
+if (isset($_POST['cedula'])) {
+    $cedula    = $_POST['cedula'];
+} else {
+}
+if (isset($_POST['nombre'])) {
+    $nombre    = mb_convert_encoding($_POST['nombre'], "ISO-8859-1", "UTF-8");
+} else {
+}
+if (isset($_POST['direccion'])) {
+    $direccion = mb_convert_encoding($_POST['direccion'], "ISO-8859-1", "UTF-8");
+} else {
+}
+if (isset($_POST['telefono'])) {
+    $telefono  = $_POST['telefono'];
+} else {
+}
+if (isset($_POST['correo'])) {
+    $correo = mb_convert_encoding($_POST['correo'], "ISO-8859-1", "UTF-8");
+} else {
+}
 $flag = 0;
 
-if (isset($_POST['enviar'])){
-   include(__DIR__ . '\..\..\conexion\conexion.php');
-   $fecha = date("d-m-Y");
-   $sql = "INSERT INTO TWebActDatos (CedulaRif,Nombre,Direccion,Telefono,Fecha,Email) VALUES ('".$cedula."','".$nombre."','".$direccion."','".$telefono."','".$fecha."','".$correo."')";
-   $result = odbc_exec($conn,$sql);
-   
-    echo "<script>alert('Gracias Por Actualizar Sus Datos. Nuestros Ejecutivos Se Comunicaran Con Usted Para Confirmar Estos Cambios');</script>"; 
-	echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";   
-	echo "</script>";	 
-	}
+if (isset($_POST['enviar'])) {
+    include(__DIR__ . '\..\..\conexion\conexion.php');
+    $fecha = date("d-m-Y");
+    $sql = "INSERT INTO TWebActDatos (CedulaRif,Nombre,Direccion,Telefono,Fecha,Email) VALUES ('" . $cedula . "','" . $nombre . "','" . $direccion . "','" . $telefono . "','" . $fecha . "','" . $correo . "')";
+    $result = odbc_exec($conn, $sql);
 
-    if (isset($_POST['buscar']) && !empty($cedula) && !empty($contrato)) {
-        include(__DIR__ . '..\conexion\conexion.php');
-        
-        // Validate and sanitize inputs
-        $cedula = floatval($cedula);  // Convert to float
-        $contrato = intval($contrato); // Convert to int
-        
-        // Use parameterized query to prevent SQL injection
-        $sql = "SELECT * FROM PruebaWeb01 WHERE (Cedula = ?) AND (Contrato = ?)";
-        $stmt = odbc_prepare($conn, $sql);
-        
-        if ($stmt && odbc_execute($stmt, array($cedula, $contrato))) {
-            $num = odbc_num_rows($stmt);
-            
-            if($num == 0) {
-                echo "<script>alert('Combinacion Cedula/Contrato No Existe. Intente de nuevo');</script>"; 
-                echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
-                echo "window.location.href= 'PCJR_servicios.php'";  
-                echo "</script>";
-            } else {
-                $sql2 = "SELECT * FROM twebactdatos WHERE (CedulaRif = ?)";
-                $stmt2 = odbc_prepare($conn, $sql2);
-                
-                if ($stmt2 && odbc_execute($stmt2, array($cedula))) {
-                    $num2 = odbc_num_rows($stmt2);
-                    
-                    if($num2 == 1) {    
-                        echo "<script>alert('Usted Ya Tiene una solicitud de actualizacion pendiente. Nuestros ejecutivos se pondran en contacto con usted para Verificar los cambios');</script>"; 
-                        echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
-                        echo "window.location.href= 'PCJR_servicios.php'";  
-                        echo "</script>";
-                    } else {
-                        $flag = 1;
-                        $row = odbc_fetch_array($stmt);
+    echo "<script>alert('Gracias Por Actualizar Sus Datos. Nuestros Ejecutivos Se Comunicaran Con Usted Para Confirmar Estos Cambios');</script>";
+    echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
+    echo "</script>";
+}
 
-                        $_SESSION['flag'] = $flag;
-                        $_SESSION['row'] = $row;
+if (isset($_POST['buscar']) && !empty($cedula) && !empty($contrato)) {
+    include(__DIR__ . '..\conexion\conexion.php');
 
-                        header("Location: Online/act_datos.php");
-                        exit();
-                    }
+    // Validate and sanitize inputs
+    $cedula = floatval($cedula);  // Convert to float
+    $contrato = intval($contrato); // Convert to int
+
+    // Use parameterized query to prevent SQL injection
+    $sql = "SELECT * FROM PruebaWeb01 WHERE (Cedula = ?) AND (Contrato = ?)";
+    $stmt = odbc_prepare($conn, $sql);
+
+    if ($stmt && odbc_execute($stmt, array($cedula, $contrato))) {
+        $num = odbc_num_rows($stmt);
+
+        if ($num == 0) {
+            echo "<script>alert('Combinacion Cedula/Contrato No Existe. Intente de nuevo');</script>";
+            echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
+            echo "window.location.href= 'PCJR_servicios.php'";
+            echo "</script>";
+        } else {
+            $sql2 = "SELECT * FROM twebactdatos WHERE (CedulaRif = ?)";
+            $stmt2 = odbc_prepare($conn, $sql2);
+
+            if ($stmt2 && odbc_execute($stmt2, array($cedula))) {
+                $num2 = odbc_num_rows($stmt2);
+
+                if ($num2 == 1) {
+                    echo "<script>alert('Usted Ya Tiene una solicitud de actualizacion pendiente. Nuestros ejecutivos se pondran en contacto con usted para Verificar los cambios');</script>";
+                    echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
+                    echo "window.location.href= 'PCJR_servicios.php'";
+                    echo "</script>";
+                } else {
+                    $flag = 1;
+                    $row = odbc_fetch_array($stmt);
+
+                    $_SESSION['flag'] = $flag;
+                    $_SESSION['row'] = $row;
+
+                    header("Location: Online/act_datos.php");
+                    exit();
                 }
             }
-        } else {
-            echo "<script>alert('Error en la consulta. Por favor intente nuevamente.');</script>";
         }
+    } else {
+        echo "<script>alert('Error en la consulta. Por favor intente nuevamente.');</script>";
     }
+}
 ?>
 
 <?php
 
-if (isset($_POST['consulta']) ){
-	$consulta = $_POST['consulta'];
-	}
-	else{
-	}
-if (isset($_POST['cedula']) ){
-	$cedula   = $_POST['cedula'];
-	}
-	else{
-	}
-if (isset($_POST['contrato']) ){
-	$contrato = $_POST['contrato'];
-	}
-	else{
-	}
+if (isset($_POST['consulta'])) {
+    $consulta = $_POST['consulta'];
+} else {
+}
+if (isset($_POST['cedula'])) {
+    $cedula   = $_POST['cedula'];
+} else {
+}
+if (isset($_POST['contrato'])) {
+    $contrato = $_POST['contrato'];
+} else {
+}
 
 $flag = 0;
 
 
 if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
     include(__DIR__ . '..\conexion\conexion.php');
-    
+
     // Validate and sanitize inputs
     $cedula = floatval($cedula);  // Convert to float
     $contrato = intval($contrato); // Convert to int
-    
+
     // Use parameterized query to prevent SQL injection
     $sql = "SELECT * FROM PruebaWeb01 WHERE (Cedula = ?) AND (Contrato = ?)";
     $stmt = odbc_prepare($conn, $sql);
-    
+
     if ($stmt && odbc_execute($stmt, array($cedula, $contrato))) {
         $num = odbc_num_rows($stmt);
-        
-        if($num == 0) {
-            echo "<script>alert('Combinacion Cedula/Contrato No Existe. Intente de nuevo');</script>"; 
+
+        if ($num == 0) {
+            echo "<script>alert('Combinacion Cedula/Contrato No Existe. Intente de nuevo');</script>";
             echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
-            echo "window.location.href= 'PCJR_servicios.php'";  
+            echo "window.location.href= 'PCJR_servicios.php'";
             echo "</script>";
         } else {
             $sql2 = "SELECT * FROM twebactdatos WHERE (CedulaRif = ?)";
             $stmt2 = odbc_prepare($conn, $sql2);
-            
+
             if ($stmt2 && odbc_execute($stmt2, array($cedula))) {
                 $num2 = odbc_num_rows($stmt2);
-                
-                if($num2 == 1) {    
-                    echo "<script>alert('Usted Ya Tiene una solicitud de actualizacion pendiente. Nuestros ejecutivos se pondran en contacto con usted para Verificar los cambios');</script>"; 
+
+                if ($num2 == 1) {
+                    echo "<script>alert('Usted Ya Tiene una solicitud de actualizacion pendiente. Nuestros ejecutivos se pondran en contacto con usted para Verificar los cambios');</script>";
                     echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
-                    echo "window.location.href= 'PCJR_servicios.php'";  
+                    echo "window.location.href= 'PCJR_servicios.php'";
                     echo "</script>";
                 } else {
                     $flag = 1;
@@ -198,126 +192,139 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
     <div class="sec1 hiddenscroll">
-        <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
-           <h1 class="hiddenscroll">Pagos</h1>
-           </div>
+        <img class="imgsec1" src="../assets/images/DSC_0636.JPG" />
+        <h1 class="hiddenscroll">Pagos</h1>
+    </div>
 
 
 
-           <div class="content">
-            <h2 class="hiddenscroll">¿Qué te ofrecemos?</h2>
-            <p class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">
-                Entendemos que los momentos de pérdida pueden ser emocionalmente abrumadores. Por eso, te ofrecemos la posibilidad de gestionar algunos servicios en línea para que pueda concentrarse en lo que realmente importa: honrar la memoria de su ser querido.
-            </p>
-            <ul class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">
-                <li>
-                    <i class="fas fa-home"></i>
-                    Realizar pagos cómodamente desde casa.
-                </li>
-                <li>
-                    <i class="fas fa-exchange-alt"></i>
-                    Completar transacciones de manera rápida y respetuosa.
-                </li>
-                <li>
-                    <i class="fas fa-user-shield"></i>
-                    Utilizar su cuenta con total tranquilidad.
-                </li>
-            </ul>
+    <div class="content">
+        <h2 class="hiddenscroll">¿Qué te ofrecemos?</h2>
+        <p class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">
+            Entendemos que los momentos de pérdida pueden ser emocionalmente abrumadores. Por eso, te ofrecemos la posibilidad de gestionar algunos servicios en línea para que pueda concentrarse en lo que realmente importa: honrar la memoria de su ser querido.
+        </p>
+        <ul class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">
+            <li>
+                <i class="fas fa-home"></i>
+                Realizar pagos cómodamente desde casa.
+            </li>
+            <li>
+                <i class="fas fa-exchange-alt"></i>
+                Completar transacciones de manera rápida y respetuosa.
+            </li>
+            <li>
+                <i class="fas fa-user-shield"></i>
+                Utilizar su cuenta con total tranquilidad.
+            </li>
+        </ul>
+    </div>
+    <div class="form-section">
+        <h2 class="hiddenscroll">Datos</h2>
+        <div class="tabs hiddenscroll">
+            <div class="active ">Datos</div>
+            <div>Balance</div>
+            <div>Pagos en Línea</div>
+            <div>Cuentas Bancarias</div>
+            <div>Metodos de pago</div>
         </div>
-        <div class="form-section">
-            <h2 class="hiddenscroll">Datos</h2>
-            <div class="tabs hiddenscroll">
-                <div class="active ">Datos</div>
-                <div>Balance</div>
-                <div>Cuentas Bancarias</div>
-                <div>Pagos en Línea</div>
-            </div>
-            <div class="form-content hiddenscroll">
-                <p>Actualizar Datos</p>
-                <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
-                <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
-                <form id="datos" name="datos" method="post" action="">
+        <div class="form-content hiddenscroll">
+            <p>Actualizar Datos</p>
+            <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
+            <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
+            <form id="datos" name="datos" method="post" action="">
                 <input placeholder="Cédula" name="cedula" type="text" id="cedula" />
                 <input placeholder="Contrato" name="contrato" type="text" id="contrato" />
                 <div class="button-container">
-                <button name="buscar" type="submit">Validar credenciales</button>
+                    <button name="buscar" type="submit">Validar credenciales</button>
                 </div>
-                </form>
-            </div>
-            <div class="form-content hidden hiddenscroll">
-                <p>Actualizar Datos</p>
-                <p>Si desea actualizar algún dato, como el teléfono, la dirección o añadir su correo electrónico, puede hacerlo por esta vía.</p>
-                <button class="verify-button">Antes de realizar el cambio es necesario que verifiquemos sus credenciales.</button>
-                <form id="saldo" name="saldo" method="post" action="Online/saldo.php">
-                 <input placeholder="Cédula" name="cedula" type="text" id="cedula" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"/>
-        <input placeholder="Contrato" name="contrato" type="text" id="contrato" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"/>
+            </form>
+        </div>
+        <div class="form-content hidden hiddenscroll">
+            <p>Ver Saldo</p>
+            <p>Si necesita revisar el saldo de su cuenta, así como verificar movimientos recientes, puede hacerlo por esta vía.</p>
+            <button class="verify-button">Antes de ver su saldo es necesario que verifiquemos sus credenciales.</button>
+            <form id="saldo" name="saldo" method="post" action="Online/saldo.php">
+                <input placeholder="Cédula" name="cedula" type="text" id="cedula" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" />
+                <input placeholder="Contrato" name="contrato" type="text" id="contrato" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" />
                 <div class="button-container">
-                <button name="consulta" type="submit" value="Consultar Balance">Validar credenciales</button>
+                    <button name="consulta" type="submit" value="Consultar Balance">Validar credenciales</button>
                 </div>
-                </form>
+            </form>
+        </div>
+        <div class="form-content hidden hiddenscroll">
+            <p>Realizar pagos</p>
+            <p>Si desea realizar algun pago a travez de la plataforma del Banco Popular</p>
+            <button class="verify-button">Antes de realizar el pago es necesario que verifiquemos sus credenciales.</button>
+            <form id="saldo" name="saldo" method="post" action="Online/pago.php">
+                <input placeholder="Cédula" name="cedula" type="text" id="cedula" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" />
+                <input placeholder="Contrato" name="contrato" type="text" id="contrato" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" />
+                <div class="button-container">
+                    <button name="consulta" type="submit" value="Consultar Balance">Validar credenciales</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-content hidden hiddenscroll">
+            <p>Cuentas Bancarias</p>
+            <div class="grid-container">
+                <div class="grid-item" style="text-align: center;">
+                    <img src="../assets/images/banesco.png" alt="Logo Banesco" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
+                    <br>
+                    <p><b>Banesco</b></p>
+                    <p>RNC: 1-30-89531-7</p>
+                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
+                    <p>Nro. de Cuenta: 99100003187</p>
+                </div>
+                <div class="grid-item" style="text-align: center;">
+                    <img src="../assets/images/popular.png" alt="Logo Banco Popular" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
+                    <br>
+                    <p><b>Banco Popular</b></p>
+                    <p>RNC: 1-30-89531-7</p>
+                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
+                    <p>Nro. de Cuenta: 99100003187</p>
+                </div>
+                <div class="grid-item" style="text-align: center;">
+                    <img src="../assets/images/Banreservas.webp" alt="Logo Banreservas" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
+                    <br>
+                    <p><b>Banreservas</b></p>
+                    <p>RNC: 1-30-89531-7</p>
+                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
+                    <p>Nro. de Cuenta: 99100003187</p>
+                </div>
+                <div class="grid-item" style="text-align: center;">
+                    <img src="../assets/images/scotiabank.webp" alt="Logo Scotiabank" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
+                    <br>
+                    <p><b>Scotiabank</b></p>
+                    <p>RNC: 1-30-89531-7</p>
+                    <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
+                    <p>Nro. de Cuenta: 99100003187</p>
+                </div>
             </div>
-            <div class="form-content hidden hiddenscroll">
-    <p>Cuentas Bancarias</p>
-    <div class="grid-container">
-        <div class="grid-item" style="text-align: center;">
-            <img src="../assets/images/banesco.png" alt="Logo Banesco" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
-            <br>    
-            <p><b>Banesco</b></p>
-            <p>RNC: 1-30-89531-7</p>
-            <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-            <p>Nro. de Cuenta: 99100003187</p>
         </div>
-        <div class="grid-item" style="text-align: center;">
-            <img src="../assets/images/popular.png" alt="Logo Banco Popular" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
-            <br>
-            <p><b>Banco Popular</b></p>
-            <p>RNC: 1-30-89531-7</p>
-            <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-            <p>Nro. de Cuenta: 99100003187</p>
-        </div>
-        <div class="grid-item" style="text-align: center;">
-            <img src="../assets/images/Banreservas.webp" alt="Logo Banreservas" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
-            <br>
-            <p><b>Banreservas</b></p>
-            <p>RNC: 1-30-89531-7</p>
-            <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-            <p>Nro. de Cuenta: 99100003187</p>
-        </div>
-        <div class="grid-item" style="text-align: center;">
-            <img src="../assets/images/scotiabank.webp" alt="Logo Scotiabank" style="width: 120px; height: 40px; object-fit: contain; margin: 0 auto;">
-            <br>
-            <p><b>Scotiabank</b></p>
-            <p>RNC: 1-30-89531-7</p>
-            <p>Tipo de Cuenta: Cuenta Corriente RD$</p>
-            <p>Nro. de Cuenta: 99100003187</p>
+
+        <div class="form-content hidden hiddenscroll">
+            <p>Pagos en Línea</p>
+            <div class="payment-grid">
+                <div class="payment-item">
+                    <h3>Internet Banking - Banco Popular</h3>
+                    <br>
+                    <p>1. Accede con tu usuario personal o empresarial a Popular en Línea.</p>
+                    <p>2. En beneficiarios, ingresa a servicios y facturas y selecciona la opción adicionar servicio o factura.</p>
+                    <p>3. Luego, elige la categoría de servicios y selecciona el beneficiario Jardines del Recuerdo. Completa los campos requeridos y presiona continuar.</p>
+                    <p>4. Ingresa el código de tu token y presiona continuar.</p>
+                    <p>5. Finalmente, te aparecerá el comprobante con el resultado de la adición del servicio o factura.</p>
+                    <p>Enlace de pago: <a href="https://www.popularenlinea.com" target="_blank">www.popularenlinea.com</a></p>
+                </div>
+                <div class="payment-item">
+                    <h3>PayPal</h3>
+                    <br>
+                    <p>1. Haga clic en nuestro enlace de PayPal.</p>
+                    <p>2. Inicie sesión de forma segura.</p>
+                    <p>3. Complete su pago con la tranquilidad que merece.</p>
+                    <p>Enlace de pago: <a href="https://paypal.me/jardinesdelrecuerdo" target="_blank">paypal.me/jardinesdelrecuerdo</a></p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-            <div class="form-content hidden hiddenscroll">
-                <p>Pagos en Línea</p>
-                <div class="payment-grid">
-                    <div class="payment-item">
-                        <h3>Internet Banking - Banco Popular</h3>
-                        <br>
-                        <p>1. Accede con tu usuario personal o empresarial a Popular en Línea.</p>
-                        <p>2. En beneficiarios, ingresa a servicios y facturas y selecciona la opción adicionar servicio o factura.</p>
-                        <p>3. Luego, elige la categoría de servicios y selecciona el beneficiario Jardines del Recuerdo. Completa los campos requeridos y presiona continuar.</p>
-                        <p>4. Ingresa el código de tu token y presiona continuar.</p>
-                        <p>5. Finalmente, te aparecerá el comprobante con el resultado de la adición del servicio o factura.</p>
-                        <p>Enlace de pago: <a href="https://www.popularenlinea.com" target="_blank">www.popularenlinea.com</a></p>
-                    </div>
-                    <div class="payment-item">
-                        <h3>PayPal</h3>
-                        <br>
-                        <p>1. Haga clic en nuestro enlace de PayPal.</p>
-                        <p>2. Inicie sesión de forma segura.</p>
-                        <p>3. Complete su pago con la tranquilidad que merece.</p>
-                        <p>Enlace de pago: <a href="https://paypal.me/jardinesdelrecuerdo" target="_blank">paypal.me/jardinesdelrecuerdo</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     <?php include(__DIR__ . '\piepagina2.html'); ?>
 
