@@ -219,7 +219,7 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
         </ul>
     </div>
     <div class="form-section">
-        <h2 class="hiddenscroll">Datos</h2>
+        <h2 class="hiddenscroll">Servicion en Línea</h2>
         <div class="tabs hiddenscroll">
             <div class="active ">Datos</div>
             <div>Balance</div>

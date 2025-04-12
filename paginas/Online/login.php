@@ -162,47 +162,246 @@ else
 <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
 <meta http-equiv="cleartype" content="on">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-<link rel="stylesheet" href="../../css/estilo4_login.css">
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap');
+
+/* Solo estilos dentro de login-page */
+.login-page {
+  width: 520px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  padding: 40px 30px;
+  margin: 50px auto;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+
+/* Cada formulario */
+.login-page #loginForm,
+.login-page #registerForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Títulos */
+.login-page h1, 
+.login-page h2 {
+  font-family: 'Playfair Display', serif;
+  color: #333;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* El formulario interno */
+.login-page form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs */
+.login-page form input[type="email"],
+.login-page form input[type="password"],
+.login-page form input[type="text"] {
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 14px 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* Hover en inputs */
+.login-page form input[type="email"]:hover,
+.login-page form input[type="password"]:hover,
+.login-page form input[type="text"]:hover {
+  border-bottom: 1px solid #43b248;
+}
+
+/* Botones submit */
+.login-page form input[type="submit"] {
+  background-color: #43b248;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  padding: 14px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-page form input[type="submit"]:hover {
+  background-color: #36983b;
+}
+
+/* Link de olvidó contraseña centrado */
+.login-page a {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  margin: 10px 0;
+  display: block;
+  text-decoration: none;
+}
+
+.login-page a:hover {
+  text-decoration: underline;
+}
+
+/* Checkbox contenedor */
+.login-page .checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Botón de cambiar entre login y registro como link */
+.login-page .switch-button {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #43b248;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.login-page .switch-button:hover {
+  color: #36983b;
+}
+
+/* Labels */
+.login-page label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Forzar botón crear cuenta */
+.login-page #crecuenta {
+  background-color: #43b248 !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 14px;
+  width: 100%;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-page #crecuenta:hover {
+  background-color: #36983b !important;
+}
+
+.login-page .switch-button {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  color: #43b248;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s;
+  text-align: center; /* 👈 CENTRAR EL TEXTO */
+  display: block;     /* 👈 Hacerlo como un bloque para que respete el ancho */
+  width: 100%;        /* 👈 Ocupar todo el ancho del form */
+}
+
+
+.mos{
+
+}
+
+
+</style>
+
+
+
 </head> 
 <body>
 <BR>
-<div class="flex-container">
-<div align="center">
-<div class="contentflex">
-<h1>Iniciar sesión</h1>
-<form action="" method="post" name="iniciarsesion" id="iniciarsesion">
-<input type="email" id="iniciarsesionemail" name="iniciarsesionemail" placeholder="Correo electrónico">
-<BR>
-<a href="password.php" style="color:black;">¿Olvido su contraseña?</a>
-<input type="password" id="iniciarsesionpassword" name="iniciarsesionpassword" placeholder="Contraseña">
-<BR>
-<input type="checkbox" onclick="FunShowPassLogin()">Mostrar contraseña
-<BR>
-<input type="submit" name="inisesion" id="inisesion" value="Iniciar sesión">
-</form>
+
+<div class="login-page">
+
+   
+      
+        
+        <!-- FORMULARIO DE INICIAR SESIÓN -->
+        <div id="loginForm">
+          <h1>Iniciar sesión</h1>
+          <form action="" method="post" name="iniciarsesion" id="iniciarsesion">
+            <input type="email" id="iniciarsesionemail" name="iniciarsesionemail" placeholder="Correo electrónico">
+            <br>
+            <a href="password.php" style="color:black;">¿Olvidó su contraseña?</a>
+            <input type="password" id="iniciarsesionpassword" name="iniciarsesionpassword" placeholder="Contraseña">
+			<p>
+            <input class="mos" type="checkbox" onclick="FunShowPassLogin()"> Mostrar contraseña</p>
+            <br>
+            <input type="submit" name="inisesion" id="inisesion" value="Iniciar sesión">
+          </form>
+          
+          <button class="switch-button" onclick="toggleForms()">¿No tienes cuenta? Crear cuenta</button>
+        </div>
+
+        <!-- FORMULARIO DE CREAR CUENTA -->
+        <div id="registerForm" style="display: none;">
+          <h2>Crear cuenta</h2>
+          <form action="" method="post" name="crearcuenta" id="crearcuenta">
+            <input type="email" id="crearcuentaemail" name="crearcuentaemail" placeholder="Correo electrónico">
+            <input type="text" id="crearcuentanombres" name="crearcuentanombres" placeholder="Nombres">
+            <input type="text" id="crearcuentaapellidos" name="crearcuentaapellidos" placeholder="Apellidos">
+            <input type="password" id="crearcuentapassword" name="crearcuentapassword" placeholder="Contraseña">
+            
+            <label for="crearcuentapassword">Mínimo 8 caracteres</label>
+            <p>
+            <input type="checkbox" onclick="FunShowPass()"> Mostrar contraseña</p>
+            <br>
+            <input type="text" id="Telefono" name="Telefono" placeholder="Teléfono XXX-XXX-XXXX" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
+            <input type="submit" name="crecuenta" id="crecuenta" value="Crear cuenta">
+          </form>
+          <br>
+          <button class="switch-button" onclick="toggleForms()">¿Ya tienes una cuenta? Iniciar sesión</button>
+        </div>
+
+      
+   
+
 </div>
-</div>
-<div align="center">
-<div class="contentflex">
-<h2>¿Aún no tiene una cuenta?</h2>
-<form action="" method="post" name="crearcuenta" id="crearcuenta">
-<input type="email" id="crearcuentaemail" name="crearcuentaemail" placeholder="Correo electrónico">
-<input type="text" id="crearcuentanombres" name="crearcuentanombres" placeholder="Nombres">
-<input type="text" id="crearcuentaapellidos" name="crearcuentaapellidos" placeholder="Apellidos">
-<input type="password" id="crearcuentapassword" name="crearcuentapassword" placeholder="Contraseña">
-<BR>
-<label for="crearcuentapassword">Mínimo 8 caracteres</label>
-<BR>
-<input type="checkbox" onclick="FunShowPass()">Mostrar contraseña
-<BR>
-<input type="text" id="Telefono" name="Telefono" placeholder="Teléfono  XXX-XXX-XXXX" onKeyPress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;">
-<input type="submit" name="crecuenta" id="crecuenta" value="Crear cuenta" style="background-color:#0073E5;">
-</form>
-<BR>
-</div>
-</div>
-</div>
+
 <script>
+function toggleForms() {
+  var loginForm = document.getElementById('loginForm');
+  var registerForm = document.getElementById('registerForm');
+  
+  if (loginForm.style.display === "none") {
+    loginForm.style.display = "block";
+    registerForm.style.display = "none";
+  } else {
+    loginForm.style.display = "none";
+    registerForm.style.display = "block";
+  }
+}
+
 function FunShowPass() {
   var x = document.getElementById("crearcuentapassword");
   if (x.type === "password") {
@@ -211,6 +410,7 @@ function FunShowPass() {
     x.type = "password";
   }
 }
+
 function FunShowPassLogin() {
   var x = document.getElementById("iniciarsesionpassword");
   if (x.type === "password") {
@@ -220,6 +420,9 @@ function FunShowPassLogin() {
   }
 }
 </script>
+
+
+
 </body>
 </html>
 <?php include(__DIR__ . '\..\piepagina3.html');?>

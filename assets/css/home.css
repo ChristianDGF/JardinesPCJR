@@ -31,7 +31,6 @@ header{
   z-index: 1;
 }
 
-
 .imgsec1 {
   position: absolute;
   top: 0;
@@ -42,14 +41,43 @@ header{
   overflow: hidden;
 }
 
-.bg-video {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(40%);
+.youtube-background {
+  background: #000; /* Fallback background color if the video fails to load */
+  position: fixed; /* Fixes the video to the viewport */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; /* Places the video behind other content */
+  overflow: hidden; /* Hides any potential overflow from the iframe */
 }
 
+.youtube-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw; /* Sets the width to 100% of the viewport width */
+  height: 100vh; /* Sets the height to 100% of the viewport height */
+  transform: translate(-50%, -50%); /* Centers the video both horizontally and vertically */
+  pointer-events: none; /* Prevents the iframe from intercepting mouse events */
+  filter: brightness(40%); /* Apply the brightness filter */
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .youtube-background iframe {
+     /* If the video aspect ratio is wider than 16:9 (typical YouTube),
+        adjust the height to cover the viewport */
+     height: 56.25vw; /* height = 100 * (9 / 16) = 56.25 */
+   }
+ }
+ 
+ @media (max-aspect-ratio: 16/9) {
+  .youtube-background iframe {
+     /* If the video aspect ratio is narrower than 16:9,
+        adjust the width to cover the viewport */
+     width: 177.78vh; /* width = 100 / (9 / 16) = 177.777777 */
+   }
+ }
 .sec1 {
   position: relative;
    width: 100%;
