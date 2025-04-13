@@ -40,7 +40,7 @@
             </ul>
             <div class="job-contact">
                 Si está interesado en presentar su candidatura, envíe su CV al correo
-                <a href="mailto:vacantespcjr@gmail.com">vacantespcjr@gmail.com</a>.
+                <a href="rrhh@jardinesdelrecuerdo.com">rrhh@jardinesdelrecuerdo.com</a>.
             </div>
         </div>
         <hr/>
@@ -59,7 +59,7 @@
             </ul>
             <div class="job-contact">
                 Si está interesado en presentar su candidatura, envíe su CV al correo
-                <a href="mailto:vacantespcjr@gmail.com">vacantespcjr@gmail.com</a>.
+                <a href="rrhh@jardinesdelrecuerdo.com">rrhh@jardinesdelrecuerdo.com</a>.
             </div>
         </div>
     </div>

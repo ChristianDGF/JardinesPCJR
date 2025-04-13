@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-
+/*
 if (!isset($_SESSION["varsessemail"])) {
     header("Location: Online/login.php");
     exit(); // Detener la ejecución del script
-}
+}*/
 
 if (isset($_POST['buscar'])) {
     $buscar    = $_POST['buscar'];
@@ -193,7 +193,7 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
 
     <div class="sec1 hiddenscroll">
         <img class="imgsec1" src="../assets/images/DSC_0636.JPG" />
-        <h1 class="hiddenscroll">Pagos</h1>
+        <h1 class="hiddenscroll">Servicios en Línea</h1>
     </div>
 
 
@@ -219,13 +219,13 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
         </ul>
     </div>
     <div class="form-section">
-        <h2 class="hiddenscroll">Servicion en Línea</h2>
+        <h2 class="hiddenscroll">Servicios en Línea</h2>
         <div class="tabs hiddenscroll">
-            <div class="active ">Datos</div>
-            <div>Balance</div>
-            <div>Pagos en Línea</div>
+            <div class="active ">Actualizar Datos</div>
+            <div>Balance y Pagos</div>
+            <div>Pagos y Servicios</div>
             <div>Cuentas Bancarias</div>
-            <div>Metodos de pago</div>
+            <div>Popular - Internet Banking</div>
         </div>
         <div class="form-content hiddenscroll">
             <p>Actualizar Datos</p>
@@ -302,28 +302,98 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
         </div>
 
         <div class="form-content hidden hiddenscroll">
-            <p>Pagos en Línea</p>
+            <p>Pagos y Servicios</p>
+            
             <div class="payment-grid">
-                <div class="payment-item">
-                    <h3>Internet Banking - Banco Popular</h3>
-                    <br>
-                    <p>1. Accede con tu usuario personal o empresarial a Popular en Línea.</p>
-                    <p>2. En beneficiarios, ingresa a servicios y facturas y selecciona la opción adicionar servicio o factura.</p>
-                    <p>3. Luego, elige la categoría de servicios y selecciona el beneficiario Jardines del Recuerdo. Completa los campos requeridos y presiona continuar.</p>
-                    <p>4. Ingresa el código de tu token y presiona continuar.</p>
-                    <p>5. Finalmente, te aparecerá el comprobante con el resultado de la adición del servicio o factura.</p>
-                    <p>Enlace de pago: <a href="https://www.popularenlinea.com" target="_blank">www.popularenlinea.com</a></p>
-                </div>
-                <div class="payment-item">
-                    <h3>PayPal</h3>
-                    <br>
-                    <p>1. Haga clic en nuestro enlace de PayPal.</p>
-                    <p>2. Inicie sesión de forma segura.</p>
-                    <p>3. Complete su pago con la tranquilidad que merece.</p>
-                    <p>Enlace de pago: <a href="https://paypal.me/jardinesdelrecuerdo" target="_blank">paypal.me/jardinesdelrecuerdo</a></p>
-                </div>
-            </div>
-        </div>
+
+  <!-- Primera fila completa: Pagar por llamada y WhatsApp -->
+  <div class="payment-buttons-row">
+    <div class="payment-item small-item">
+      <h3>Pagar por llamada</h3>
+      <p>Realiza tu pago llamando al siguiente número:</p>
+      <p class="btn-pl">
+        <a href="tel:+1 809 971 7222">(809) 555-1234</a>
+      </p>
+    </div>
+
+    <div class="payment-item small-item">
+      <h3>Pagar por WhatsApp</h3>
+      <p>Gestiona tu pago fácilmente vía WhatsApp:</p>
+      <p class="btn-pl">
+        <a href="https://api.whatsapp.com/send?phone=18294210760&text=Quiero%20ser%20previsivo." target="_blank">(809) 555-6789</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Segunda fila: Banco Popular y columna de PayPal + Estafetas -->
+  <div class="payment-item">
+    <h3>Internet Banking - Banco Popular</h3>
+
+    <p>1. Accede con tu usuario personal o empresarial a <b>www.popularenlinea.com</b></p>
+    <p>2. En beneficiarios, ingresa a servicios y facturas y selecciona la opción adicionar servicio o factura.</p>
+    <p>3. Luego, elige la categoría de servicios y selecciona el beneficiario <b>Jardines del Recuerdo.</b> Completa los campos requeridos y presiona continuar.</p>
+    <p>4. Ingresa el código de tu token y presiona <b>continuar.</b></p>
+    <p>5. Finalmente, te aparecerá el <b>comprobante</b> con el resultado de la adición del servicio o factura.</p>
+    
+    <br>
+
+    <h3>Una vez agregado el beneficiario podrás realizar pagos</h3>
+
+    <p>1. Ingresa a pagos de <b>servicios y facturas</b> y selecciona la categoría de <b>servicios</b>.</p>
+    <p>2. Escoge el beneficiario <b>Jardines del Recuerdo</b> y consulta tu <b>número de contrato.</b></p>
+    <p>3. Elige la cuenta desde la cual realizarás el pago, confirma los datos y presiona <b>continuar.</b></p>
+    <p>4. Se presentará el <b>comprobante</b> y has finalizado el pago.</p>
+    
+    <br>
+
+    <h3>Para realizar pagos en las sucursales del Banco Popular Dominicano</h3>
+
+    <p>1. Al visitar la sucursal del banco más cercana, comunica al cajero que deseas realizar un <b>pago de servicio</b> en la nueva plataforma de <b>Jardines del Recuerdo.</b> Indica al cajero tu <b>número de contrato.</b></p>
+    <p>2. Verifica lo pagado y los datos en tu <b>comprobante</b> de pago.</p>
+
+    <br>
+
+    <p class="btn-pl">
+      Enlace de pago: 
+      <a href="https://www.popularenlinea.com" target="_blank">www.popularenlinea.com</a>
+    </p>
+  </div>
+
+  <!-- Derecha: PayPal + Estafetas en columna -->
+  <div class="payment-column-right">
+
+    <div class="payment-item">
+      <h3>PayPal</h3>
+
+      <p>1. Haga clic en nuestro enlace de PayPal.</p>
+      <p>2. Inicie sesión de forma segura.</p>
+      <p>3. Complete su pago con la tranquilidad que merece.</p>
+
+      <p class="btn-pl">
+        Enlace de pago: 
+        <a href="https://paypal.me/jardinesdelrecuerdo" target="_blank">paypal.me/jardinesdelrecuerdo</a>
+      </p>
+    </div>
+
+    <div class="payment-item">
+      <h3>Listado de Estafetas - Paga Todo</h3>
+
+      <p>Paga tus servicios de Jardines del Recuerdo de forma rápida y segura en cualquiera de nuestras estafetas disponibles en Santiago. Contamos con más de 90 puntos de pago estratégicamente ubicados.</p>
+
+      <p class="btn-pl">
+        Listado completo: 
+        <a href="../assets/doc/paga.pdf" target="_blank">Descargar listado</a>
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+  </div>
+</div>
+
     </div>
 
     <?php include(__DIR__ . '\piepagina2.html'); ?>

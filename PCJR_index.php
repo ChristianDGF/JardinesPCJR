@@ -29,6 +29,7 @@
   <div class="sec1 hiddenscroll">
     <div class="content">
       <h1 class="hiddenscroll">Planes de Previsión <br>Familiar Flexibles</h1>
+      <h3 class="hiddenscroll h3m">¡A 2 metros del Monumento!</h3>
       <p class="mainp hiddenscroll">Con más de 50 años brindando servicios exequiales y funerarios con un personal altamente motivado y enfocado en lograr alta calidad en la atencion a las familias</p>
       <div class="links-b hiddenscroll">
         <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank"><button class="specialbtn">Atención Urgente <div class="arrow">➜</div></button></a>
@@ -119,8 +120,9 @@
           <h3>
             Jardines Familiares
           </h3>
-          <p>
-            Conjunto de lotes anexos, con vista panorámica del parque.
+          <p class="btnmasinfo">
+            <a href="paginas/planes.php">
+          más información...</a>
           </p>
         </div>
       </div>
@@ -130,8 +132,9 @@
           <h3>
             Mausoleos Familiares
           </h3>
-          <p>
-            Ofrecemos exclusividad para familias tradicionales.
+          <p class="btnmasinfo">
+            <a href="paginas/planes.php">
+          más información...</a>
           </p>
         </div>
       </div>
@@ -141,8 +144,9 @@
           <h3>
             Panteones Familiares
           </h3>
-          <p>
-            Imponentes, con carácter privado al estilo americano.
+          <p class="btnmasinfo">
+            <a href="paginas/planes.php">
+          más información...</a>
           </p>
         </div>
       </div>
@@ -228,7 +232,7 @@
 
     <!-- Imagen lateral ocupa 5/8, toma contenido desde la izquierda -->
     <div class="w-full md:basis-[62.5%] p-0 m-0">
-      <img src="assets/images/fieldfam.jpg" alt=""
+      <img src="assets/images/fieldfam.jpeg" alt=""
         class="w-full h-[350px] rounded-lg object-cover object-left m-0 p-0">
     </div>
 
@@ -239,7 +243,7 @@
         es lo más importante
       </h3>
       <p class="text-gray-700 mt-3 text-sm md:text-base" style="font-family: 'Lato', sans-serif;">
-        Afíliate gratis con nosotros para obtener información directa.
+      Afíliate gratis hoy y disfruta de descuentos, ventajas y beneficios exclusivos.
       </p>
 
       <!-- Botón -->
