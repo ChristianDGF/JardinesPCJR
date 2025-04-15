@@ -31,7 +31,7 @@
       <p>
         La Capilla es un espacio sagrado y elegante, destinado a rendir homenaje a la vida y a proporcionar consuelo a las familias en momentos de despedida. Con un diseño moderno y acogedor, la capilla está equipada con todas las comodidades necesarias para ofrecer un ambiente de respeto y solemnidad. Sus grandes ventanales permiten la entrada de luz natural, creando una atmósfera de paz que invita a la meditación y al recuerdo. Aquí, las familias pueden reunirse para celebrar la vida de sus seres queridos en un entorno que refleja amor y dignidad.
       </p>
-      <a href="../pages/capilla.html">
+      <a href="../pages/PCJR_capilla.php">
       <button  class="plan-btn">Planes de Capilla</button></a>
     </div>
   </div>
