@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-/*
+
 if (!isset($_SESSION["varsessemail"])) {
     header("Location: Online/login.php");
     exit(); // Detener la ejecución del script
-}*/
+}
 
 if (isset($_POST['buscar'])) {
     $buscar    = $_POST['buscar'];
