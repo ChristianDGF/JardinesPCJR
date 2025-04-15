@@ -711,11 +711,15 @@ footer .text-green-600 {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-size: 16px !important;
+
 }
 
 .btnmasinfo a {
-  color: #43b248 !important; /* ✅ El enlace ahora es verde */
-  text-decoration: underline; /* ✅ Opcional, si quieres que se vea como un link */
+  color: white !important;
+  background-color: #43b248;
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 5px 10px;
   font-weight: 600; /* ✅ Opcional, un poquito más grueso */
 }
 
