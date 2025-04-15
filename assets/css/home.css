@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:wght@100;300;400;700;900&family=Playfair+Display:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --color-1: white;
-  --text-color: #333;
+  --text-color: #333333;
   --accent-color: #43b248;
 }
 
-/* Reset básico */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +17,13 @@ html {
 }
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
+  background-color: #f5f5f5;
+  font-size: 16px;
+}
+header {
+  z-index: 1;
 }
 
 /* Video de fondo */
@@ -40,14 +44,10 @@ body {
   filter: brightness(40%);
 }
 @media (min-aspect-ratio: 16/9) {
-  .youtube-background iframe {
-    height: 56.25vw;
-  }
+  .youtube-background iframe { height: 56.25vw; }
 }
 @media (max-aspect-ratio: 16/9) {
-  .youtube-background iframe {
-    width: 177.78vh;
-  }
+  .youtube-background iframe { width: 177.78vh; }
 }
 
 /* Sección Hero */
@@ -76,12 +76,11 @@ body {
 }
 .sec1 p {
   margin-top: 20px;
+  font-family: "Lato", serif;
   color: white;
-  font-family: "Lato", sans-serif;
+  font-weight: 400;
 }
-.mainp {
-  width: 50%;
-}
+.mainp { width: 50%; }
 .specialbtn {
   font-family: "Playfair Display", serif;
   background-color: #43b248;
@@ -100,7 +99,7 @@ body {
 }
 .specialbtn .arrow {
   margin-left: 8px;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 .specialbtn:hover .arrow {
   transform: translateX(5px);
@@ -136,7 +135,7 @@ body {
   inherits: false;
 }
 
-/* Estructura general secciones */
+/* Estructura general de secciones */
 .section {
   padding: 50px 20px;
   text-align: center;
@@ -154,7 +153,7 @@ body {
   color: #666;
 }
 
-/* Why choose us */
+/* "Why choose us" */
 .why-choose-us,
 .what-we-offer,
 .testimonials {
@@ -165,10 +164,14 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  font-family: "Lato", serif;
 }
 .feature {
   border-radius: 10px;
-  padding: 10px 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   width: 300px;
 }
 .feature i {
@@ -178,7 +181,7 @@ body {
   background-color: #c7dfc7;
   width: 55px;
   height: 55px;
-  line-height: 55px;
+  line-height: 60px;
   text-align: center;
   border-radius: 50%;
   display: inline-block;
@@ -187,7 +190,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Sección WHAT WE OFFER - Carrusel custom */
+/* Sección "What we offer" */
 .what-we-offer {
   background-image: url("../images/map.png");
   background-size: cover;
@@ -212,64 +215,26 @@ body {
 }
 .what-we-offer button:hover {
   background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
   --myColor1: #43b248;
   --myColor2: #d4b757;
   --myColor3: #ffdb98;
 }
-.what-we-offer button:not(:hover){
+.what-we-offer button:not(:hover) {
   background: linear-gradient(var(--myColor1), var(--myColor2));
+  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
 }
 
-/* Carrusel personalizado */
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px; /* Ajusta según quieras */
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.carousel-track-container {
-  overflow: hidden; 
-  width: 100%;
-}
-.carousel-track {
-  display: flex;
-  transition: transform 0.4s ease;
-  /* El ancho se ajusta en JS según la cantidad de slides */
-}
-
-/* Flechas */
-.arrow {
-  background-color: #43b248;
-  border: none;
-  color: #fff;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 0 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.arrow:hover {
-  background-color: #2e7c32;
-}
-
-/* Cada .offer */
+/* Cada "oferta" (slide en Slick) */
 .offer {
   background-color: #fff;
   border-radius: 10px;
-  margin-right: 20px; /* margen entre ofertas */
-  width: 300px;
-  flex: 0 0 auto; /* Para que no se enciman */
-  transition: .3s ease;
+  padding: 0 0 20px 0;
+  transition: .4s ease;
+  margin: 0 15px;  /* Separación horizontal */
 }
 .offer:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 .offer img {
   width: 100%;
@@ -304,11 +269,50 @@ body {
   text-decoration: none;
 }
 
-/* Mapa / Contacto */
+/* Flechas Slick con tu estética */
+.my-arrow {
+  background-color: #43b248;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+.my-arrow:hover {
+  background-color: #2e7c32;
+}
+.my-arrow i {
+  font-size: 16px;
+}
+
+/* POSICIÓN de las flechas (opcional): 
+   Si las quieres a los extremos y centradas verticalmente en el carrusel, añade: */
+.my-arrow.slick-prev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.my-arrow.slick-next {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Mapa / Contact */
 .contact {
   position: relative;
   display: flex;
-  padding-bottom: 0px;
+  padding: 0;
+  padding-bottom: 0;
 }
 .contact > * {
   width: 50%;
@@ -331,6 +335,9 @@ body {
   display: flex;
   gap: 100px;
   padding: 20px 0;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 .carousel-inner {
   display: flex;
@@ -357,15 +364,11 @@ body {
   color: #FFD700;
 }
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-/* Efecto show-on-scroll */
+/* Animación showonscroll */
 .hiddenscroll {
   opacity: 0;
   transition: all 1.1s cubic-bezier(.07,.04,.09,1.00);
@@ -388,39 +391,28 @@ body {
   animation: shine 10s linear infinite;
 }
 @keyframes shine {
-  0% {
-    background-position: 200% center;
-  }
-  100% {
-    background-position: -200% center;
-  }
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
 }
 
 /* Responsividad */
-@media (max-width: 1024px) {
-  .mainp {
-    width: 70%;
-  }
-}
 @media (max-width: 768px) {
   .why-choose-us .features {
     flex-direction: column;
     align-items: center;
   }
-  .mainp {
-    width: 100%;
-  }
+  .mainp { width: 100%; }
   .contact {
+    display: flex;
     flex-direction: column;
   }
   .contact > * {
     width: 100%;
   }
-  .carousel-container {
-    max-width: 100%;
+  .specialbtn {
+    width: auto;
   }
-  /* Podrías mostrar solo 1 o 2 en pantallas pequeñas,
-     pero entonces hay que cambiar la lógica en JS 
-     (ej. slidesToShow = 2). Por ahora mantiene 3 y se verán
-     en scroll horizontal si no caben. */
+  
+  /* Slick se encarga de mostrar 1 slide a la vez en móvil si definimos breakpoint: 768 */
+  .offer { margin: 0 5px; }
 }
