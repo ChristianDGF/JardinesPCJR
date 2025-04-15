@@ -19,6 +19,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
+  background-color: #f7f7f7;
 }
 
 /* Sección Hero */
@@ -68,7 +69,7 @@ body {
   max-width: 1100px;
   margin: 0 auto 60px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
   gap: 30px;
   align-items: center;
   justify-content: space-between;
@@ -178,4 +179,88 @@ body {
   syntax: '<color>';
   initial-value: #43b248;
   inherits: false;
+}
+
+
+footer{
+  background-color: #144816 !important;
+  color: white;
+  padding-top: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 20px;
+}
+.flogo {
+  width: auto;
+  height: 75px;
+}
+
+footer li {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer .text-green-600 {
+  font-size: 18px;
+}
+
+.plan-container {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.plan-img-container {
+  flex: 0 0 40%; /* La imagen ocupará el 40% del ancho */
+  max-width: 40%;
+}
+
+.plan-img {
+  width: 100%; /* Para que no se pase de su contenedor */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.plan-text {
+  flex: 0 0 55%; /* El texto ocupará 55% */
+  min-width: 280px;
+}
+
+.plan-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+  .plan-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .plan-img-container,
+  .plan-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .plan-img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .plan-text {
+    padding: 0 10px;
+  }
 }
