@@ -719,8 +719,8 @@ footer .text-green-600 {
   background-color: #43b248;
   border-radius: 30px;
   font-size: 14px;
-  padding: 5px 10px;
-  font-weight: 600; /* ✅ Opcional, un poquito más grueso */
+  padding: 8px 15px;
+  font-weight: 400; /* ✅ Opcional, un poquito más grueso */
 }
 
 .btnmasinfo a:hover {
