@@ -78,7 +78,7 @@ if (isset($_POST['enviar'])){
 			if($num == 0) {
 				echo "<script>alert('Combinacion Cedula/Contrato No Existe. Intente de nuevo');</script>"; 
 				echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
-				echo "window.location.href= 'act_datos.php'";  
+				echo "window.location.href= 'PCJR_servicios.php'";  
 				echo "</script>";
 			} else {
 				$sql2 = "SELECT * FROM twebactdatos WHERE (CedulaRif = ?)";
@@ -90,7 +90,7 @@ if (isset($_POST['enviar'])){
 					if($num2 == 1) {    
 						echo "<script>alert('Usted Ya Tiene una solicitud de actualizacion pendiente. Nuestros ejecutivos se pondran en contacto con usted para Verificar los cambios');</script>"; 
 						echo "<script language=\"JavaScript\" type=\"text/JavaScript\">";
-						echo "window.location.href= 'act_datos.php'";  
+						echo "window.location.href= 'PCJR_servicios.php'";  
 						echo "</script>";
 					} else {
 						$flag = 1;

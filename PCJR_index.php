@@ -172,7 +172,7 @@
     </div>
 
     <!-- Botón CTA -->
-    <a href="pages/Afiliarse.html" class="hiddenscroll">
+    <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" class="hiddenscroll">
       <button>Quiero Comprar</button>
     </a>
   </div>

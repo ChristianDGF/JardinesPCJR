@@ -119,15 +119,12 @@ else
 		$num0 = odbc_num_rows($result0);
 		if($num0 > 0)
 		{
-			$_SESSION["varsessemail"] = $iniciarsesionemail;
-			echo "<script>window.open('../servicios.php','_self')</script>";
-			exit();	
 			$fila0 = odbc_fetch_array($result0);
 			if (password_verify($iniciarsesionpassword,$fila0["Password"]))
 			{
 				session_start();
 				$_SESSION["varsessemail"] = $iniciarsesionemail;
-				echo "<script>window.open('pago.php','_self')</script>";	
+				echo "<script>window.open('../servicios.php','_self')</script>";	
 			}
 			else
 			{
