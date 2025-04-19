@@ -111,7 +111,7 @@ if ((isset($_POST['mensajeasunto'])) && (filter_var($Email, FILTER_VALIDATE_EMAI
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
     <div class="sec1 hiddenscroll">
-        <img class="imgsec1 " src="../assets/images/DSC_0636.JPG"/>
+        <img class="imgsec1 " src="../assets/images/afil.jpg"/>
            <h1 class="hiddenscroll">Plan de Afiliación</h1>
            </div>
         </div>
@@ -125,7 +125,7 @@ if ((isset($_POST['mensajeasunto'])) && (filter_var($Email, FILTER_VALIDATE_EMAI
             <input name="télefono" placeholder="télefono" style="width: 80%; background-color: #f5f5f5;" type="number"/>
                 
             </select>
-            <button class="hiddenscroll" type="submit" style="margin-top: 20px;">Enviar solicitud</button>
+            <button class="hiddenscroll btn-afiliarse" type="submit">Enviar solicitud</button>
         </form>
     </div>
     <div class="containera benefits-container">

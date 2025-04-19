@@ -19,12 +19,58 @@
         margin-bottom: 20px;
       }
 
+      @media (max-width: 768px) {
+        .container {
+          padding-top: 20px !important;
+          padding-bottom: 20px !important;
+        }
+      }
+
+      /* Estilos botón specialbtn2 con hover */
+      .specialbtn2 {
+        background-color: #43b248;
+        color: white;
+        border: unset;
+        border-radius: 2px;
+        font-weight: 600;
+        display: block;
+        align-items: center;
+        text-align: left !important;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .specialbtn2:hover {
+        background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+        transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+        --myColor1: #43b248;
+        --myColor2: #d4b757;
+        --myColor3: #ffdb98;
+      }
+      .specialbtn2:not(:hover) {
+        background: linear-gradient(var(--myColor1), var(--myColor2));
+        transition: --myColor1 0.4s, --myColor2 0.5s;
+      }
+      @property --myColor1 {
+        syntax: '<color>';
+        initial-value: #43b248;
+        inherits: false;
+      }
+      @property --myColor2 {
+        syntax: '<color>';
+        initial-value: #43b248;
+        inherits: false;
+      }
+      @property --myColor3 {
+        syntax: '<color>';
+        initial-value: #43b248;
+        inherits: false;
+      }
   </style>
 </head>
 
 <header class="bg-white shadow-md relative z-50">
   <div class="container mx-auto flex justify-between items-center py-2 px-6 ">
-    <img src="assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="h-14 navpadding" style="height: 56px; width: auto;"/>
+    <a href="./index.php"><img src="assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="h-14 navpadding" style="height: 56px; width: auto;"/></a>
     
     <!-- Menú de escritorio -->
     <nav class="hidden md:flex items-center space-x-6 navpadding2">
@@ -50,7 +96,7 @@
       </div>
       <a href="paginas/FAQ.php" class="text-gray-700 hover:text-green-500">Ayuda</a>
       <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="text-gray-700 hover:text-green-500">Blog</a>
-      <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
+      <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="whatsapp-btn-navbar">WhatsApp</a>
     </nav>
     
     <!-- Botón menú móvil -->
@@ -102,7 +148,7 @@
       <a href="https://blog.jardinesrecuerdo.com/blog/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-green-500">Blog</a>
       
       <div class="border-t border-gray-200"></div>
-      <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
+      <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="block px-4 py-2 w-full text-left" style="background-color: #43b248; color: white; font-weight: bold; text-align: left !important;">WhatsApp</a>
     </div>
 </header>
 

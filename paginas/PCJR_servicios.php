@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-
+/*
 if (!isset($_SESSION["varsessemail"])) {
     header("Location: Online/login.php");
     exit(); // Detener la ejecución del script
-}
+}*/
 
 if (isset($_POST['buscar'])) {
     $buscar    = $_POST['buscar'];
@@ -192,29 +192,27 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
     <div class="sec1 hiddenscroll">
-        <img class="imgsec1" src="../assets/images/DSC_0636.JPG" />
+        <img class="imgsec1" src="../assets/images/pi.jpg" />
         <h1 class="hiddenscroll">Servicios en Línea</h1>
     </div>
 
 
 
     <div class="content">
-        <h2 class="hiddenscroll">¿Qué te ofrecemos?</h2>
-        <p class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">
-            Entendemos que los momentos de pérdida pueden ser emocionalmente abrumadores. Por eso, te ofrecemos la posibilidad de gestionar algunos servicios en línea para que pueda concentrarse en lo que realmente importa: honrar la memoria de su ser querido.
-        </p>
+        <h2 class="hiddenscroll">¿Qué ofrecemos?</h2>
+        <p class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">Ofrecemos Previsión Familiar a través de la inversión en propiedades y planes de capillas diseñados para brindar a la familia tranquilidad y seguridad en momentos difíciles. Estas son sus ventajas al tomar su Previsión Familiar:</p>
         <ul class="hiddenscroll" style="margin-left: 10%; margin-right: 10%; text-align: left;">
-            <li>
-                <i class="fas fa-home"></i>
-                Realizar pagos cómodamente desde casa.
+            <li class="flex items-center pl-4 mb-2" style="color: #666;">
+                <i class="fas fa-shield-alt text-green-600 mr-2"></i>
+                <b>PROTECCIÓN:</b>&nbsp;Amparo total y permanente de la familia, no más angustias.
             </li>
-            <li>
-                <i class="fas fa-exchange-alt"></i>
-                Completar transacciones de manera rápida y respetuosa.
+            <li class="flex items-center pl-4 mb-2" style="color: #666;">
+                <i class="fas fa-chart-line text-green-600 mr-2"></i>
+                <b>INVERSIÓN:</b>&nbsp;Propiedades y servicios con revalorización constante.
             </li>
-            <li>
-                <i class="fas fa-user-shield"></i>
-                Utilizar su cuenta con total tranquilidad.
+            <li class="flex items-center pl-4" style="color: #666;">
+                <i class="fas fa-money-bill-wave text-green-600 mr-2"></i>
+                <b>FACILIDADES DE PAGO:</b>&nbsp;Adaptados a su presupuesto.
             </li>
         </ul>
     </div>
@@ -310,9 +308,11 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
   <div class="payment-buttons-row">
     <div class="payment-item small-item">
       <h3>Pagar por llamada</h3>
-      <p>Realiza tu pago llamando al siguiente número:</p>
+      <p>Para realizar tu pago por llamada, presiona el siguiente botón:</p>
       <p class="btn-pl">
-        <a href="tel:+1 809 971 7222">(809) 555-1234</a>
+        <a href="tel:+1 809 971 7222">
+            <i class="fas fa-phone"></i> Pago por llamada
+        </a>
       </p>
     </div>
 
@@ -320,7 +320,9 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
       <h3>Pagar por WhatsApp</h3>
       <p>Gestiona tu pago fácilmente vía WhatsApp:</p>
       <p class="btn-pl">
-        <a href="https://api.whatsapp.com/send?phone=18294210760&text=Quiero%20ser%20previsivo." target="_blank">(809) 555-6789</a>
+        <a href="https://api.whatsapp.com/send?phone=18294210760&text=Quiero%20ser%20previsivo." target="_blank">
+            <i class="fab fa-whatsapp"></i> Pago por WhatsApp
+        </a>
       </p>
     </div>
   </div>

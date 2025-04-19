@@ -11,6 +11,14 @@
   margin: 0;
   padding: 0;
 }
+
+/* —————————————————————————————————————————————— */
+/* Evita scroll horizontal al cargar la página */
+/* —————————————————————————————————————————————— */
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 16px;
   font-family: "Playfair Display", serif;
@@ -104,8 +112,6 @@ header {
 .specialbtn:hover .arrow {
   transform: translateX(5px);
 }
-
-/* Efecto hover en el botón */
 .specialbtn:hover {
   background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
   transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
@@ -115,10 +121,8 @@ header {
 }
 .specialbtn:not(:hover) {
   background: linear-gradient(var(--myColor1), var(--myColor2));
-  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+  transition: --myColor1 0.4s, --myColor2 0.5s;
 }
-
-/* Declaraciones CSS para animar gradiente */
 @property --myColor1 {
   syntax: '<color>';
   initial-value: #43b248;
@@ -133,6 +137,14 @@ header {
   syntax: '<color>';
   initial-value: #43b248;
   inherits: false;
+}
+
+/* AGRUPAR BOTONES EN HORIZONTAL */
+.links-b {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estructura general de secciones */
@@ -168,10 +180,7 @@ header {
 }
 .feature {
   border-radius: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 30px;
   width: 300px;
 }
 .feature i {
@@ -215,23 +224,20 @@ header {
 }
 .what-we-offer button:hover {
   background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
-  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
-  --myColor1: #43b248;
-  --myColor2: #d4b757;
-  --myColor3: #ffdb98;
+  transition: --myColor1 0.4s, --myColor2 0.5s;
 }
 .what-we-offer button:not(:hover) {
   background: linear-gradient(var(--myColor1), var(--myColor2));
-  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+  transition: --myColor1 0.4s, --myColor2 0.5s;
 }
 
 /* Cada "oferta" (slide en Slick) */
 .offer {
   background-color: #fff;
   border-radius: 10px;
-  padding: 0 0 20px 0;
+  padding-bottom: 20px;
   transition: .4s ease;
-  margin: 0 15px;  /* Separación horizontal */
+  margin: 0 15px;
 }
 .offer:hover {
   transform: scale(1.05);
@@ -252,8 +258,6 @@ header {
   margin-top: 5px;
   display: inline-block;
   border-radius: 20px;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
   font-size: 16px !important;
 }
 .btnmasinfo a {
@@ -269,7 +273,7 @@ header {
   text-decoration: none;
 }
 
-/* Flechas Slick con tu estética */
+/* Flechas Slick */
 .my-arrow {
   background-color: #43b248;
   border: none;
@@ -281,7 +285,6 @@ header {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  outline: none;
 }
 .my-arrow:hover {
   background-color: #2e7c32;
@@ -289,9 +292,6 @@ header {
 .my-arrow i {
   font-size: 16px;
 }
-
-/* POSICIÓN de las flechas (opcional): 
-   Si las quieres a los extremos y centradas verticalmente en el carrusel, añade: */
 .my-arrow.slick-prev {
   position: absolute;
   left: 10px;
@@ -307,12 +307,11 @@ header {
   z-index: 10;
 }
 
-/* Mapa / Contact */
+/* Contact / Mapa */
 .contact {
   position: relative;
   display: flex;
   padding: 0;
-  padding-bottom: 0;
 }
 .contact > * {
   width: 50%;
@@ -379,31 +378,78 @@ header {
   transform: translateY(0px);
 }
 
-/* Título con efecto "shine" */
+/* Subtítulo “¡A 2 metros del Monumento!” sin degradado interior y líneas más juntas */
 .h3m {
+  position: relative;
   font-size: 18px;
   font-weight: 600;
-  background: linear-gradient(90deg, #FFD700, #ffffff, #FFD700);
-  background-size: 200% auto;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  animation: shine 10s linear infinite;
+  color: #ffffff;    /* dorado sólido */
+  background: none;
+  animation: none;
 }
-@keyframes shine {
-  0% { background-position: 200% center; }
-  100% { background-position: -200% center; }
+.h3m::before,
+.h3m::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  
+  filter: blur(2px);
+}
+.h3m::before { top: -3px; }
+.h3m::after  { bottom: -3px; }
+
+/* Estilo específico para el botón de WhatsApp en el navbar */
+.whatsapp-btn-navbar {
+  width: 109px;
+  height: 40px;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #43b248;
+  color: white !important;
+  border: unset;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.whatsapp-btn-navbar:hover {
+  background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+  --myColor1: #43b248;
+  --myColor2: #d4b757;
+  --myColor3: #ffdb98;
+  color: white !important;
+  text-decoration: none;
+}
+
+.whatsapp-btn-navbar:not(:hover) {
+  background: linear-gradient(var(--myColor1), var(--myColor2));
+  transition: --myColor1 0.4s, --myColor2 0.5s;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
+  /* Texto más grande en hero para móvil */
+  .sec1 h1 {
+    font-size: 32px !important;
+    line-height: 1.3;
+  }
+
   .why-choose-us .features {
     flex-direction: column;
     align-items: center;
   }
   .mainp { width: 100%; }
   .contact {
-    display: flex;
     flex-direction: column;
   }
   .contact > * {
@@ -412,7 +458,22 @@ header {
   .specialbtn {
     width: auto;
   }
-  
-  /* Slick se encarga de mostrar 1 slide a la vez en móvil si definimos breakpoint: 768 */
   .offer { margin: 0 5px; }
+  /* WhatsApp full width en responsive */
+  #mobile-menu a.whatsapp-btn-mobile {
+    background-color: var(--accent-color) !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    display: block; /* Asegura que ocupe su propia línea */
+    width: calc(100% - 30px); /* Ancho completo menos el padding lateral del contenedor */
+    padding: 10px 15px; /* Padding vertical 10px, horizontal 15px */
+    margin: 10px 15px; /* Margen para centrar y espaciar */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    text-align: center; /* Centra el texto */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+  /* Estilo general para otros items del menu movil si es necesario */
+  #mobile-menu a:not(.whatsapp-btn-mobile) {
+    padding: 10px 15px; /* Asegurar padding consistente */
+  }
 }

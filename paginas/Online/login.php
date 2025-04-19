@@ -319,16 +319,21 @@ else
   cursor: pointer;
   text-decoration: underline;
   transition: color 0.3s;
-  text-align: center; /* 👈 CENTRAR EL TEXTO */
-  display: block;     /* 👈 Hacerlo como un bloque para que respete el ancho */
-  width: 100%;        /* 👈 Ocupar todo el ancho del form */
+  text-align: center; /* CENTRAR EL TEXTO */
+  display: block;     /* Hacerlo como un bloque para que respete el ancho */
+  width: 100%;        /* Ocupar todo el ancho del form */
 }
 
-
-.mos{
-
+/* Logo Emblema ODS */
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
 }
-
+.logo-container img.emblema-ods {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+}
 
 </style>
 
@@ -339,11 +344,8 @@ else
 <BR>
 
 <div class="login-page">
-
-   
-      
-        
-        <!-- FORMULARIO DE INICIAR SESIÓN -->
+  <div class="logo-container"><img src="../../assets/images/Emblema_ODS_block (PNG).png" alt="Emblema ODS" class="emblema-ods" /></div>
+    <!-- FORMULARIO DE INICIAR SESIÓN -->
         <div id="loginForm">
           <h1>Iniciar sesión</h1>
           <form action="" method="post" name="iniciarsesion" id="iniciarsesion">

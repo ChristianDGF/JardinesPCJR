@@ -398,3 +398,30 @@ body {
     grid-column: span 1;
   }
 }
+
+/* Navbar responsive (móvil) para pagosonline */
+@media screen and (max-width: 1024px) {
+  .topnav.responsive {
+    background-color: var(--accent-color);
+  }
+  .topnav.responsive a {
+    color: white !important;
+    font-weight: bold !important;
+  }
+  .topnav.responsive a {
+    display: block; /* Asegura que ocupe su propia línea */
+    text-align: left;
+    padding: 15px 10px 15px 10px; /* Padding similar a otros items, ajustar si es necesario */
+  }
+  .topnav.responsive a.whatsapp-btn-mobile {
+    background-color: var(--accent-color) !important; /* Fondo verde */
+    width: calc(100% - 20px); /* Ancho completo menos padding horizontal */
+    box-sizing: border-box; /* Incluir padding en el ancho */
+    margin-left: 10px; /* Alinear con otros items si tienen padding */
+    margin-right: 10px;
+    margin-top: 10px; /* Espacio superior */
+    margin-bottom: 10px; /* Espacio inferior */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+    text-align: center; /* Centrar texto dentro del botón */
+  }
+}

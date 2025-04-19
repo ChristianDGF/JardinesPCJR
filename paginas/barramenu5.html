@@ -18,12 +18,18 @@
         margin-bottom: 20px;
       }
 
+      @media (max-width: 768px) {
+        .topnav.responsive a {
+          padding-top: 20px !important;
+          padding-bottom: 20px !important;
+        }
+      }
   </style>
 </head>
 
 <header class="bg-white shadow-md relative z-50">
   <div class="container mx-auto flex justify-between items-center py-2 px-6 ">
-    <img src="../assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="h-14 navpadding" style="height: 56px; width: auto;"/>
+    <a href="../index.php"><img src="../assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="h-14 navpadding" style="height: 56px; width: auto;"/></a>
     
     <!-- Menú de escritorio -->
     <nav class="hidden md:flex items-center space-x-6 navpadding2">
@@ -104,4 +110,3 @@
       <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 specialbtn2">WhatsApp</a>
     </div>
 </header>
-

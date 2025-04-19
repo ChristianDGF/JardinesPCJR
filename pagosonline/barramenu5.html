@@ -71,11 +71,86 @@ body {
     text-align: left;
 	font-size: 25px;
 	font-weight:bold;
-	padding-top:15px;
-	padding-bottom: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	
   }
 }
+
+.specialbtn {
+  font-family: "Playfair Display", serif;
+  background-color: #43b248;
+  color: white;
+  width: 200px;
+  border: unset;
+  border-radius: 2px;
+  margin-top: 20px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.specialbtn .arrow {
+  margin-left: 8px;
+  transition: all 0.4s ease;
+}
+.specialbtn:hover .arrow {
+  transform: translateX(5px);
+}
+.specialbtn:hover {
+  background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+  --myColor1: #43b248;
+  --myColor2: #d4b757;
+  --myColor3: #ffdb98;
+}
+.specialbtn:not(:hover) {
+  background: linear-gradient(var(--myColor1), var(--myColor2));
+  transition: --myColor1 0.4s, --myColor2 0.5s;
+}
+
+.whatsapp-btn {
+  font-family: "Playfair Display", serif;
+  background-color: #43b248;
+  color: white;
+  width: 100%;
+  border: unset;
+  border-radius: 2px;
+  margin-top: 20px;
+  font-weight: 600;
+  display: block;
+  align-items: center;
+  text-align: left !important;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.whatsapp-btn .arrow {
+  margin-left: 8px;
+  transition: all 0.4s ease;
+}
+
+.whatsapp-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+  transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+  --myColor1: #43b248;
+  --myColor2: #d4b757;
+  --myColor3: #ffdb98;
+}
+
+.whatsapp-btn:not(:hover) {
+  background: linear-gradient(var(--myColor1), var(--myColor2));
+  transition: --myColor1 0.4s, --myColor2 0.5s;
+}
+
 </style>
 </head>
 <body>
@@ -91,6 +166,7 @@ body {
   <a href="../paginas/campana.php">Campaña</a>
   <a href="//blog.jardinesrecuerdo.com">Blog</a>
   <a href="../paginas/promocion.php" style="color:#CE8500;">Promoci&oacute;n</a>
+  <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="whatsapp-btn">WhatsApp</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <img src="../images/ListaMenu3L.png" alt="Menú Parque Cementerio Jardines del Recuerdo">
   </a>

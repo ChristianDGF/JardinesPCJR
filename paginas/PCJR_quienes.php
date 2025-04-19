@@ -22,19 +22,19 @@
     
     
     <div class="sec1">
-    <img class="imgsec1 hiddenscroll" src="../assets/images/DSC_0636.JPG" alt="Imagen Sec1" />
+    <img class="imgsec1 hiddenscroll" src="../assets/images/qs.jpg" alt="Imagen Sec1" />
     <h1 class="hiddenscroll">¿Quiénes Somos?</h1>
   </div>
 
   <div class="section">
     <div class="content hiddenscroll">
       <div class="img-wrapper">
-        <img src="../assets/images/DSC_0621.JPG" alt="A modern building with green surroundings">
+        <img src="../assets/images/imag1.jpeg" alt="A modern building with green surroundings">
       </div>
       <div class="text">
-        <h2 class="green">¿Quiénes Somos?</h2>
+        
         <p>
-          Una organización con una experiencia de más de 50 años, en los cuales hemos tenido el privilegio de lograr que más de un millón de familias, en diferentes países, se motivaran a tomar una de las decisiones más importantes, como lo es contar con un Plan de Previsión Familiar, adquiriendo antes, sin angustia ni presión, propiedades indispensables para afrontar dignamente la partida de un ser querido.
+          Somos una organización con una experiencia de más de 50 años, en los cuales hemos tenido el privilegio de lograr que más de un millón de familias, en diferentes países, se motivaran a tomar una de las decisiones más importantes, como lo es contar con un Plan de Previsión Familiar, adquiriendo antes, sin angustia ni presión, propiedades indispensables para afrontar dignamente la partida de un ser querido.
         </p>
       </div>
     </div>
@@ -49,7 +49,7 @@
         </p>
       </div>
       <div class="img-wrapper">
-        <img src="../assets/images/DSC_0606.JPG" alt="A group of happy elderly people smiling together">
+        <img src="../assets/images/imag2.jpg" alt="A group of happy elderly people smiling together">
       </div>
     </div>
   </div>
@@ -57,7 +57,7 @@
   <div class="section">
     <div class="content hiddenscroll">
       <div class="img-wrapper">
-        <img src="../assets/images/DJI_0288.JPG" alt="A group of serious looking young professionals">
+        <img src="../assets/images/imag3.jpg" alt="A group of serious looking young professionals">
       </div>
       <div class="text">
         <h2>Visión</h2>

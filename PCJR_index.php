@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
 
-  <!-- Tu CSS principal (la versión de Slick que querías) -->
+  <!-- Tu CSS principal -->
   <link rel="stylesheet" href="assets/css/home.css" />
 
   <!-- Íconos (Font Awesome) -->
@@ -30,6 +30,22 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
   />
+  <!-- Custom carousel styles -->
+  <style>
+    .offers-slider {
+      width: 70%; /* Slider ocupa 70% */
+      margin: 0 auto;
+      position: relative;
+    }
+    .offers-slider .slick-prev {
+      left: 0 !important;
+      transform: translateX(-110%) !important; /* Flechas más afuera */
+    }
+    .offers-slider .slick-next {
+      right: 0 !important;
+      transform: translateX(110%) !important; /* Flechas más afuera */
+    }
+  </style>
 </head>
 
 <body>
@@ -50,8 +66,13 @@
   <!-- Sección Hero -->
   <div class="sec1 hiddenscroll">
     <div class="content">
-      <h1 class="hiddenscroll">Planes de Previsión <br>Familiar Flexibles</h1>
+      <h1 class="hiddenscroll">
+        Propiedades y Planes de Previsión <br />
+        Familiar al alcance de todos
+      </h1>
+      <!-- Subtítulo con líneas doradas -->
       <h3 class="hiddenscroll h3m">¡A 2 metros del Monumento!</h3>
+
       <p class="mainp hiddenscroll">
         Con más de 50 años brindando servicios exequiales y funerarios con un
         personal altamente motivado y enfocado en lograr alta calidad en la
@@ -59,7 +80,7 @@
       </p>
       <div class="links-b hiddenscroll">
         <a
-          href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20¿Me%20pueden%20ayudar?"
+          href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F"
           target="_blank"
         >
           <button class="specialbtn">
@@ -82,34 +103,29 @@
     <h2 class="hiddenscroll">¿Por qué elegirnos?</h2>
     <div class="features">
       <div class="feature hiddenscroll">
-        <i class="fas fa-hand-holding-heart"></i>
-        <h3>Atención Profesional</h3>
-        <p>Ofrecemos un abrazo silencioso, acompañándote con sensibilidad en cada paso.</p>
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovación</h3>
+        <p>Somos un parque cementerio único gracias a nuestra avanzada arquitectura e ingeniería.</p>
       </div>
       <div class="feature hiddenscroll">
-        <i class="fas fa-home"></i>
-        <h3>Consuelo y Respeto</h3>
-        <p>Un lugar donde honres la vida de nuestros seres queridos con dignidad y amor.</p>
-      </div>
-      <div class="feature hiddenscroll">
-        <i class="fas fa-users"></i>
-        <h3>Planes Familiares</h3>
-        <p>Ofrecemos soluciones flexibles, porque entendemos lo importante que es la familia.</p>
-      </div>
-      <div class="feature hiddenscroll">
-        <i class="fas fa-seedling"></i>
-        <h3>Inversión con Significado</h3>
-        <p>Ofrecemos un lugar de memoria permanente que crece en valor sentimental.</p>
+        <i class="fas fa-user-tie"></i>
+        <h3>Atención profesional</h3>
+        <p>Contamos con un equipo altamente capacitado, dedicado a ofrecer un servicio con un enfoque humano.</p>
       </div>
       <div class="feature hiddenscroll">
         <i class="fas fa-tree"></i>
-        <h3>Espacio para los Recuerdos</h3>
-        <p>Ofrecemos un ambiente de belleza y tranquilidad para conectar con familiares y amigos.</p>
+        <h3>Entorno acogedor</h3>
+        <p>La belleza, tranquilidad, paz y seguridad que ofrecemos invitan a las visitas de familiares y amigos.</p>
       </div>
       <div class="feature hiddenscroll">
-        <i class="fas fa-church"></i>
-        <h3>Refugio de Paz</h3>
-        <p>Santuario diseñado con innovación arquitectónica e ingeniería avanzada para darte el espacio que necesitas.</p>
+        <i class="fas fa-home"></i>
+        <h3>Propiedades y Planes de Previsión Familiar</h3>
+        <p>Diseñamos opciones con las máximas facilidades para su tranquilidad.</p>
+      </div>
+      <div class="feature hiddenscroll">
+        <i class="fas fa-chart-line"></i>
+        <h3>Inversión segura</h3>
+        <p>Adquiere una propiedad con una revalorización constante.</p>
       </div>
     </div>
   </div>
@@ -120,59 +136,65 @@
 
     <div class="offers-slider hiddenscroll">
       <div class="offer">
-        <img alt="Jardines Familiares" src="assets/images/lotefam_brillo4.jpg" />
-        <div class="description">
-          <h3>Jardines Familiares</h3>
-          <p class="btnmasinfo">
-            <a href="paginas/planes.php">Más Información</a>
-          </p>
+        <img
+          alt="Jardines Familiares"
+          src="assets/images/lotefam_brillo4.jpg"
+        />
+        <div class="description" style="text-align:center; padding:10px 5px;">
+          <div style="background:#43b248; color:white; padding:8px 20px; border-radius:30px; display:inline-block; margin-bottom:8px; font-family:serif;">Jardines Familiares</div>
+          <div>
+            <a href="paginas/planes.php" style="color:#43b248; text-decoration:none; font-size:16px;">Más Información ›</a>
+          </div>
         </div>
       </div>
 
       <div class="offer">
         <img alt="Mausoleos Familiares" src="assets/images/maus_noche2.jpg" />
-        <div class="description">
-          <h3>Mausoleos Familiares</h3>
-          <p class="btnmasinfo">
-            <a href="paginas/planes.php">Más Información</a>
-          </p>
+        <div class="description" style="text-align:center; padding:10px 5px;">
+          <div style="background:#43b248; color:white; padding:8px 20px; border-radius:30px; display:inline-block; margin-bottom:8px; font-family:serif;">Mausoleos Familiares</div>
+          <div>
+            <a href="paginas/planes.php" style="color:#43b248; text-decoration:none; font-size:16px;">Más Información ›</a>
+          </div>
         </div>
       </div>
 
       <div class="offer">
         <img alt="Panteones Familiares" src="assets/images/panteon4.jpg" />
-        <div class="description">
-          <h3>Panteones Familiares</h3>
-          <p class="btnmasinfo">
-            <a href="paginas/planes.php">Más Información</a>
-          </p>
+        <div class="description" style="text-align:center; padding:10px 5px;">
+          <div style="background:#43b248; color:white; padding:8px 20px; border-radius:30px; display:inline-block; margin-bottom:8px; font-family:serif;">Panteones Familiares</div>
+          <div>
+            <a href="paginas/planes.php" style="color:#43b248; text-decoration:none; font-size:16px;">Más Información ›</a>
+          </div>
         </div>
       </div>
 
       <div class="offer">
         <img alt="Mausoleos Majestuosos" src="assets/images/maus_garden1.jpg" />
-        <div class="description">
-          <h3>Majestuosos Mausoleos</h3>
-          <p class="btnmasinfo">
-            <a href="paginas/planes.php">Más Información</a>
-          </p>
+        <div class="description" style="text-align:center; padding:10px 5px;">
+          <div style="background:#43b248; color:white; padding:8px 20px; border-radius:30px; display:inline-block; margin-bottom:8px; font-family:serif;">Majestuosos Mausoleos</div>
+          <div>
+            <a href="paginas/planes.php" style="color:#43b248; text-decoration:none; font-size:16px;">Más Información ›</a>
+          </div>
         </div>
       </div>
 
       <div class="offer">
-        <img alt="Nuevos Osarios" src="assets/images/lotefam_brillo1.jpg" />
-        <div class="description">
-          <h3>Nuevos Osarios</h3>
-          <p class="btnmasinfo">
-            <a href="paginas/planes.php">Más Información</a>
-          </p>
+        <img alt="Nuevos Osarios" src="assets/images/osa.jpeg" />
+        <div class="description" style="text-align:center; padding:10px 5px;">
+          <div style="background:#43b248; color:white; padding:8px 20px; border-radius:30px; display:inline-block; margin-bottom:8px; font-family:serif;">Nuevos Osarios</div>
+          <div>
+            <a href="paginas/planes.php" style="color:#43b248; text-decoration:none; font-size:16px;">Más Información ›</a>
+          </div>
         </div>
       </div>
       <!-- Agrega más .offer si deseas más items -->
     </div>
 
     <!-- Botón CTA -->
-    <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" class="hiddenscroll">
+    <a
+      href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F"
+      class="hiddenscroll"
+    >
       <button>Quiero Comprar</button>
     </a>
   </div>
@@ -195,11 +217,11 @@
       <div class="carousel-inner hiddenscroll">
         <div class="testimonial">
           <p>
-            "Cuando perdí a mi madre, sentí que el mundo se derrumbaba. Jardines 
-            del Recuerdo no solo nos dio un lugar hermoso para honrar su memoria, 
-            sino que nos acompañó en cada paso de nuestro dolor. Aquí, cada rincón 
-            habla de la importancia de la familia y la conexión que trasciende la vida. 
-            Estoy muy agradecida por su apoyo."
+            "Cuando perdí a mi madre, sentí que el mundo se derrumbaba. Jardines
+            del Recuerdo no solo nos dio un lugar hermoso para honrar su
+            memoria, sino que nos acompañó en cada paso de nuestro dolor. Aquí,
+            cada rincón habla de la importancia de la familia y la conexión que
+            trasciende la vida. Estoy muy agradecida por su apoyo."
           </p>
           <h4>María González</h4>
           <span>52 años</span>
@@ -207,11 +229,11 @@
         </div>
         <div class="testimonial">
           <p>
-            "Nunca imaginé que un lugar dedicado a la despedida pudiera 
-            transmitir tanta paz. El personal nos trató con una sensibilidad 
-            que nunca olvidaremos. No es solo un cementerio, es un espacio 
-            donde los recuerdos siguen vivos, donde el amor continúa floreciendo. 
-            Un lugar que me permitió encontrar serenidad."
+            "Nunca imaginé que un lugar dedicado a la despedida pudiera
+            transmitir tanta paz. El personal nos trató con una sensibilidad
+            que nunca olvidaremos. No es solo un cementerio, es un espacio donde
+            los recuerdos siguen vivos, donde el amor continúa floreciendo. Un
+            lugar que me permitió encontrar serenidad."
           </p>
           <h4>Carlos Rodríguez</h4>
           <span>43 años</span>
@@ -219,11 +241,11 @@
         </div>
         <div class="testimonial">
           <p>
-            "Después de perder a mi esposo, temía los lugares que recordarían mi dolor. 
-            Pero Jardines del Recuerdo fue diferente. Es un jardín de esperanza. 
-            Un lugar donde puedo sentirme cerca de él, recordarlo con una sonrisa 
-            y encontrar consuelo para el corazón. Siempre estaré agradecida 
-            con todo el equipo."
+            "Después de perder a mi esposo, temía los lugares que recordarían mi
+            dolor. Pero Jardines del Recuerdo fue diferente. Es un jardín de
+            esperanza. Un lugar donde puedo sentirme cerca de él, recordarlo con
+            una sonrisa y encontrar consuelo para el corazón. Siempre estaré
+            agradecida con todo el equipo."
           </p>
           <h4>Elena Martínez</h4>
           <span>59 años</span>
@@ -231,11 +253,12 @@
         </div>
         <div class="testimonial">
           <p>
-            "En el momento más difícil de nuestra familia, cuando perdimos a nuestro hijo, 
-            Jardines del Recuerdo nos dio más que un lugar de descanso. Nos brindaron 
-            un santuario lleno de vida y esperanza, un lugar donde siempre podremos 
-            recordarlo con amor y sentir que su presencia nos acompaña. No hay palabras 
-            para describir lo que significa para nosotros."
+            "En el momento más difícil de nuestra familia, cuando perdimos a
+            nuestro hijo, Jardines del Recuerdo nos dio más que un lugar de
+            descanso. Nos brindaron un santuario lleno de vida y esperanza, un
+            lugar donde siempre podremos recordarlo con amor y sentir que su
+            presencia nos acompaña. No hay palabras para describir lo que
+            significa para nosotros."
           </p>
           <h4>Laura y Ricken Perez</h4>
           <span>33 y 31 años</span>
@@ -253,7 +276,7 @@
   <div
     id="popup-afiliacion"
     class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center px-4"
-    style="display: none"
+    style="display: flex"
   >
     <div
       class="relative bg-white border border-green-600 p-4 w-full max-w-3xl shadow-2xl rounded-xl md:rounded-lg flex flex-col md:flex-row items-center gap-6 scale-90"
@@ -308,44 +331,59 @@
   <!-- Slick Carousel JS -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <!-- Menú móvil (ajusta si necesitas) -->
+  <!-- Menú móvil -->
   <script>
-    if(document.getElementById('menu-button')){
-      document.getElementById('menu-button').addEventListener('click', function() {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
-      });
+    if (document.getElementById('menu-button')) {
+      document
+        .getElementById('menu-button')
+        .addEventListener('click', function () {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
     }
-    if(document.getElementById('mobile-nosotros')){
-      document.getElementById('mobile-nosotros').addEventListener('click', function() {
-        document.getElementById('mobile-nosotros-menu').classList.toggle('hidden');
-      });
+    if (document.getElementById('mobile-nosotros')) {
+      document
+        .getElementById('mobile-nosotros')
+        .addEventListener('click', function () {
+          document
+            .getElementById('mobile-nosotros-menu')
+            .classList.toggle('hidden');
+        });
     }
-    if(document.getElementById('mobile-servicios')){
-      document.getElementById('mobile-servicios').addEventListener('click', function() {
-        document.getElementById('mobile-servicios-menu').classList.toggle('hidden');
-      });
+    if (document.getElementById('mobile-servicios')) {
+      document
+        .getElementById('mobile-servicios')
+        .addEventListener('click', function () {
+          document
+            .getElementById('mobile-servicios-menu')
+            .classList.toggle('hidden');
+        });
     }
   </script>
 
-  <!-- Configuración de Slick: 3 simultáneas, avanza 1, flechas correctas -->
+  <!-- Configuración de Slick -->
   <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
       $('.offers-slider').slick({
-        slidesToShow: 3,        
-        slidesToScroll: 1,      
+        slidesToShow: 3, /* Default: intentar mostrar 3 */
+        slidesToScroll: 1,
+        variableWidth: false, /* Slick gestiona el ancho/espacio */
         infinite: true,
         autoplay: false,
         speed: 800,
         arrows: true,
-        // Flecha izquierda => .slick-prev
-        prevArrow: '<button class="my-arrow slick-prev"><i class="fas fa-chevron-left"></i></button>',
-        // Flecha derecha => .slick-next
-        nextArrow: '<button class="my-arrow slick-next"><i class="fas fa-chevron-right"></i></button>',
-
-        // Responsivo: en pantallas menores a 768px muestra 1
+        prevArrow:
+          '<button class="my-arrow slick-prev"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow:
+          '<button class="my-arrow slick-next"><i class="fas fa-chevron-right"></i></button>',
         responsive: [
           {
-            breakpoint: 768,
+            breakpoint: 1240, /* Debajo de 1240px, mostrar 2 */
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 830,  /* Debajo de 830px, mostrar 1 */
             settings: {
               slidesToShow: 1
             }
@@ -357,6 +395,5 @@
 
   <!-- Efecto "show on scroll" -->
   <script src="assets/js/showonscroll.js"></script>
-
 </body>
 </html>

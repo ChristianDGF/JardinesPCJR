@@ -66,18 +66,28 @@ body {
 }
 
 .plan-container {
-  max-width: 1100px;
-  margin: 0 auto 60px;
   display: flex;
-  flex-direction: row !important;
-  gap: 30px;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start; /* Align items at top for titles next to images */
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
 }
 
-.plan-container.reverse {
-  flex-direction: row-reverse;
+.plan-container .plan-img {
+  flex: 0 0 40%;
+}
+
+.plan-container .plan-text {
+  flex: 1; /* Text takes remaining space */
+  text-align: left; /* Ensure text inside is left-aligned */
+}
+
+.plan-text h1 {
+  text-align: left;
+  margin: 0 0 15px; /* Space below title */
 }
 
 .plan-img {
@@ -88,11 +98,6 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.plan-text {
-  flex: 1;
-  min-width: 280px;
-}
-
 .plan-text p {
   font-size: 16px;
   color: #444;
@@ -101,32 +106,40 @@ body {
 
 /* Botón estilizado con hover */
 .plan-btn {
-  margin-top: 20px;
+  margin: 0; /* Remove top margin so it aligns with .btn-yellow-green */
   font-size: 16px;
   border: none;
-  background-color: var(--accent-color);
+  background-color: #43b248; /* initial green */
   color: white;
-  padding: 12px 24px;
-  font-weight: 500;
+  padding: 12px 25px;
+  font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background 0.4s ease, transform 0.2s ease; /* Transition background */
 }
 
 .plan-btn:hover {
-  background-color: #379b3b;
   transform: scale(1.05);
+  /* Apply gradient on hover, similar to specialbtn */
+  background: linear-gradient(45deg, #43b248, #a8e063, #ffdb98); /* Example gradient */
+}
+
+/* Gradient animation for Planes de Capilla button */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .plan-container,
-  .plan-container.reverse {
+  .plan-container {
     flex-direction: column;
-    text-align: center;
+    align-items: stretch;
   }
 
-  .plan-img {
+  .plan-container .plan-img {
+    flex-basis: auto;
     max-width: 100%;
     margin-bottom: 20px;
   }
@@ -136,6 +149,148 @@ body {
   }
 }
 
+/* Card Grid Layout */
+.plans-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.plan-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card .plan-img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1.3 / 1;
+  object-fit: cover;
+}
+
+.plan-card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.plan-card-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.plan-card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+/* Shared Button Styles */
+.btn-whatsapp,
+.btn-call {
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.btn-whatsapp i,
+.btn-call i {
+  margin-right: 8px;
+}
+
+/* WhatsApp Button (Green) */
+.btn-whatsapp {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  background-color: #379b3b;
+  transform: scale(1.03);
+}
+
+/* Call Button (Gold/Yellow) */
+.btn-call {
+  background: linear-gradient(145deg, #ffdb98, #d4b757);
+  color: #444;
+  border: 1px solid #c8a947;
+}
+
+.btn-call:hover {
+  background: linear-gradient(145deg, #d4b757, #ffdb98);
+  transform: scale(1.03);
+}
+
+/* Responsive adjustments for the grid */
+@media (max-width: 768px) {
+  .plans-grid-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 15px;
+  }
+}
+
+/* Button group layout horizontal */
+.button-group {
+  display: flex;
+  flex-direction: row; /* Align buttons horizontally */
+  align-items: center; /* Ensure vertical alignment */
+  justify-content: flex-start; /* Justify buttons to the left */
+  gap: 10px; /* Space between buttons */
+  margin-top: 15px;
+}
+
+/* Yellow-Green button styling - disable animation */
+.btn-yellow-green {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-yellow-green:hover {
+  background-color: #379b3b;
+  transform: scale(1.05);
+}
 
 .specialbtn2 {
   background-color: #43b248;
@@ -181,7 +336,6 @@ body {
   inherits: false;
 }
 
-
 footer{
   background-color: #144816 !important;
   color: white;
@@ -207,24 +361,13 @@ footer .text-green-600 {
   font-size: 18px;
 }
 
-.plan-container {
-  max-width: 1100px;
-  margin: 0 auto 60px;
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .plan-img-container {
-  flex: 0 0 40%; /* La imagen ocupará el 40% del ancho */
+  flex: 0 0 40%;
   max-width: 40%;
 }
 
 .plan-img {
-  width: 100%; /* Para que no se pase de su contenedor */
+  width: 100%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -232,7 +375,7 @@ footer .text-green-600 {
 }
 
 .plan-text {
-  flex: 0 0 55%; /* El texto ocupará 55% */
+  flex: 0 0 55%;
   min-width: 280px;
 }
 
@@ -263,4 +406,11 @@ footer .text-green-600 {
   .plan-text {
     padding: 0 10px;
   }
+}
+
+/* Keyframes for button gradient animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

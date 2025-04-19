@@ -21,7 +21,7 @@
 
     
     <div class="sec1 hiddenscroll">
-        <img class="imgsec1" src="../assets/images/DSC_0636.JPG"/>
+        <img class="imgsec1" src="../assets/images/po.jpeg"/>
            <h1 class="hiddenscroll">Empleos</h1>
            </div>
         </div>

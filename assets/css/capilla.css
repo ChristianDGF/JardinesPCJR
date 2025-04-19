@@ -1,0 +1,32 @@
+/* Styles specific to the chapel plans page */
+
+/* Ensure cards stretch to equal height in the grid */
+.plans-grid-container .plan-card {
+  height: 100%; /* Make card take full height of grid row */
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column; /* Stack image and content vertically */
+}
+
+/* Make content area grow to push buttons down */
+.plan-card-content {
+  flex-grow: 1; /* Allow content to expand */
+  display: flex; /* Use flexbox for content layout */
+  flex-direction: column; /* Stack title, p, buttons vertically */
+}
+
+/* Ensure paragraph within content can grow */
+.plan-card-content p {
+    flex-grow: 1; /* Allow paragraph to take available space */
+}
+
+/* Center and bold plan titles */
+.plan-card-content h2 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px; /* Optional: Adds some space below the title */
+}
+
+/* Override max-width from planes.css specifically for chapel images */
+.plan-img {
+  max-width: 100%; /* Ensure image can fill the card width */
+}
