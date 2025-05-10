@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.png" type="image/png" />
+
   <!-- Tu CSS principal -->
   <link rel="stylesheet" href="assets/css/home.css" />
 
@@ -71,7 +75,7 @@
         Familiar al alcance de todos
       </h1>
       <!-- Subtítulo con líneas doradas -->
-      <h3 class="hiddenscroll h3m">¡A 2 metros del Monumento!</h3>
+      <h3 class="hiddenscroll h3m">¡A 2,600 metros del Monumento!</h3>
 
       <p class="mainp hiddenscroll">
         Con más de 50 años brindando servicios exequiales y funerarios con un
@@ -80,8 +84,8 @@
       </p>
       <div class="links-b hiddenscroll">
         <a
-          href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F"
-          target="_blank"
+          href="javascript:void(0)"
+          onclick="document.getElementById('popup-whatsapp').style.display='flex'"
         >
           <button class="specialbtn">
             Atención Urgente
@@ -214,8 +218,9 @@
   <div class="section testimonials">
     <h2 class="hiddenscroll">Testimonios de nuestros clientes</h2>
     <div class="carousel">
-      <div class="carousel-inner hiddenscroll">
-        <div class="testimonial">
+      <div class="carousel-inner">
+        <!-- Primera vez - Set completo de testimonios -->
+        <div class="testimonial hiddenscroll">
           <p>
             "Cuando perdí a mi madre, sentí que el mundo se derrumbaba. Jardines
             del Recuerdo no solo nos dio un lugar hermoso para honrar su
@@ -227,7 +232,7 @@
           <span>52 años</span>
           <div class="stars">★★★★★</div>
         </div>
-        <div class="testimonial">
+        <div class="testimonial hiddenscroll">
           <p>
             "Nunca imaginé que un lugar dedicado a la despedida pudiera
             transmitir tanta paz. El personal nos trató con una sensibilidad
@@ -239,7 +244,7 @@
           <span>43 años</span>
           <div class="stars">★★★★★</div>
         </div>
-        <div class="testimonial">
+        <div class="testimonial hiddenscroll">
           <p>
             "Después de perder a mi esposo, temía los lugares que recordarían mi
             dolor. Pero Jardines del Recuerdo fue diferente. Es un jardín de
@@ -251,7 +256,7 @@
           <span>59 años</span>
           <div class="stars">★★★★★</div>
         </div>
-        <div class="testimonial">
+        <div class="testimonial hiddenscroll">
           <p>
             "En el momento más difícil de nuestra familia, cuando perdimos a
             nuestro hijo, Jardines del Recuerdo nos dio más que un lugar de
@@ -264,7 +269,57 @@
           <span>33 y 31 años</span>
           <div class="stars">★★★★★</div>
         </div>
-        <!-- Agrega más si quieres más testimonios -->
+        
+        <!-- Segunda vez - Duplicado de testimonios para animación continua -->
+        <div class="testimonial hiddenscroll">
+          <p>
+            "Cuando perdí a mi madre, sentí que el mundo se derrumbaba. Jardines
+            del Recuerdo no solo nos dio un lugar hermoso para honrar su
+            memoria, sino que nos acompañó en cada paso de nuestro dolor. Aquí,
+            cada rincón habla de la importancia de la familia y la conexión que
+            trasciende la vida. Estoy muy agradecida por su apoyo."
+          </p>
+          <h4>María González</h4>
+          <span>52 años</span>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial hiddenscroll">
+          <p>
+            "Nunca imaginé que un lugar dedicado a la despedida pudiera
+            transmitir tanta paz. El personal nos trató con una sensibilidad
+            que nunca olvidaremos. No es solo un cementerio, es un espacio donde
+            los recuerdos siguen vivos, donde el amor continúa floreciendo. Un
+            lugar que me permitió encontrar serenidad."
+          </p>
+          <h4>Carlos Rodríguez</h4>
+          <span>43 años</span>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial hiddenscroll">
+          <p>
+            "Después de perder a mi esposo, temía los lugares que recordarían mi
+            dolor. Pero Jardines del Recuerdo fue diferente. Es un jardín de
+            esperanza. Un lugar donde puedo sentirme cerca de él, recordarlo con
+            una sonrisa y encontrar consuelo para el corazón. Siempre estaré
+            agradecida con todo el equipo."
+          </p>
+          <h4>Elena Martínez</h4>
+          <span>59 años</span>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial hiddenscroll">
+          <p>
+            "En el momento más difícil de nuestra familia, cuando perdimos a
+            nuestro hijo, Jardines del Recuerdo nos dio más que un lugar de
+            descanso. Nos brindaron un santuario lleno de vida y esperanza, un
+            lugar donde siempre podremos recordarlo con amor y sentir que su
+            presencia nos acompaña. No hay palabras para describir lo que
+            significa para nosotros."
+          </p>
+          <h4>Laura y Ricken Perez</h4>
+          <span>33 y 31 años</span>
+          <div class="stars">★★★★★</div>
+        </div>
       </div>
     </div>
   </div>
@@ -276,7 +331,7 @@
   <div
     id="popup-afiliacion"
     class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center px-4"
-    style="display: flex"
+    style="display: none"
   >
     <div
       class="relative bg-white border border-green-600 p-4 w-full max-w-3xl shadow-2xl rounded-xl md:rounded-lg flex flex-col md:flex-row items-center gap-6 scale-90"
@@ -284,15 +339,15 @@
       <!-- Botón cerrar -->
       <button
         onclick="document.getElementById('popup-afiliacion').style.display='none'"
-        class="absolute top-2 right-3 text-gray-500 hover:text-red-500 text-2xl font-semibold"
+        class="absolute top-2 right-3 text-gray-500 hover:text-red-500 px-2 py-1 text-sm font-semibold rounded"
       >
-        &times;
+        Cerrar
       </button>
 
       <!-- Imagen lateral -->
       <div class="w-full md:basis-[62.5%] p-0 m-0">
         <img
-          src="assets/images/fieldfam.jpeg"
+          src="assets/images/pop1.jpeg"
           alt=""
           class="w-full h-[350px] rounded-lg object-cover object-left m-0 p-0"
         />
@@ -325,11 +380,91 @@
     </div>
   </div>
 
+  <!-- Popup WhatsApp Contactos -->
+  <div
+    id="popup-whatsapp"
+    class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center px-4"
+    style="display: none"
+  >
+    <div
+      class="relative bg-white border border-green-600 p-6 w-full max-w-2xl shadow-2xl rounded-xl flex flex-col items-center"
+    >
+      <!-- Botón cerrar -->
+      <button
+        onclick="document.getElementById('popup-whatsapp').style.display='none'"
+        class="absolute top-2 right-3 text-gray-500 hover:text-red-500 px-2 py-1 text-sm font-semibold rounded"
+      >
+        Cerrar
+      </button>
+
+      <!-- Título -->
+      <h3
+        class="text-2xl md:text-3xl font-semibold text-green-700 mb-4"
+        style="font-family: 'Playfair Display', serif"
+      >
+        Atención Urgente
+      </h3>
+      <p
+        class="text-gray-700 mb-6 text-center"
+        style="font-family: 'Lato', sans-serif"
+      >
+        Seleccione una de nuestras líneas de atención para recibir asistencia inmediata
+      </p>
+
+      <!-- Opciones de WhatsApp -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+        <a 
+          href="https://wa.me/18293451022/?text=Hola%2C%20necesito%20atención%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F" 
+          target="_blank"
+          class="whatsapp-option"
+        >
+          <div class="flex flex-col items-center p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-all">
+            <i class="fab fa-whatsapp text-3xl text-green-600 mb-2"></i>
+            <p class="font-bold text-gray-800">WhatsApp 1</p>
+            <p class="text-gray-600">+1 829 345 1022</p>
+          </div>
+        </a>
+        
+        <a 
+          href="https://wa.me/18293451032/?text=Hola%2C%20necesito%20atención%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F" 
+          target="_blank"
+          class="whatsapp-option"
+        >
+          <div class="flex flex-col items-center p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-all">
+            <i class="fab fa-whatsapp text-3xl text-green-600 mb-2"></i>
+            <p class="font-bold text-gray-800">WhatsApp 2</p>
+            <p class="text-gray-600">+1 829 345 1032</p>
+          </div>
+        </a>
+        
+        <a 
+          href="tel:+18099717222" 
+          target="_blank"
+          class="phone-option"
+        >
+          <div class="flex flex-col items-center p-4 bg-green-50 hover:bg-green-100 rounded-lg transition-all">
+            <i class="fas fa-phone-alt text-3xl text-green-600 mb-2"></i>
+            <p class="font-bold text-gray-800">Central</p>
+            <p class="text-gray-600">+1 809 971 7222</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
   <!-- Slick Carousel JS -->
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Script para mostrar popup de afiliación con retraso -->
+  <script>
+    // Mostrar el popup después de 10 segundos
+    setTimeout(function() {
+      document.getElementById('popup-afiliacion').style.display = 'flex';
+    }, 10000); // 10000 milisegundos = 10 segundos
+  </script>
 
   <!-- Menú móvil -->
   <script>

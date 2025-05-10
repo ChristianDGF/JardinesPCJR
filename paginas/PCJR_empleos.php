@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCJR - EMPLEOS</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/png" />
+    
     <!-- Vinculación con Archivo CSS -->
     <link rel="stylesheet" href="../assets/css/empleos.css">
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>

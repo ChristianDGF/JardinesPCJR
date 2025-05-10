@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCJR | Ayuda</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/png" />
+    
     <!-- Vinculación con Archivo CSS -->
     <link rel="stylesheet" href="../assets/css/faq.css">
-    <!-- Vinculación con librexría de JS para el SCROLL -->
+    <!-- Vinculación con librería de JS para el SCROLL -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
@@ -33,49 +38,79 @@
         <div class="faq">
             <div class="faq-item" onclick="toggleAnswer(event)">
                 <i class="far fa-circle"></i>
-                ¿Cómo puede actualizar mis datos?
+                ¿Cómo puedo ingresar a "Servicios en Línea"?
             </div>
             <div class="faq-answer">
-                Puede actualizar sus datos (teléfono, dirección o correo electrónico) en la sección 'Actualizar Datos', validando sus credenciales.
+                Puede acceder a "Servicios en Línea" desde nuestra barra de navegación principal, dentro del menú "¿Qué te ofrecemos?". Allí encontrará todas las opciones para gestionar su cuenta y realizar diversas operaciones.
             </div>
+
             <div class="faq-item" onclick="toggleAnswer(event)">
                 <i class="far fa-circle"></i>
-                ¿Cómo puedo consultar mi balance?
+                ¿Cómo puedo actualizar mis datos personales?
             </div>
             <div class="faq-answer">
-                Puede consultar su saldo y movimientos recientes en la sección 'Balance y Pagos', validando sus credenciales.
+                En la sección "Servicios en Línea", encontrará la opción para actualizar su información personal como teléfono, dirección o correo electrónico.
             </div>
+
             <div class="faq-item" onclick="toggleAnswer(event)">
                 <i class="far fa-circle"></i>
-                ¿Puedo realizar pagos en línea?
+                ¿Cómo verifico si estoy al día con mis pagos?
             </div>
             <div class="faq-answer">
-                Sí, puede realizar pagos en línea mediante la plataforma del Banco Popular en la sección 'Pagos y Servicios', tras validar sus credenciales.
+                Dentro de "Servicios en Línea", puede verificar el estado actual de sus pagos, incluyendo si tiene algún saldo pendiente.
             </div>
+
             <div class="faq-item" onclick="toggleAnswer(event)">
                 <i class="far fa-circle"></i>
-                ¿Qué otros métodos de pago disponen?
+                ¿Cómo consulto o imprimo mi estado de cuenta o movimiento de cuotas?
             </div>
             <div class="faq-answer">
-                Además de la plataforma en línea, ofrecemos pago por llamada al (809) 555-1234, pago por WhatsApp al (809) 555-6789, Internet Banking del Banco Popular y transferencias a nuestras cuentas en Banesco, Banco Popular, Banreservas y Scotiabank.
+                En "Servicios en Línea" encontrará opciones para visualizar e imprimir su estado de cuenta completo, así como ver el historial detallado de sus movimientos y cuotas.
             </div>
+
             <div class="faq-item" onclick="toggleAnswer(event)">
                 <i class="far fa-circle"></i>
-                ¿Cuánto cuesta el servicio?
+                ¿Cómo puedo pagar online?
             </div>
             <div class="faq-answer">
-                El uso de nuestros servicios en línea no tiene costo adicional; las transacciones pueden estar sujetas a comisiones de la entidad financiera.
+                Puede realizar pagos en línea mediante la plataforma del Banco Popular, Paypal Me, en "Servicios en Línea". También ofrecemos pago por llamada al (809) 555-1234, pago por WhatsApp al (809) 555-6789, y transferencias a nuestras cuentas en Banesco, Banco Popular, Banreservas y Scotiabank.
             </div>
+
             <div class="faq-item" onclick="toggleAnswer(event)">
                 <i class="far fa-circle"></i>
-                ¿Cómo encuentro a mi conocido?
+                ¿Cómo puedo pagar con PayPal.Me?
             </div>
             <div class="faq-answer">
-                Puede buscar a su conocido utilizando la función de búsqueda en nuestra página principal.
+                En la sección "Servicios en Línea" encontrará la opción para realizar pagos mediante PayPal.Me, un método seguro y rápido para sus transacciones.
             </div>
+
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                ¿Dónde encuentro información sobre sus cuentas bancarias?
+            </div>
+            <div class="faq-answer">
+                La información sobre nuestras cuentas bancarias está disponible en "Servicios en Línea", donde podrá ver los detalles para realizar transferencias o depósitos.
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                ¿Cómo ubico a un familiar o amigo fallecido?
+            </div>
+            <div class="faq-answer">
+                A través de la opción "Buscar Difunto" en nuestro menú principal o dentro de "Servicios en Línea", puede localizar a familiares o amigos fallecidos ingresando su nombre.
+            </div>
+
+            <div class="faq-item" onclick="toggleAnswer(event)">
+                <i class="far fa-circle"></i>
+                ¿Cómo solicito otros requerimientos específicos?
+            </div>
+            <div class="faq-answer">
+                En "Servicios en Línea" encontrará formularios para solicitar diversos requerimientos o servicios adicionales. También puede contactarnos directamente para cualquier solicitud personalizada.
+            </div>
+
             <div class="faq-item">
                 <i class="far fa-circle"></i>
-                ¿No encuentra una respuesta a su pregunta? <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank">Escríbanos</a>
+                ¿No encuentra una respuesta a su pregunta? Por favor escríbanos a <a href="mailto:jimmy@jardinesrecuerdo.com">jimmy@jardinesrecuerdo.com</a> o <a href="https://wa.me/18293451006/?text=Hola%2C%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank">WhatsApp 8293451006</a>
             </div>
         </div>
     </div>

@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PCJR - GALERÍA</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/png" />
+
   <!-- CSS externo -->
   <link rel="stylesheet" href="../assets/css/galeria.css">
 
@@ -24,28 +28,48 @@
   <!-- Título de sección -->
   <div class="sec1">
     <img class="imgsec1" src="../assets/images/maus_garden1.jpg" alt="Imagen principal de la galería"/>
-    <h1>Galería</h1>
+    <h1>GALERÍA</h1>
   </div>
 
-  <!-- Galería en formato grid -->
+  <!-- Galería en formato grid para pantallas grandes y una columna para móviles -->
   <section>
     <div class="gallery-grid">
-      <div class="gallery-item big"><img src="../assets/images/maus_noche2.jpg" alt="Imagen 1"></div>
-      <div class="gallery-item"><img src="../assets/images/DSC_0621.JPG" alt="Imagen 2"></div>
-      <div class="gallery-item tall"><img src="../assets/images/panteon_brillo5.jpg" alt="Imagen 3"></div>
-      <div class="gallery-item"><img src="../assets/images/DSC_1708.JPG" alt="Imagen 4"></div>
-      <div class="gallery-item tall"><img src="../assets/images/lotefam_brillo3.jpg" alt="Imagen 5"></div>
-      <div class="gallery-item"><img src="../assets/images/panteon_brillo1.jpg" alt="Imagen 6"></div>
-      <div class="gallery-item big"><img src="../assets/images/panteon4.jpg" alt="Imagen 7"></div>
-      <div class="gallery-item"><img src="../assets/images/PHOTO-2022-11-03-15-53-17.jpg" alt="Imagen 8"></div>
-      <div class="gallery-item big"><img src="../assets/images/DSC_4073.jpg" alt="Imagen 9"></div>
-      <div class="gallery-item"><img src="../assets/images/DSC_4174.JPG" alt="Imagen 10"></div>
-      <div class="gallery-item tall"><img src="../assets/images/DSC_4423.jpg" alt="Imagen 11"></div>
-      <div class="gallery-item"><img src="../assets/images/DSC_4415.JPG" alt="Imagen 12"></div>
-      <div class="gallery-item tall"><img src="../assets/images/verjaperim_brillo2.jpg" alt="Imagen 13"></div>
-      <div class="gallery-item"><img src="../assets/images/DSC_1676.jpg" alt="Imagen 14"></div>
-      <div class="gallery-item big"><img src="../assets/images/DSC_1613.jpg" alt="Imagen 15"></div>
-      <div class="gallery-item"><img src="../assets/images/DSC_0629.jpg" alt="Imagen 16"></div>
+      <div class="gallery-item big"><img src="../assets/images/maus_noche2.jpg" alt="Mausoleo de noche"></div>
+      <div class="gallery-item"><img src="../assets/images/DSC_0621.JPG" alt="Vista del parque"></div>
+      <div class="gallery-item tall"><img src="../assets/images/panteon_brillo5.jpg" alt="Panteón familiar"></div>
+      <div class="gallery-item"><img src="../assets/images/DSC_1708.JPG" alt="Área de descanso"></div>
+      <div class="gallery-item tall"><img src="../assets/images/lotefam_brillo3.jpg" alt="Lote familiar"></div>
+      <div class="gallery-item"><img src="../assets/images/panteon_brillo1.jpg" alt="Vista panorámica"></div>
+      <div class="gallery-item big"><img src="../assets/images/panteon4.jpg" alt="Panteón iluminado"></div>
+      <div class="gallery-item"><img src="../assets/images/PHOTO-2022-11-03-15-53-17.jpg" alt="Jardín de memorias"></div>
+      <div class="gallery-item big"><img src="../assets/images/DSC_4073.jpg" alt="Entrada principal"></div>
+      <div class="gallery-item"><img src="../assets/images/DSC_4174.JPG" alt="Área verde"></div>
+      <div class="gallery-item tall"><img src="../assets/images/DSC_4423.jpg" alt="Monumento"></div>
+      <div class="gallery-item"><img src="../assets/images/DSC_4415.JPG" alt="Capilla"></div>
+      <div class="gallery-item tall"><img src="../assets/images/verjaperim_brillo2.jpg" alt="Verja perimetral"></div>
+      <div class="gallery-item"><img src="../assets/images/DSC_1676.jpg" alt="Pasillo de jardín"></div>
+      <div class="gallery-item big"><img src="../assets/images/DSC_1613.jpg" alt="Vista panorámica"></div>
+      <div class="gallery-item"><img src="../assets/images/DSC_0629.jpg" alt="Detalle arquitectónico"></div>
+    </div>
+
+    <!-- Versión móvil de la galería (solo visible en móviles) -->
+    <div class="mobile-gallery">
+      <div class="mobile-item"><img src="../assets/images/maus_noche2.jpg" alt="Mausoleo de noche"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_0621.JPG" alt="Vista del parque"></div>
+      <div class="mobile-item"><img src="../assets/images/panteon_brillo5.jpg" alt="Panteón familiar"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_1708.JPG" alt="Área de descanso"></div>
+      <div class="mobile-item"><img src="../assets/images/lotefam_brillo3.jpg" alt="Lote familiar"></div>
+      <div class="mobile-item"><img src="../assets/images/panteon_brillo1.jpg" alt="Vista panorámica"></div>
+      <div class="mobile-item"><img src="../assets/images/panteon4.jpg" alt="Panteón iluminado"></div>
+      <div class="mobile-item"><img src="../assets/images/PHOTO-2022-11-03-15-53-17.jpg" alt="Jardín de memorias"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_4073.jpg" alt="Entrada principal"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_4174.JPG" alt="Área verde"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_4423.jpg" alt="Monumento"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_4415.JPG" alt="Capilla"></div>
+      <div class="mobile-item"><img src="../assets/images/verjaperim_brillo2.jpg" alt="Verja perimetral"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_1676.jpg" alt="Pasillo de jardín"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_1613.jpg" alt="Vista panorámica"></div>
+      <div class="mobile-item"><img src="../assets/images/DSC_0629.jpg" alt="Detalle arquitectónico"></div>
     </div>
   </section>
 
@@ -78,7 +102,7 @@
   <!-- Lightbox JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const images = document.querySelectorAll('.gallery-item img');
+      const images = document.querySelectorAll('.gallery-item img, .mobile-item img');
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightboxImg');
       const closeBtn = document.getElementById('closeBtn');

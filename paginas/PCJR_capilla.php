@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Planes</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/png" />
+
   <!-- Fuentes y Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -32,7 +36,7 @@
         <h2>Plan Platinum</h2>
         <p>Este plan premium brinda acceso exclusivo a una capilla de lujo, equipada con servicios personalizados y atención prioritaria. Ideal para quienes buscan lo mejor en un entorno sereno y elegante.</p>
         <div class="plan-card-buttons">
-          <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
+          <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Estoy%20interesado%2Fa%20en%20adquirir%20el%20Plan%20Platinum%20de%20Capilla.%20%C2%BFPodr%C3%ADan%20indicarme%20c%C3%B3mo%20completar%20el%20proceso%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
           <a href="tel:+1-809-555-1234" class="btn-call"><i class="fas fa-phone-alt"></i> Comprar por Llamada</a>
         </div>
       </div>
@@ -45,7 +49,7 @@
         <h2>Plan Zafiro</h2>
         <p>Una opción que combina confort y distinción, el Plan Zafiro ofrece instalaciones de alta calidad y un servicio excepcional, garantizando una experiencia memorable para sus seres queridos.</p>
         <div class="plan-card-buttons">
-          <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
+          <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Deseo%20adquirir%20el%20Plan%20Zafiro%20de%20Capilla.%20%C2%BFMe%20orientan%20sobre%20c%C3%B3mo%20formalizar%20la%20contrataci%C3%B3n%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
           <a href="tel:+1-809-555-1234" class="btn-call"><i class="fas fa-phone-alt"></i> Comprar por Llamada</a>
         </div>
       </div>
@@ -58,7 +62,7 @@
         <h2>Plan Rubí</h2>
         <p>Este plan proporciona un equilibrio perfecto entre calidad y accesibilidad. Con servicios completos y un ambiente acogedor, el Plan Rubí es una elección acertada para honrar a quienes han partido.</p>
         <div class="plan-card-buttons">
-          <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
+          <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Estoy%20listo%2Fa%20para%20contratar%20el%20Plan%20Rub%C3%AD%20de%20Capilla.%20%C2%BFCu%C3%A1l%20es%20el%20siguiente%20paso%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
           <a href="tel:+1-809-555-1234" class="btn-call"><i class="fas fa-phone-alt"></i> Comprar por Llamada</a>
         </div>
       </div>
@@ -71,7 +75,7 @@
         <h2>Plan Marfil</h2>
         <p>Diseñado para aquellos que buscan simplicidad y elegancia, el Plan Marfil ofrece un espacio tranquilo y bien cuidado, ideal para recordar a sus seres queridos con dignidad.</p>
         <div class="plan-card-buttons">
-          <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
+          <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Me%20interesa%20adquirir%20el%20Plan%20Marfil%20de%20Capilla.%20%C2%BFPueden%20guiarme%20con%20los%20pasos%20para%20formalizarlo%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
           <a href="tel:+1-809-555-1234" class="btn-call"><i class="fas fa-phone-alt"></i> Comprar por Llamada</a>
         </div>
       </div>
@@ -84,7 +88,7 @@
         <h2>Plan Ámbar</h2>
         <p>Este plan es una opción accesible que brinda un servicio respetuoso y adecuado, asegurando que cada familia pueda conmemorar a sus seres queridos en un ambiente apropiado.</p>
         <div class="plan-card-buttons">
-          <a href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
+          <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Quiero%20adquirir%20el%20Plan%20%C3%81mbar%20de%20Capilla.%20%C2%BFC%C3%B3mo%20puedo%20completar%20la%20contrataci%C3%B3n%3F" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Comprar por WhatsApp</a>
           <a href="tel:+1-809-555-1234" class="btn-call"><i class="fas fa-phone-alt"></i> Comprar por Llamada</a>
         </div>
       </div>

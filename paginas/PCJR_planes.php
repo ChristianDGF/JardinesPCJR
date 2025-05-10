@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Planes</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon/favicon.png" type="image/png" />
+  <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/png" />
+
   <!-- Fuentes y Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -19,7 +23,7 @@
 
   <div class="sec1">
       <img class="imgsec1" src="../assets/images/planes.jpg"/>
-         <h1>Productos</h1>
+         <h1>Productos / Propiedades</h1>
          </div>
       </div>
       
@@ -29,13 +33,13 @@
     <div class="plan-text">
       <h1>Modernas Capillas</h1>
       <p>
-        La Capilla es un espacio sagrado y elegante, destinado a rendir homenaje a la vida y a proporcionar consuelo a las familias en momentos de despedida. Con un diseño moderno y acogedor, la capilla está equipada con todas las comodidades necesarias para ofrecer un ambiente de respeto y solemnidad. Sus grandes ventanales permiten la entrada de luz natural, creando una atmósfera de paz que invita a la meditación y al recuerdo. Aquí, las familias pueden reunirse para celebrar la vida de sus seres queridos en un entorno que refleja amor y dignidad.
+        Las Capillas son espacios sagrados y elegantes, destinados a rendir homenaje a la vida y a proporcionar consuelo a las familias en momentos de despedida. Con un diseño moderno y acogedor, la capilla está equipada con todas las comodidades necesarias para ofrecer un ambiente de respeto y solemnidad. Sus grandes ventanales permiten la entrada de luz natural, creando una atmósfera de paz que invita a la meditación y al recuerdo. Aquí, las familias pueden reunirse para celebrar la vida de sus seres queridos en un entorno que refleja amor y dignidad.
       </p>
       <div class="button-group">
       <a href="PCJR_capilla.php">
           <button class="plan-btn">Planes de Capilla</button>
         </a>
-        <a href="https://wa.me/18293451020?text=Quiero%20comprar%20Modernas%20Capillas" target="_blank">
+        <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Estoy%20listo%2Fa%20para%20adquirir%20uno%20de%20sus%20planes%20de%20Capillas%20Velatorias.%20%C2%BFPodr%C3%ADan%20indicarme%20los%20pasos%20para%20formalizarlo%3F" target="_blank">
           <button class="btn-yellow-green">Quiero Comprar</button>
         </a>
       </div>
@@ -52,7 +56,7 @@
         Descubre la tranquilidad y la intimidad que ofrecen nuestros Jardines Familiares, donde cada lote nicho de 2 puestos está diseñado para honrar la memoria de sus seres queridos en un entorno sereno y natural. Rodeados de vegetación exuberante y coloridas flores, estos espacios permiten que las familias se reúnan para recordar y celebrar la vida en un ambiente de paz.
       </p>
       <div class="button-group">
-        <a href="https://wa.me/18293451020?text=Quiero%20comprar%20Hermosos%20Jardines%20Familiares" target="_blank">
+        <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Estoy%20interesado%2Fa%20en%20adquirir%20un%20espacio%20en%20sus%20Jardines%20Familiares.%20%C2%BFC%C3%B3mo%20puedo%20proceder%20con%20la%20compra%3F" target="_blank">
           <button class="btn-yellow-green">Quiero Comprar</button>
         </a>
       </div>
@@ -70,7 +74,7 @@
 
       </p>
       <div class="button-group">
-        <a href="https://wa.me/18293451020?text=Quiero%20comprar%20Nuevos%20Osarios" target="_blank">
+        <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Deseo%20adquirir%20un%20osario%20con%20ustedes.%20%C2%BFPodr%C3%ADan%20orientarme%20sobre%20c%C3%B3mo%20realizar%20la%20contrataci%C3%B3n%3F" target="_blank">
           <button class="btn-yellow-green">Quiero Comprar</button>
         </a>
       </div>
@@ -89,7 +93,7 @@
 
       </p>
       <div class="button-group">
-        <a href="https://wa.me/18293451020?text=Quiero%20comprar%20Panteones%20Familiares" target="_blank">
+        <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Quiero%20avanzar%20con%20la%20adquisici%C3%B3n%20de%20un%20Pante%C3%B3n%20Familiar.%20%C2%BFCu%C3%A1l%20ser%C3%ADa%20el%20siguiente%20paso%3F" target="_blank">
           <button class="btn-yellow-green">Quiero Comprar</button>
         </a>
       </div>
@@ -109,7 +113,7 @@
 
       </p>
       <div class="button-group">
-        <a href="https://wa.me/18293451020?text=Quiero%20comprar%20Majestuosos%20Mausoleos" target="_blank">
+        <a href="https://wa.me/18293451006?text=%C2%A1Hola!%20Estoy%20interesado%2Fa%20en%20adquirir%20un%20Mausoleo.%20%C2%BFMe%20indican%20c%C3%B3mo%20puedo%20completar%20el%20proceso%3F" target="_blank">
           <button class="btn-yellow-green">Quiero Comprar</button>
         </a>
       </div>

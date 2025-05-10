@@ -95,7 +95,12 @@ if ((isset($_POST['mensajeasunto'])) && (filter_var($Email, FILTER_VALIDATE_EMAI
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PCJR - EMPLEOS</title>
+    <title>PCJR - AFILIARSE</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/png" />
+    
     <!-- Vinculación con Archivo CSS -->
     <link rel="stylesheet" href="../assets/css/afiliarse.css">
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
@@ -129,16 +134,18 @@ if ((isset($_POST['mensajeasunto'])) && (filter_var($Email, FILTER_VALIDATE_EMAI
         </form>
     </div>
     <div class="containera benefits-container">
-        <h2 class="hiddenscroll" >Beneficios de ser Afiliado</h2>
+        <h2 class="hiddenscroll" >Estás son las Ventajas de tú afiliación:</h2>
         <div class="benefits-content hiddenscroll">
             <img alt="Personas mayores usando una tablet" height="250" src="../assets/images/busi.webp" width="250"/>
             <ol class="olafil">
-                <li>Descuentos especiales de hasta del 30%</li>
-                <li>Planes flexibles sin pago inicial</li>
-                <li>Plazos personalizados, respetando su ritmo y necesidades</li>
-                <li>Sin intereses adicionales, transparencia y cuidado en cada detalle</li>
+                <li>Recibirás tú Carnet Digital de Afiliación en tu correo.</li>
+                <li>Atención Inmediata por el Teléfono: 809 9717222 para resolver consultas o servicios rápidamente.</li>
+                <li>Ventajas y descuentos Exclusivos para adquirir propiedad o planes de capilla, a futuro.</li>
+                <li>Bono de Descuento de UD$100 dólares para propiedad y uno de USD$50 dólares para plan de capilla a futuro.</li>
+                <li>Boletín Informativo mensual con contenido valioso y ofertas para vivir tranquilo.</li>
             </ol>
         </div>
+        <p class="hiddenscroll" style="text-align: center; font-weight: bold; color: #43b248; font-size: 18px; width: 100%; display: block;">¡Estamos aquí para servirte!</p>
     </div>
     <div class="containera testimonials-container">
         <h2 class="hiddenscroll">Opiniones de nuestros Afiliados</h2>

@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCJR PROJECT | QUIENES SOMOS</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/png" />
+    
     <!-- Vinculación con Archivo CSS -->
     <link rel="stylesheet" href="../assets/css/quienes.css">
     <!-- Vinculación con librexría de JS para el SCROLL -->
@@ -34,7 +39,7 @@
       <div class="text">
         
         <p>
-          Somos una organización con una experiencia de más de 50 años, en los cuales hemos tenido el privilegio de lograr que más de un millón de familias, en diferentes países, se motivaran a tomar una de las decisiones más importantes, como lo es contar con un Plan de Previsión Familiar, adquiriendo antes, sin angustia ni presión, propiedades indispensables para afrontar dignamente la partida de un ser querido.
+          Somos una organización con más de 50 años de experiencia, durante los cuales hemos tenido el privilegio de motivar a más de un millón de familias en diferentes países a tomar una de las decisiones más importantes: contar con un Plan de Previsión Familiar. Esto les ha permitido adquirir, sin angustia ni presión, las propiedades indispensables para afrontar dignamente la partida de un ser querido.
         </p>
       </div>
     </div>
@@ -43,9 +48,9 @@
   <div class="section">
     <div class="content hiddenscroll">
       <div class="text">
-        <h2>Misión</h2>
+        <h2>MISIÓN:</h2>
         <p>
-          Asesorar y facilitar al máximo que todos los hogares de República Dominicana, SIN EXCEPCIÓN, adquieran el PLAN DE PREVISIÓN FAMILIAR de Jardines del Recuerdo; como solución inteligente y económica para garantizar la tranquilidad presente y futura de la familia cuando fallece un ser querido.
+          Que todos los hogares de Santiago de los Caballeros y de la República Dominicana tengan un Plan de Previsión Familiar. Nuestro objetivo es asesorar y facilitar al máximo esta adquisición, como una solución inteligente y económica para garantizar la tranquilidad presente y futura de las familias ante el fallecimiento de un ser querido.
         </p>
       </div>
       <div class="img-wrapper">

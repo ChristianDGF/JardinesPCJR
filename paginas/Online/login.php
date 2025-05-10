@@ -335,6 +335,86 @@ else
   height: auto;
 }
 
+/* Estilos para el popup informativo */
+.info-popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.info-popup-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 25px;
+  border: 1px solid #43b248;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 550px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.info-popup-content h3 {
+  color: #43b248;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.info-popup-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+}
+
+.info-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #777;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.info-popup-close:hover {
+  color: #43b248;
+  background-color: #f5f5f5;
+}
+
+.info-popup-button {
+  background-color: #43b248;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.info-popup-button:hover {
+  background-color: #36983b;
+}
 </style>
 
 
@@ -343,8 +423,20 @@ else
 <body>
 <BR>
 
+<!-- Popup Informativo -->
+<div id="info-popup" class="info-popup">
+  <div class="info-popup-content">
+    <span class="info-popup-close" onclick="closeInfoPopup()">Cerrar</span>
+    <h3>Bienvenido a nuestros servicios en línea</h3>
+    <p>Apreciado cliente, para disfrutar de los servicios en línea le invitamos a crear una cuenta registrándose con sus datos personales; si ya está registrado puede ingresar con su correo y contraseña.</p>
+    <div style="text-align: center;">
+      <button class="info-popup-button" style="margin-right:5px;" onclick="closeInfoPopup()">Entendido</button><button class="info-popup-button" style="margin-left:5px;" onclick="closeInfoPopup(); toggleForms();">Crear cuenta</button>
+    </div>
+  </div>
+</div>
+
 <div class="login-page">
-  <div class="logo-container"><img src="../../assets/images/Emblema_ODS_block (PNG).png" alt="Emblema ODS" class="emblema-ods" /></div>
+  <div class="logo-container" style="text-align: center; margin-bottom: 20px;"><img src="../../assets/images/Logo.png" alt="Logo de Parque Cementerio Jardines del Recuerdo" class="emblema-ods" style="height: auto; max-height: 80px; width: auto; max-width: 100%; object-fit: contain;" /></div>
     <!-- FORMULARIO DE INICIAR SESIÓN -->
         <div id="loginForm">
           <h1>Iniciar sesión</h1>
@@ -417,6 +509,16 @@ function FunShowPassLogin() {
   } else {
     x.type = "password";
   }
+}
+
+// Mostrar popup informativo al cargar la página
+window.onload = function() {
+  document.getElementById('info-popup').style.display = 'block';
+}
+
+// Cerrar popup informativo
+function closeInfoPopup() {
+  document.getElementById('info-popup').style.display = 'none';
 }
 </script>
 

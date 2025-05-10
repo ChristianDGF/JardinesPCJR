@@ -2,60 +2,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-h6 {margin:15px;font-size: 27px;line-height:30px;font-weight: normal;font-family:'Ubuntu',sans-serif;color:white;}
-#contenedor {display: table;}
+h6 {margin:15px;font-size: 22px;line-height:30px;font-weight: normal;font-family:'Roboto',sans-serif;color:white;}
+#contenedor {display: table; width: 100%;}
 #contenidos {display: table-row;}
 #principal {display: table-cell;width: 25%;padding-left:50px;}
-#centro {display: table-cell;width: 47%;}
-#secundario {display: table-cell;width: 28%;}
+#centro {display: table-cell;width: 37%;}
+#secundario {display: table-cell;width: 38%;}
+
 @media screen and (max-width: 1007px) {
-h6 {margin:15px;font-size: 22px;line-height:30px;font-weight: normal;font-family:'Ubuntu',sans-serif;color:white;}
-#contenedor {display: block;}
-#contenidos {display: block;}
-#principal {display:block;align:center;width:100%;padding-left:0px;}
-#centro {display:block;align:center;width:100%;}
-#secundario {display:block;align:center;width:100%;}
+    h6 {margin:15px;font-size: 18px;line-height:26px;font-weight: normal;font-family:'Roboto',sans-serif;color:white;}
+    #contenedor {display: block;}
+    #contenidos {display: block;}
+    #principal {display:block;text-align:center;width:100%;padding-left:0px;}
+    #centro {display:block;text-align:center;width:100%;}
+    #secundario {display:block;text-align:center;width:100%;}
+    
+    .footer-title {
+        font-weight: 600;
+        margin: 15px 0 5px 0;
+        letter-spacing: 0.5px;
+        font-size: 20px;
+    }
+    
+    .footer-contact a {
+        display: block;
+        padding: 5px 0;
+        transition: all 0.3s ease;
+    }
+    
+    .horarios-container {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .social-icons {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+.footer-title {
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    color: #4ADE80;
+    font-size: 18px;
+}
+
+.horarios-container {
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    line-height: 1.8;
+}
+
+.footer-link:hover {
+    color: #4ADE80;
 }
 
 </style>
 </head>
 <body>
-<div style="background-color:#106510;">
-<BR>
+<div style="background-color:#144816; padding: 40px 20px 20px 20px;">
 <div id="contenedor">
 <div id="contenidos">
-<div id="principal" align="center">
-	<a href="Index.php"><img src="images/LogoTrans58.png" alt="Logo Parque Cementerio Jardines del Recuerdo"></a>
-	<h6 style="cursor: pointer;" onclick="location.href='../paginas/quienes.php'">Acerca de Nosotros</h6>
-	<h6 style="cursor: pointer;" onclick="location.href='../paginas/obituarios.php'">Obituarios</h6>
-	<h6 style="cursor: pointer;" onclick="location.href='../paginas/servicios.php'">Servicios en L&iacute;nea</h6>
-	<h6 style="cursor: pointer;" onclick="location.href='../paginas/ubiquenos.php'">Donde Estamos</h6>
-	<h6 style="cursor: pointer;" onclick="location.href='../paginas/empleo.php'">Empleo</h6>
-	<h6 style="cursor: pointer;" onclick="location.href='../paginas/Testimonios.php'">Testimonios</h6>
-	<h6 style="cursor: pointer;" onclick="location.href='../paginas/campana.php'">Campaña</h6>
-	<h6 style="cursor: pointer;" onclick="location.href='//blog.jardinesrecuerdo.com'">Blog</h6>
-	<h6 style="cursor: pointer;color:#E59400;" onclick="location.href='../paginas/promocion.php'">Promoci&oacute;n</h6>
+<div id="principal">
+	<a href="../Index.php"><img alt="Company Logo" class="flogo" src="../assets/images/Emblema_ODS_block (PNG).png" style="margin-bottom: 20px; width: auto; height: 75px;"/></a>
+	<h6 class="footer-title">Enlaces rápidos</h6>
+	<h6><a class="footer-link" href="../Index.php">Inicio</a></h6>
+	<h6><a class="footer-link" href="../paginas/PCJR_FAQ.php">Ayuda</a></h6>
+	<h6><a class="footer-link" href="//blog.jardinesrecuerdo.com">Blog</a></h6>
+	<h6><a class="footer-link" href="mailto:rrhh@jardinesrecuerdo.com">EMPLEOS</a></h6>
+	<h6><a class="footer-link" href="../paginas/Online/login.php">Iniciar Sesión</a></h6>
+	<h6><a class="footer-link" href="../paginas/Online/registrar.php">Registrarse</a></h6>
 </div>
-<div id="centro" align="center">
+<div id="centro">
+    <h6 class="footer-title">Información</h6>
+    <h6><a class="footer-link" href="../paginas/PCJR_quienes.php">Sobre Nosotros</a></h6>
+    <h6><a class="footer-link" href="../paginas/PCJR_servicios.php#cuentas-bancarias">Cuentas Bancarias</a></h6>
+    <h6><a class="footer-link" href="../paginas/PCJR_afiliarse.php">Afiliarse</a></h6>
+    <h6 class="footer-title" style="margin-top: 20px;">Servicios</h6>
+    <h6><a class="footer-link" href="../paginas/PCJR_planes.php">Planes de Capilla y Propiedades</a></h6>
+    <h6><a class="footer-link" href="../paginas/PCJR_servicios.php">Servicios en Línea</a></h6>
+    <h6><a class="footer-link" href="../paginas/obituarios.php">Obituarios</a></h6>
+    <h6><a class="footer-link" href="../paginas/buscardif.php">Buscar Difunto</a></h6>
 </div>
-<div id="secundario" align="center">
-	<a style="color:white;font-size:14px;line-height:15px;text-decoration:none;" href="mailto:info@jardinesrecuerdo.com" target="_blank">Email: info@jardinesrecuerdo.com</a>
-	<BR>
-	<a style="color:white;font-size:14px;line-height:15px;text-decoration:none;" href="mailto:cobranzas@jardinesrecuerdo.com" target="_blank">Notificar pagos: cobranzas@jardinesrecuerdo.com</a>
-	<h6 style="font-size:13px;line-height:14px;">Teléfono Oficina Administrativa: <a href="tel:+18099717222" style="color:white;text-decoration:none;">+1 809 971 7222</a></h6>
-	<h6 style="font-size:13px;line-height:14px;">Teléfono Parque Cementerio: <a href="tel:+18092471316" style="color:white;text-decoration:none;">+1 809 247 1316</a></h6>
-    <dispblo class="b"><a href="http://www.facebook.com/jardinesdelrecuerdosantiago" target="_blank" rel="noopener"> <img src="images/Facebook.png" alt="Únete en FaceBook"/></a></dispblo>
-	<dispblo class="b"><a href="https://www.youtube.com/channel/UCFrUIXEKI4mnIFlospXzhxQ" target="_blank" rel="noopener"> <img src="images/YouTube.png" alt="Suscribir en YouTube"/></a></dispblo>
-	<dispblo class="b"><a href="https://www.instagram.com/jardinesdelrecuerdosantiago/?hl=es-la" target="_blank" rel="noopener"> <img src="images/Instagram.png" alt="Siguenos en Instagram"/></a></dispblo>
-	<dispblo class="b"><a href="mailto:info@jardinesrecuerdo.com" target="_blank" rel="noopener"> <img src="images/Mail.png" alt="Email"/></a></dispblo>
-	<dispblo class="b"><a href="https://twitter.com/jardinesdelrec1?lang=es" target="_blank" rel="noopener"> <img src="images/Twitter.png" alt="Síguenos en Twitter"/></a></dispblo>
+<div id="secundario" class="footer-contact">
+    <h6 class="footer-title">Contáctenos</h6>
+	<h6><a class="footer-link" href="mailto:info@jardinesrecuerdo.com">info@jardinesrecuerdo.com</a></h6>
+	<h6><a class="footer-link" href="mailto:cobranzas@jardinesrecuerdo.com">Notificar pagos: cobranzas@jardinesrecuerdo.com</a></h6>
+	
+	<div class="horarios-container">
+        <h6 class="footer-title">Oficinas administrativas</h6>
+        <h6>Lunes a viernes: 8:00 a.m. - 5 p.m.</h6>
+        <h6>Sábados: 8:00 a.m. - 12 p.m.</h6>
+        
+        <h6 class="footer-title" style="margin-top: 20px;">Parque Cementerio</h6>
+        <h6>Lunes a Domingo y feriados:</h6>
+        <h6>8:00 a.m. - 6 p.m.</h6>
+        
+        <h6 class="footer-title" style="margin-top: 20px;">Departamento de servicios</h6>
+        <h6><a class="footer-link" href="https://wa.me/18293451022">+1 829 345 1022</a> WhatsApp</h6>
+        <h6><a class="footer-link" href="https://wa.me/18293451032">+1 829 345 1032</a> WhatsApp</h6>
+        <h6><a class="footer-link" href="tel:+18099717222">+1 809 971 7222</a> Teléfono</h6>
+    </div>
+    
+    <div class="social-icons" style="margin-top: 20px;">
+        <a href="https://www.facebook.com/jardinesdelrecuerdosantiago" target="_blank" rel="noopener">
+            <i class="fab fa-facebook-f" style="color: #4ADE80; font-size: 24px; margin: 0 10px;"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCFrUIXEKI4mnIFlospXzhxQ" target="_blank" rel="noopener">
+            <i class="fab fa-youtube" style="color: #4ADE80; font-size: 24px; margin: 0 10px;"></i>
+        </a>
+        <a href="https://www.instagram.com/jardinesdelrecuerdosantiago/?hl=es-la" target="_blank" rel="noopener">
+            <i class="fab fa-instagram" style="color: #4ADE80; font-size: 24px; margin: 0 10px;"></i>
+        </a>
+        <a href="mailto:info@jardinesrecuerdo.com" target="_blank" rel="noopener">
+            <i class="fas fa-envelope" style="color: #4ADE80; font-size: 24px; margin: 0 10px;"></i>
+        </a>
+        <a href="https://twitter.com/jardinesdelrec1?lang=es" target="_blank" rel="noopener">
+            <i class="fab fa-twitter" style="color: #4ADE80; font-size: 24px; margin: 0 10px;"></i>
+        </a>
+    </div>
 </div>
 </div>
 </div>
-<BR>
-<div align="center">
-<h6 style="font-size:12px;line-height:16px;">© 2020 Parque Cementerio Jardines del Recuerdo, S.A.S. Todos los derechos reservados.</h6>
+<div style="text-align: center; margin-top: 30px;">
+<h6 style="font-size:14px;line-height:16px;"> 2024 Parque Cementerio Jardines del Recuerdo, S.A.S. Todos los derechos reservados.</h6>
 </div>
 </div>
 </body>

@@ -1,11 +1,11 @@
 <?php
 
 session_start();
-/*
+
 if (!isset($_SESSION["varsessemail"])) {
     header("Location: Online/login.php");
     exit(); // Detener la ejecución del script
-}*/
+}
 
 if (isset($_POST['buscar'])) {
     $buscar    = $_POST['buscar'];
@@ -176,6 +176,11 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCJR | PAGOS</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/favicon/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.png" type="image/png" />
+    
     <!-- Vinculación con Archivo CSS -->
     <link rel="stylesheet" href="../assets/css/pagos.css">
     <!-- Vinculación con librexría de JS para el SCROLL -->
