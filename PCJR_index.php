@@ -60,7 +60,7 @@
   <!-- Video de fondo -->
   <div class="youtube-background">
     <iframe
-      src="https://www.youtube-nocookie.com/embed/J_b_MbI58jQ?controls=0&autoplay=1&mute=1&showinfo=0&rel=0&loop=1&playlist=J_b_MbI58jQ"
+      src="https://www.youtube-nocookie.com/embed/ZTZOEFkJgF0?controls=0&autoplay=1&mute=1&showinfo=0&rel=0&loop=1&playlist=ZTZOEFkJgF0"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
@@ -414,7 +414,7 @@
       <!-- Opciones de WhatsApp -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
         <a 
-          href="https://wa.me/18293451022/?text=Hola%2C%20necesito%20atención%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F" 
+          href="https://wa.me/18293451022/?text=%C2%A1Hola%21%20Necesito%20asistencia%20inmediata%2E%20Es%20una%20situaci%C3%B3n%20urgente%20y%20me%20gustar%C3%ADa%20ser%20atendido%2Fa%20lo%20antes%20posible%2C%20por%20favor" 
           target="_blank"
           class="whatsapp-option"
         >
@@ -426,7 +426,7 @@
         </a>
         
         <a 
-          href="https://wa.me/18293451032/?text=Hola%2C%20necesito%20atención%20urgente.%20%C2%BFMe%20pueden%20ayudar%3F" 
+          href="https://wa.me/18293451032/?text=%C2%A1Hola%21%20Necesito%20asistencia%20inmediata%2E%20Es%20una%20situaci%C3%B3n%20urgente%20y%20me%20gustar%C3%ADa%20ser%20atendido%2Fa%20lo%20antes%20posible%2C%20por%20favor" 
           target="_blank"
           class="whatsapp-option"
         >
