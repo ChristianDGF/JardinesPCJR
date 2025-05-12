@@ -60,11 +60,11 @@
   <!-- Video de fondo -->
   <div class="youtube-background">
     <iframe
-      src="https://www.youtube-nocookie.com/embed/ZTZOEFkJgF0?controls=0&autoplay=1&mute=1&showinfo=0&rel=0&loop=1&playlist=ZTZOEFkJgF0"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    ></iframe>
+       src="https://www.youtube-nocookie.com/embed/dxjQteUC5zU?controls=0&autoplay=1&mute=1&showinfo=0&rel=0&loop=1&playlist=dxjQteUC5zU"
+       frameborder="0"
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+       allowfullscreen
+     ></iframe>
   </div>
 
   <!-- Sección Hero -->
@@ -325,7 +325,7 @@
   </div>
 
   <!-- Footer -->
-  <?php include(__DIR__ . '/paginas/piepagina1index.html'); ?>
+  <?php include(__DIR__ . '/paginas/piepagina_pcjr_index.html'); ?>
 
   <!-- Popup Afiliación -->
   <div
@@ -397,6 +397,11 @@
         Cerrar
       </button>
 
+      <!-- Ícono de auriculares -->
+      <div class="flex justify-center mb-3">
+        <i class="fas fa-headphones-alt text-3xl text-green-600"></i>
+      </div>
+      
       <!-- Título -->
       <h3
         class="text-2xl md:text-3xl font-semibold text-green-700 mb-4"

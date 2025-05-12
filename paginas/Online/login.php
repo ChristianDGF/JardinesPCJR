@@ -166,7 +166,8 @@ else
 
 /* Solo estilos dentro de login-page */
 .login-page {
-  width: 520px;
+  width: 90%;
+  max-width: 520px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
@@ -177,6 +178,66 @@ else
   flex-direction: column;
   align-items: center;
   padding: 60px;
+}
+
+/* Estilos responsivos para móviles */
+@media (max-width: 768px) {
+  .login-page {
+    width: 95%;
+    padding: 30px 20px;
+    margin: 30px auto;
+  }
+  
+  .login-page h1, 
+  .login-page h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login-page form input[type="email"],
+  .login-page form input[type="password"],
+  .login-page form input[type="text"] {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  .login-page form input[type="submit"] {
+    padding: 12px;
+  }
+  
+  /* Estilos popup responsivos */
+  .info-popup-content {
+    width: 90%;
+    margin: 15% auto;
+    padding: 20px 15px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .info-popup-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .info-popup-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .info-popup-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 5px;
+    width: auto;
+    display: inline-block;
+  }
+  
+  .info-popup-close {
+    top: 8px;
+    right: 10px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 }
 
 /* Cada formulario */
@@ -427,6 +488,12 @@ else
 <div id="info-popup" class="info-popup">
   <div class="info-popup-content">
     <span class="info-popup-close" onclick="closeInfoPopup()">Cerrar</span>
+    
+    <!-- Ícono de laptop -->
+    <div class="flex justify-center mb-3">
+      <i class="fas fa-laptop text-3xl text-green-600"></i>
+    </div>
+    
     <h3>Bienvenido a nuestros servicios en línea</h3>
     <p>Apreciado cliente, para disfrutar de los servicios en línea le invitamos a crear una cuenta registrándose con sus datos personales; si ya está registrado puede ingresar con su correo y contraseña.</p>
     <div style="text-align: center;">
@@ -514,6 +581,17 @@ function FunShowPassLogin() {
 // Mostrar popup informativo al cargar la página
 window.onload = function() {
   document.getElementById('info-popup').style.display = 'block';
+  
+  // Verificar si la URL contiene #registerForm para mostrar automáticamente el formulario de registro
+  if(window.location.hash === '#registerForm') {
+    var loginForm = document.getElementById('loginForm');
+    var registerForm = document.getElementById('registerForm');
+    
+    if(loginForm && registerForm) {
+      loginForm.style.display = "none";
+      registerForm.style.display = "block";
+    }
+  }
 }
 
 // Cerrar popup informativo

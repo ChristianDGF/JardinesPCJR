@@ -66,7 +66,7 @@
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
     <div class="sec1">
-        <img class="imgsec1" src="../assets/images/DSC_0636.JPG" />
+        <img class="imgsec1" src="../assets/images/obih.jpg" />
         <h1>Obituarios</h1>
     </div>
     </div>
