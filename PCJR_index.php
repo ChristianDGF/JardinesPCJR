@@ -49,6 +49,37 @@
       right: 0 !important;
       transform: translateX(110%) !important; /* Flechas más afuera */
     }
+    
+    /* Estilo para el botón Quiero Comprar */
+    .specialbtn-comprar {
+      font-family: "Playfair Display", serif;
+      background-color: #43b248;
+      color: white;
+      border: unset;
+      border-radius: 20px; /* Forma redondeada */
+      margin-top: 20px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.4s ease;
+    }
+    
+    .specialbtn-comprar:hover {
+      background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+      transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+      --myColor1: #43b248;
+      --myColor2: #d4b757;
+      --myColor3: #ffdb98;
+    }
+    
+    .specialbtn-comprar:not(:hover) {
+      background: linear-gradient(var(--myColor1), var(--myColor2));
+      transition: --myColor1 0.4s, --myColor2 0.5s;
+    }
   </style>
 </head>
 
@@ -199,7 +230,7 @@
       href="https://wa.me/18293451020/?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F"
       class="hiddenscroll"
     >
-      <button>Quiero Comprar</button>
+      <button class="specialbtn-comprar">Quiero Comprar</button>
     </a>
   </div>
 

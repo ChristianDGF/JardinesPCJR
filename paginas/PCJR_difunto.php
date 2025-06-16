@@ -19,7 +19,10 @@
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
     <div class="sec1">
-        <img class="imgsec1" src="../assets/images/buscardif.jpg" />
+        <div class="image-container">
+            <img class="imgsec1" src="../assets/images/buscardif.jpg" />
+            <div class="green-overlay"></div>
+        </div>
         <h1>Buscar Difunto</h1>
     </div>
 

@@ -27,7 +27,10 @@
 
   <!-- Título de sección -->
   <div class="sec1">
-    <img class="imgsec1" src="../assets/images/maus_garden1.jpg" alt="Imagen principal de la galería"/>
+    <div class="image-container">
+      <img class="imgsec1" src="../assets/images/maus_garden1.jpg" alt="Imagen principal de la galería"/>
+      <div class="green-overlay"></div>
+    </div>
     <h1>GALERÍA</h1>
   </div>
 

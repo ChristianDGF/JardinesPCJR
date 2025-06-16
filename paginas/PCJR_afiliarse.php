@@ -116,10 +116,12 @@ if ((isset($_POST['mensajeasunto'])) && (filter_var($Email, FILTER_VALIDATE_EMAI
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
     <div class="sec1 hiddenscroll">
-        <img class="imgsec1 " src="../assets/images/afil.jpg"/>
-           <h1 class="hiddenscroll">Plan de Afiliación</h1>
-           </div>
+        <div class="image-container">
+            <img class="imgsec1" src="../assets/images/afil.jpg"/>
+            <div class="green-overlay"></div>
         </div>
+        <h1 class="hiddenscroll">Plan de Afiliación</h1>
+    </div>
     
     <div class="containera form-container">
         <h1 class="hiddenscroll">Afiliarse</h1>

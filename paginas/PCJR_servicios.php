@@ -197,7 +197,10 @@ if (isset($_POST['consulta']) && !empty($cedula) && !empty($contrato)) {
     <?php include(__DIR__ . '\barramenu5.html'); ?>
 
     <div class="sec1 hiddenscroll">
-        <img class="imgsec1" src="../assets/images/pi.jpg" />
+        <div class="image-container">
+            <img class="imgsec1" src="../assets/images/pi.jpg" />
+            <div class="green-overlay"></div>
+        </div>
         <h1 class="hiddenscroll">Servicios en Línea</h1>
     </div>
 

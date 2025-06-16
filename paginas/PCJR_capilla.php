@@ -23,7 +23,10 @@
   <?php include(__DIR__ . '\barramenu5.html'); ?>
 
   <div class="sec1">
-    <img class="imgsec1" src="../assets/images/DSC_4010.JPG" />
+    <div class="image-container">
+      <img class="imgsec1" src="../assets/images/DSC_4010.JPG" />
+      <div class="green-overlay"></div>
+    </div>
     <h1>Planes de capilla</h1>
   </div>
 

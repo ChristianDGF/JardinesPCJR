@@ -16,21 +16,37 @@
 
 
 
- .imgsec1{
-    width: 100%; 
-    height: 400px; 
-    object-fit: cover;
-    object-position: left center;  
-    top: 0;
-    left: 0;
-    filter: brightness(50%);
-    z-index: -1;
-  }
-  
   .sec1 {
     position: relative;
     width: 100%;
     height: 400px;
+    overflow: hidden;
+  }
+
+  .image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .imgsec1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+
+  .green-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 93, 0, 0.25);
+    z-index: 1;
+    pointer-events: none;
   }
   
   .sec1 h1{
@@ -40,10 +56,10 @@
     font-size: 45px;
     top: 45%;
     left: 0;
-    position:absolute;
     text-align:center;
     width: 100%;
     font-family: "Playfair Display", serif;
+    z-index: 10;
   }
 
  .containera {

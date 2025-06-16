@@ -27,21 +27,37 @@ body {
 
 
 
-.imgsec1{
-    width: 100%; 
-    height: 400px; 
-    object-fit: cover;
-    object-position: left center;  
-    top: 0;
-    left: 0;
-    filter: brightness(50%);
-    z-index: -1;
-  }
-  
-  .sec1 {
+.sec1 {
     position: relative;
     width: 100%;
     height: 400px;
+    overflow: hidden;
+  }
+  
+  .image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .imgsec1 {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    object-position: left center;
+  }
+  
+  .green-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 93, 0, 0.25);
+    z-index: 1;
+    pointer-events: none;
   }
   
   .sec1 h1{
@@ -55,6 +71,7 @@ body {
     text-align:center;
     width: 100%;
     font-family: "Playfair Display", serif;
+    z-index: 10;
   }
 
   footer{
@@ -178,6 +195,30 @@ body {
     cursor: pointer;
     margin-top: 20px;
     font-size: 16px;
+}
+
+/* Aplicar el efecto de hover solo a los botones de tipo submit (Validar credenciales) */
+.form-section button[type="submit"] {
+    transition: background 0.4s ease;
+}
+
+.form-section button[type="submit"]:hover {
+    background: linear-gradient(43deg, var(--myColor1) 0%, var(--myColor2) 46%, var(--myColor3) 100%);
+    transition: --myColor1 0.4s, --myColor2 0.5s, --myColor3 0.2s;
+    --myColor1: #43b248;
+    --myColor2: #d4b757;
+    --myColor3: #ffdb98;
+}
+
+.form-section button[type="submit"]:not(:hover) {
+    background: linear-gradient(var(--myColor1), var(--myColor2));
+    transition: --myColor1 0.4s, --myColor2 0.5s;
+}
+
+/* Asegurar que los botones verify-button no tengan el efecto de hover */
+.form-section .verify-button {
+    background-color: #43b248;
+    transition: none;
 }
 .form-section .verify-button {
     margin-bottom: 20px;

@@ -27,9 +27,12 @@
     
     
     <div class="sec1">
-    <img class="imgsec1 hiddenscroll" src="../assets/images/qs.jpg" alt="Imagen Sec1" />
-    <h1 class="hiddenscroll">¿Quiénes Somos?</h1>
-  </div>
+      <div class="image-container">
+        <img class="imgsec1 hiddenscroll" src="../assets/images/quienessom.jpg" alt="Imagen Sec1" />
+        <div class="green-overlay"></div>
+      </div>
+      <h1 class="hiddenscroll">¿Quiénes Somos?</h1>
+    </div>
 
   <div class="section">
     <div class="content hiddenscroll">

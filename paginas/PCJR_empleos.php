@@ -26,10 +26,12 @@
 
     
     <div class="sec1 hiddenscroll">
-        <img class="imgsec1" src="../assets/images/po.jpeg"/>
-           <h1 class="hiddenscroll">Empleos</h1>
-           </div>
+        <div class="image-container">
+            <img class="imgsec1" src="../assets/images/po.jpeg"/>
+            <div class="green-overlay"></div>
         </div>
+        <h1 class="hiddenscroll">Empleos</h1>
+    </div>
 
     <div class="content">
         <div class="job hiddenscroll">
