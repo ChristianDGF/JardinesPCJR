@@ -207,13 +207,22 @@
         margin-left: 0;
         text-align: center;
     }
+    .benefits-container ol li {
+        text-align: left;
+        margin: 15px 0;
+        padding-left: 10px;
+    }
+    .benefits-container ol li::before {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
     .testimonials-container .testimonial {
         width: 100%;
     }
 }
-
-
-
 footer{
     background-color: #144816;
     color: white;

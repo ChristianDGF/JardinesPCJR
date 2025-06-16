@@ -104,13 +104,16 @@
     <?php include(__DIR__ . '\piepagina2.html'); ?>
 
     <script>
-        document.getElementById('menu-button').addEventListener('click', function() {
-            var menu = document.getElementById('mobile-menu');
-            if (menu.classList.contains('hidden')) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
+        document.getElementById('menu-button')?.addEventListener('click', () => {
+            document.getElementById('mobile-menu')?.classList.toggle('hidden');
+        });
+
+        document.getElementById('mobile-nosotros')?.addEventListener('click', () => {
+            document.getElementById('mobile-nosotros-menu')?.classList.toggle('hidden');
+        });
+
+        document.getElementById('mobile-servicios')?.addEventListener('click', () => {
+            document.getElementById('mobile-servicios-menu')?.classList.toggle('hidden');
         });
     </script>
 </body>
