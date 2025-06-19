@@ -1,7 +1,7 @@
 <?php
    include(__DIR__ . '/../conexion/conexion.php');
    $d=strtotime("-1 Months");    
-   $fecha = date("Y-m-d",$d);
+   $fecha = date("d/m/Y",$d);
    $sql="select * from VServiciosdia where fecha >= '". $fecha. "'" ;
    $resultado = odbc_exec($conn,$sql);
    $totalregistros = odbc_num_rows($resultado);
